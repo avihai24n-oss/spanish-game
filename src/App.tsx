@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { AnimatePresence, motion } from "framer-motion";
 import { useGameStore } from "./game/store";
 import HomeScreen from "./components/HomeScreen";
 import LobbyScreen from "./components/LobbyScreen";
@@ -20,22 +19,11 @@ export default function App() {
 
   return (
     <div className="min-h-full">
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={screen}
-          className="min-h-full"
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -12 }}
-          transition={{ duration: 0.22, ease: "easeOut" }}
-        >
-          {screen === "home" && <HomeScreen />}
-          {screen === "lobby" && <LobbyScreen />}
-          {screen === "game" && <GameScreen />}
-          {screen === "waiting" && <WaitingScreen />}
-          {screen === "results" && <ResultsScreen />}
-        </motion.div>
-      </AnimatePresence>
+      {screen === "home" && <HomeScreen />}
+      {screen === "lobby" && <LobbyScreen />}
+      {screen === "game" && <GameScreen />}
+      {screen === "waiting" && <WaitingScreen />}
+      {screen === "results" && <ResultsScreen />}
     </div>
   );
 }
