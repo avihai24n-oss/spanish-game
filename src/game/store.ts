@@ -7,7 +7,7 @@ import { randomSeed } from "./rng";
 import type { MatchTransport } from "../transport/MatchTransport";
 import { BotTransport } from "../transport/BotTransport";
 
-export type Screen = "home" | "lobby" | "game" | "results";
+export type Screen = "home" | "lobby" | "game" | "waiting" | "results";
 export type Phase = "answering" | "feedback";
 
 const STATS_KEY = "vamos-stats-v1";
@@ -67,12 +67,14 @@ interface GameState {
   opponent: PlayerState;
   stats: PersistentStats;
   transport: MatchTransport | null;
+  roundFinalized: boolean;
 
   goHome: () => void;
   openLobby: () => void;
   startGame: () => Promise<void>;
   submitAnswer: (correct: boolean, timeMs: number) => void;
   nextQuestion: () => void;
+  finishRound: () => void;
 }
 
 export const useGameStore = create<GameState>((set, get) => ({
@@ -92,6 +94,7 @@ export const useGameStore = create<GameState>((set, get) => ({
   opponent: freshPlayer("בוט", "🤖"),
   stats: loadStats(),
   transport: null,
+  roundFinalized: false,
 
   goHome: () => {
     get().transport?.dispose();
@@ -121,6 +124,7 @@ export const useGameStore = create<GameState>((set, get) => ({
         set((s) => ({
           opponent: { ...s.opponent, finished: true, score: event.totalScore },
         }));
+        get().finishRound();
       }
     });
 
@@ -143,6 +147,7 @@ export const useGameStore = create<GameState>((set, get) => ({
       player: freshPlayer("את/ה", "🦸"),
       opponent: freshPlayer("בוט", "🤖"),
       transport,
+      roundFinalized: false,
     });
 
     transport.send({
@@ -212,7 +217,19 @@ export const useGameStore = create<GameState>((set, get) => ({
       correctCount: player.correctCount,
     });
 
-    const won = player.score >= s.opponent.score;
+    set({
+      screen: s.opponent.finished ? "results" : "waiting",
+      player,
+    });
+
+    get().finishRound();
+  },
+
+  finishRound: () => {
+    const s = get();
+    if (s.roundFinalized || !s.player.finished || !s.opponent.finished) return;
+
+    const won = s.player.score > s.opponent.score;
     const stats: PersistentStats = {
       totalXp: s.stats.totalXp + s.xpEarned,
       gamesPlayed: s.stats.gamesPlayed + 1,
@@ -221,7 +238,7 @@ export const useGameStore = create<GameState>((set, get) => ({
     };
     saveStats(stats);
 
-    set({ screen: "results", player, stats });
+    set({ screen: "results", stats, roundFinalized: true });
   },
 }));
 

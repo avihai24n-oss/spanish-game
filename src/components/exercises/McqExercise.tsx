@@ -29,33 +29,35 @@ export default function McqExercise({
   };
 
   return (
-    <div className="flex flex-col gap-6">
+    <section className="panel rounded-[1.7rem] p-5 sm:p-7">
       <div>
-        <p className="text-sm font-extrabold text-duo-gray">
+        <p className="text-sm font-black uppercase tracking-[0.14em] text-duo-purple">
           {toSpanish ? "איך אומרים בספרדית?" : "מה הפירוש בעברית?"}
         </p>
         <h2
-          className={`mt-2 text-4xl font-black ${toSpanish ? "" : "es-text"}`}
+          className={`mt-3 text-4xl font-black leading-tight text-duo-ink ${
+            toSpanish ? "" : "es-text"
+          }`}
           dir={toSpanish ? "rtl" : "ltr"}
         >
           {question.prompt}
         </h2>
       </div>
 
-      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+      <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
         {question.options.map((opt, i) => {
           const isCorrect = i === question.correctIndex;
           const isSelected = i === selected;
 
           let stateClasses =
-            "border-duo-border bg-white hover:bg-duo-bg hover:-translate-y-0.5";
+            "border-duo-border bg-white/85 hover:bg-duo-surface2 hover:-translate-y-0.5";
           if (revealed && isCorrect) {
             stateClasses =
               "border-duo-green bg-duo-greenLight text-duo-greenShadow animate-pop";
           } else if (revealed && isSelected && !isCorrect) {
             stateClasses = "border-duo-red bg-duo-redLight text-duo-red animate-shake";
           } else if (isSelected) {
-            stateClasses = "border-duo-blue bg-duo-blueLight text-duo-blueShadow";
+            stateClasses = "border-duo-purple bg-duo-purpleLight text-duo-purpleShadow";
           } else if (revealed) {
             stateClasses = "border-duo-border bg-white opacity-50";
           }
@@ -66,7 +68,7 @@ export default function McqExercise({
               onClick={() => choose(i)}
               disabled={revealed}
               whileTap={revealed ? undefined : { scale: 0.97 }}
-              className={`relative rounded-2xl border-2 border-b-4 px-5 py-4 text-xl font-bold transition-all duration-150 ${stateClasses} ${
+              className={`relative rounded-2xl border border-b-4 px-5 py-4 text-xl font-extrabold shadow-card transition-all duration-150 ${stateClasses} ${
                 toSpanish ? "es-text" : ""
               }`}
               dir={toSpanish ? "ltr" : "rtl"}
@@ -81,6 +83,6 @@ export default function McqExercise({
           );
         })}
       </div>
-    </div>
+    </section>
   );
 }

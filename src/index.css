@@ -2,15 +2,65 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --bg: #f4f6f0;
+  --bg-2: #eaf1e2;
+  --surface: #fffdf8;
+  --surface-2: #f9faf5;
+  --ink-rgb: 23, 32, 36;
+  --green-rgb: 88, 204, 2;
+  --purple-rgb: 139, 92, 246;
+  --line: rgba(var(--ink-rgb), 0.1);
+  --line-2: rgba(var(--ink-rgb), 0.16);
+  --r-lg: 24px;
+  --r: 18px;
+  --r-sm: 12px;
+  --pill: 999px;
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
 html,
 body,
 #root {
   height: 100%;
 }
 
+html {
+  overflow-x: clip;
+}
+
 body {
   @apply bg-duo-bg font-duo text-duo-text antialiased;
   overscroll-behavior: none;
+  overflow-x: hidden;
+  letter-spacing: 0.005em;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: -24% -12% auto -12%;
+  z-index: -2;
+  height: 92vh;
+  background:
+    radial-gradient(52% 48% at 76% 10%, rgba(var(--green-rgb), 0.2), transparent 62%),
+    radial-gradient(46% 46% at 18% 3%, rgba(var(--purple-rgb), 0.16), transparent 64%),
+    linear-gradient(180deg, #fffdf8 0%, var(--bg) 58%, var(--bg-2) 100%);
+  filter: blur(8px);
+  pointer-events: none;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: radial-gradient(rgba(var(--ink-rgb), 0.34) 1px, transparent 1px);
+  background-size: 22px 22px;
 }
 
 /* Spanish (LTR) islands inside the RTL Hebrew UI */
@@ -20,11 +70,49 @@ body {
 }
 
 ::selection {
-  background: #ddf4ff;
+  background: #8b5cf6;
+  color: #ffffff;
 }
 
-/* Subtle playful dotted backdrop */
+:focus-visible {
+  outline: 3px solid rgba(var(--purple-rgb), 0.42);
+  outline-offset: 3px;
+  border-radius: 12px;
+}
+
 .dotted-bg {
-  background-image: radial-gradient(#e5e5e5 1.5px, transparent 1.5px);
-  background-size: 26px 26px;
+  background:
+    linear-gradient(140deg, rgba(255, 255, 255, 0.74), rgba(255, 255, 255, 0)),
+    radial-gradient(circle at 15% 12%, rgba(88, 204, 2, 0.16), transparent 30%),
+    radial-gradient(circle at 85% 16%, rgba(139, 92, 246, 0.16), transparent 28%);
+}
+
+@layer components {
+  .screen-shell {
+    @apply dotted-bg min-h-screen px-4 py-5 sm:px-6 sm:py-8;
+  }
+
+  .app-wrap {
+    @apply mx-auto w-full max-w-5xl;
+  }
+
+  .panel {
+    @apply border shadow-soft backdrop-blur-xl;
+    border-color: rgba(var(--ink-rgb), 0.1);
+    background-color: rgba(255, 253, 248, 0.9);
+  }
+
+  .raised-card {
+    @apply rounded-[1.4rem] border border-duo-border bg-duo-surface shadow-card;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-duo-border px-3 py-1 text-xs font-black uppercase tracking-[0.18em] text-duo-gray shadow-sm;
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+
+  .metric-card {
+    @apply rounded-2xl border border-duo-border px-3 py-3 shadow-card backdrop-blur;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
 }

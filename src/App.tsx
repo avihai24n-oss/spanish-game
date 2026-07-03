@@ -3,6 +3,7 @@ import { useGameStore } from "./game/store";
 import HomeScreen from "./components/HomeScreen";
 import LobbyScreen from "./components/LobbyScreen";
 import GameScreen from "./components/GameScreen";
+import WaitingScreen from "./components/WaitingScreen";
 import ResultsScreen from "./components/ResultsScreen";
 
 export default function App() {
@@ -22,6 +23,7 @@ export default function App() {
           {screen === "home" && <HomeScreen />}
           {screen === "lobby" && <LobbyScreen />}
           {screen === "game" && <GameScreen />}
+          {screen === "waiting" && <WaitingScreen />}
           {screen === "results" && <ResultsScreen />}
         </motion.div>
       </AnimatePresence>

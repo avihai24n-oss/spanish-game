@@ -4,14 +4,14 @@ type Variant = "green" | "blue" | "white" | "red" | "gold" | "purple";
 
 const variantClasses: Record<Variant, string> = {
   green:
-    "bg-duo-green text-white border-duo-greenShadow hover:bg-duo-greenHover",
-  blue: "bg-duo-blue text-white border-duo-blueShadow hover:brightness-105",
+    "bg-[linear-gradient(180deg,#6DE51A,#58CC02)] text-white border-duo-greenShadow shadow-[0_18px_34px_-18px_rgba(88,204,2,0.78)] hover:bg-duo-greenHover hover:-translate-y-0.5",
+  blue: "bg-[linear-gradient(180deg,#9B7CFF,#8B5CF6)] text-white border-duo-purpleShadow shadow-[0_18px_34px_-18px_rgba(139,92,246,0.72)] hover:brightness-105 hover:-translate-y-0.5",
   red: "bg-duo-red text-white border-duo-redShadow hover:brightness-105",
   gold: "bg-duo-gold text-white border-duo-goldShadow hover:brightness-105",
   purple:
-    "bg-duo-purple text-white border-duo-purpleShadow hover:brightness-105",
+    "bg-[linear-gradient(180deg,#9B7CFF,#8B5CF6)] text-white border-duo-purpleShadow shadow-[0_18px_34px_-18px_rgba(139,92,246,0.72)] hover:brightness-105 hover:-translate-y-0.5",
   white:
-    "bg-white text-duo-blue border-duo-border border-2 border-b-4 hover:bg-duo-bg",
+    "bg-white/90 text-duo-purple border-duo-border border-2 border-b-4 shadow-sm hover:bg-duo-surface2",
 };
 
 interface DuoButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -42,7 +42,7 @@ export default function DuoButton({
     <button
       disabled={disabled}
       className={[
-        "select-none rounded-2xl font-extrabold tracking-wide transition-all duration-100",
+        "relative select-none overflow-hidden rounded-2xl font-extrabold tracking-wide transition-all duration-150",
         variant === "white" ? "" : "border-b-4",
         sizes[size],
         variantClasses[variant],

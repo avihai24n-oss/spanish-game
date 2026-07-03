@@ -9,9 +9,9 @@ interface ProgressBarProps {
 export default function ProgressBar({ value }: ProgressBarProps) {
   const pct = Math.max(0, Math.min(1, value)) * 100;
   return (
-    <div className="h-4 w-full overflow-hidden rounded-full bg-duo-border">
+    <div className="h-4 w-full overflow-hidden rounded-full border border-duo-border bg-duo-border/80 shadow-inner">
       <motion.div
-        className="relative h-full rounded-full bg-duo-green"
+        className="relative h-full rounded-full bg-[linear-gradient(90deg,#58CC02,#8AEF3D)]"
         initial={false}
         animate={{ width: `${pct}%` }}
         transition={{ type: "spring", stiffness: 160, damping: 22 }}

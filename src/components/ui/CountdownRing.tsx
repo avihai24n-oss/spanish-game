@@ -5,25 +5,28 @@ interface CountdownRingProps {
   seconds: number;
 }
 
-const SIZE = 52;
+const SIZE = 56;
 const STROKE = 5;
 const R = (SIZE - STROKE) / 2;
 const CIRC = 2 * Math.PI * R;
 
-/** Per-question countdown ring — green, then gold, then red as time runs out. */
+/** Per-question countdown ring — green, then purple, then red as time runs out. */
 export default function CountdownRing({ fraction, seconds }: CountdownRingProps) {
   const f = Math.max(0, Math.min(1, fraction));
-  const color = f > 0.5 ? "#58CC02" : f > 0.25 ? "#FFC800" : "#FF4B4B";
+  const color = f > 0.5 ? "#58CC02" : f > 0.25 ? "#8B5CF6" : "#FF4B4B";
 
   return (
-    <div className="relative" style={{ width: SIZE, height: SIZE }}>
+    <div
+      className="relative rounded-full bg-white/75 shadow-sm"
+      style={{ width: SIZE, height: SIZE }}
+    >
       <svg width={SIZE} height={SIZE} className="-rotate-90">
         <circle
           cx={SIZE / 2}
           cy={SIZE / 2}
           r={R}
           fill="none"
-          stroke="#E5E5E5"
+          stroke="#DCE4D5"
           strokeWidth={STROKE}
         />
         <circle

@@ -70,20 +70,21 @@ export default function GameScreen() {
   if (!question) return null;
 
   return (
-    <div className="mx-auto flex min-h-screen w-full max-w-2xl flex-col px-4 pb-36 pt-4">
+    <main className="screen-shell pb-36">
+      <div className="mx-auto flex min-h-[calc(100vh-3rem)] w-full max-w-3xl flex-col">
       {/* Header: quit, progress, hearts */}
-      <div className="flex items-center gap-3">
+      <div className="panel sticky top-4 z-10 flex items-center gap-3 rounded-[1.35rem] px-3 py-3">
         <button
           onClick={goHome}
           aria-label="יציאה"
-          className="rounded-xl p-1.5 text-2xl font-black text-duo-gray transition-colors hover:bg-duo-border/50"
+          className="rounded-xl px-2 py-1 text-2xl font-black text-duo-gray transition-colors hover:bg-duo-border/50"
         >
           ✕
         </button>
         <div className="flex-1">
           <ProgressBar value={player.progress / ROUND_SIZE} />
         </div>
-        <div className="flex items-center gap-1 text-lg font-black text-duo-red">
+        <div className="flex items-center gap-1 rounded-full bg-duo-redLight px-3 py-1 text-lg font-black text-duo-red">
           <span>❤️</span>
           <span className="tabular-nums">{hearts}</span>
         </div>
@@ -95,7 +96,7 @@ export default function GameScreen() {
       </div>
 
       {/* Timer + combo + score row */}
-      <div className="mt-4 flex items-center justify-between">
+      <div className="mt-4 flex items-center justify-between rounded-[1.35rem] border border-duo-border bg-white/65 px-4 py-3 shadow-sm backdrop-blur">
         <CountdownRing
           fraction={phase === "answering" ? remainingMs / timeLimit : 0}
           seconds={Math.ceil(remainingMs / 1000)}
@@ -108,7 +109,7 @@ export default function GameScreen() {
               animate={{ scale: 1, opacity: 1, rotate: 0 }}
               exit={{ scale: 0.6, opacity: 0 }}
               transition={{ type: "spring", stiffness: 400, damping: 15 }}
-              className="rounded-full border-b-2 border-duo-goldShadow bg-duo-gold px-3 py-1 text-sm font-black text-white"
+              className="rounded-full border border-white/70 bg-duo-gold px-3 py-1 text-sm font-black text-duo-ink shadow"
             >
               🔥 רצף ×{combo}
             </motion.div>
@@ -157,8 +158,10 @@ export default function GameScreen() {
             animate={{ y: 0 }}
             exit={{ y: 120 }}
             transition={{ type: "spring", stiffness: 350, damping: 30 }}
-            className={`fixed inset-x-0 bottom-0 z-20 ${
-              lastCorrect ? "bg-duo-greenLight" : "bg-duo-redLight"
+            className={`fixed inset-x-0 bottom-0 z-20 border-t backdrop-blur-xl ${
+              lastCorrect
+                ? "border-duo-green/30 bg-duo-greenLight/95"
+                : "border-duo-red/25 bg-duo-redLight/95"
             }`}
           >
             <div className="mx-auto flex w-full max-w-2xl items-center justify-between gap-4 px-6 py-5">
@@ -203,6 +206,7 @@ export default function GameScreen() {
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
+      </div>
+    </main>
   );
 }
