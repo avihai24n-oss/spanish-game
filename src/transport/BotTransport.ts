@@ -13,6 +13,17 @@ const BOT_DELAY_RANGES = {
   sentence: { min: 8000, max: 20000 },
 } as const;
 
+interface PlannedBotAnswer {
+  questionIndex: number;
+  correct: boolean;
+  points: number;
+  totalScore: number;
+  progress: number;
+  correctCount: number;
+  isLast: boolean;
+  delayMs: number;
+}
+
 /**
  * Simulated opponent: answers the same round with a randomized, realistic
  * delay per question and ~75% accuracy. Exercises the full race UI through
@@ -21,6 +32,9 @@ const BOT_DELAY_RANGES = {
 export class BotTransport implements MatchTransport {
   private handlers: MatchEventHandler[] = [];
   private timers: ReturnType<typeof setTimeout>[] = [];
+  private plan: PlannedBotAnswer[] = [];
+  private nextAnswerIndex = 0;
+  private finished = false;
 
   async createRoom(): Promise<string> {
     return "bot-room";
@@ -33,9 +47,11 @@ export class BotTransport implements MatchTransport {
   send(event: MatchEvent): void {
     if (event.type === "roundStart") {
       this.startBotRun(event.questionKinds);
+    } else if (event.type === "playerFinished") {
+      this.fastForwardRemainingAnswers();
     }
-    // playerAnswer / playerFinished would be relayed to a real opponent;
-    // the bot doesn't react to them.
+    // playerAnswer would be relayed to a real opponent; the bot only reacts to
+    // playerFinished so waiting after a fast player stays short in bot mode.
   }
 
   onEvent(cb: MatchEventHandler): void {
@@ -46,6 +62,9 @@ export class BotTransport implements MatchTransport {
     this.timers.forEach(clearTimeout);
     this.timers = [];
     this.handlers = [];
+    this.plan = [];
+    this.nextAnswerIndex = 0;
+    this.finished = false;
   }
 
   private emit(event: MatchEvent): void {
@@ -56,6 +75,11 @@ export class BotTransport implements MatchTransport {
     let elapsed = 0;
     let totalScore = 0;
     let correctCount = 0;
+    this.plan = [];
+    this.nextAnswerIndex = 0;
+    this.finished = false;
+    this.timers.forEach(clearTimeout);
+    this.timers = [];
 
     for (let i = 0; i < questionKinds.length; i++) {
       const kind = questionKinds[i];
@@ -67,29 +91,64 @@ export class BotTransport implements MatchTransport {
       elapsed += thinkMs;
       totalScore += points;
       if (correct) correctCount++;
+      this.plan.push({
+        questionIndex: i,
+        correct,
+        points,
+        totalScore,
+        progress: i + 1,
+        correctCount,
+        isLast: i === questionKinds.length - 1,
+        delayMs: elapsed,
+      });
+    }
 
-      const snapshotScore = totalScore;
-      const snapshotCorrect = correctCount;
-      const isLast = i === questionKinds.length - 1;
-
+    for (let i = 0; i < this.plan.length; i++) {
+      const answer = this.plan[i];
       this.timers.push(
         setTimeout(() => {
-          this.emit({
-            type: "opponentAnswer",
-            questionIndex: i,
-            correct,
-            points,
-            totalScore: snapshotScore,
-            progress: i + 1,
-          });
-          if (isLast) {
-            this.emit({
-              type: "opponentFinished",
-              totalScore: snapshotScore,
-              correctCount: snapshotCorrect,
-            });
-          }
-        }, elapsed)
+          this.emitAnswer(i);
+        }, answer.delayMs)
+      );
+    }
+  }
+
+  private emitAnswer(index: number): void {
+    if (this.finished || index < this.nextAnswerIndex) return;
+    const answer = this.plan[index];
+    if (!answer) return;
+
+    this.nextAnswerIndex = index + 1;
+    this.emit({
+      type: "opponentAnswer",
+      questionIndex: answer.questionIndex,
+      correct: answer.correct,
+      points: answer.points,
+      totalScore: answer.totalScore,
+      progress: answer.progress,
+    });
+
+    if (answer.isLast) {
+      this.finished = true;
+      this.emit({
+        type: "opponentFinished",
+        totalScore: answer.totalScore,
+        correctCount: answer.correctCount,
+      });
+    }
+  }
+
+  private fastForwardRemainingAnswers(): void {
+    if (this.finished || this.nextAnswerIndex >= this.plan.length) return;
+    this.timers.forEach(clearTimeout);
+    this.timers = [];
+
+    for (let i = this.nextAnswerIndex; i < this.plan.length; i++) {
+      const delay = 450 * (i - this.nextAnswerIndex + 1);
+      this.timers.push(
+        setTimeout(() => {
+          this.emitAnswer(i);
+        }, delay)
       );
     }
   }
