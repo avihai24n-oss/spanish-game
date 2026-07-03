@@ -6,7 +6,18 @@ import DuoButton from "./ui/DuoButton";
 import { useSound } from "../hooks/useSound";
 
 export default function ResultsScreen() {
-  const { player, opponent, startGame, goHome } = useGameStore();
+  const {
+    player,
+    opponent,
+    startGame,
+    goHome,
+    mode,
+    requestRematch,
+    rematchRequested,
+    opponentWantsRematch,
+    opponentLeft,
+    createDuel,
+  } = useGameStore();
   const { play } = useSound();
 
   const won = player.score > opponent.score;
@@ -85,10 +96,48 @@ export default function ResultsScreen() {
           <span className="text-sm font-bold text-duo-gray">נקודות</span>
         </div>
 
+        {mode === "duel" && opponentLeft && (
+          <div className="mx-auto mt-5 max-w-md rounded-2xl border border-duo-gold/40 bg-duo-gold/10 px-4 py-2.5 text-sm font-bold text-duo-ink">
+            {opponent.name} התנתק/ה מהמשחק
+          </div>
+        )}
+        {mode === "duel" && !opponentLeft && opponentWantsRematch && !rematchRequested && (
+          <motion.div
+            initial={{ scale: 0.9, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            className="mx-auto mt-5 max-w-md rounded-2xl border border-duo-green/40 bg-duo-greenLight px-4 py-2.5 text-sm font-black text-duo-greenShadow"
+          >
+            ⚔️ {opponent.name} רוצה עוד סיבוב!
+          </motion.div>
+        )}
+
         <div className="mx-auto mt-7 grid w-full max-w-md gap-3 sm:grid-cols-2">
-          <DuoButton variant="green" size="lg" className="w-full" onClick={() => void startGame()}>
-            שחק שוב
-          </DuoButton>
+          {mode === "duel" ? (
+            opponentLeft ? (
+              <DuoButton
+                variant="green"
+                size="lg"
+                className="w-full"
+                onClick={() => void createDuel()}
+              >
+                חדר חדש ⚔️
+              </DuoButton>
+            ) : (
+              <DuoButton
+                variant="green"
+                size="lg"
+                className="w-full"
+                disabled={rematchRequested}
+                onClick={requestRematch}
+              >
+                {rematchRequested ? "מחכים ליריב..." : "עוד סיבוב ⚔️"}
+              </DuoButton>
+            )
+          ) : (
+            <DuoButton variant="green" size="lg" className="w-full" onClick={() => void startGame()}>
+              שחק שוב
+            </DuoButton>
+          )}
           <DuoButton variant="white" size="lg" className="w-full" onClick={goHome}>
             חזרה לתפריט
           </DuoButton>

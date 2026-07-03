@@ -25,6 +25,8 @@ export type MatchEvent =
     }
   /** Sent by the local player when they finish the round. */
   | { type: "playerFinished"; totalScore: number; correctCount: number }
+  /** Sent by the local player asking for another round. */
+  | { type: "rematchRequest" }
   /** Received: the opponent answered a question. */
   | {
       type: "opponentAnswer";
@@ -35,7 +37,17 @@ export type MatchEvent =
       progress: number;
     }
   /** Received: the opponent finished the round. */
-  | { type: "opponentFinished"; totalScore: number; correctCount: number };
+  | { type: "opponentFinished"; totalScore: number; correctCount: number }
+  /** Received: an opponent connected to the room and introduced themselves. */
+  | { type: "opponentJoined"; name: string; avatar: string }
+  /** Received: both players are in — the round starts with this shared seed. */
+  | { type: "matchStart"; seed: string }
+  /** Received: the opponent wants a rematch. */
+  | { type: "opponentWantsRematch" }
+  /** Received: the opponent disconnected. */
+  | { type: "opponentLeft" }
+  /** Received: the room already has two players. */
+  | { type: "roomFull" };
 
 export type MatchEventHandler = (event: MatchEvent) => void;
 

@@ -17,6 +17,7 @@ export default function HomeScreen() {
   const startGame = useGameStore((s) => s.startGame);
   const openLobby = useGameStore((s) => s.openLobby);
   const stats = useGameStore((s) => s.stats);
+  const profile = useGameStore((s) => s.profile);
   const { play } = useSound();
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -36,8 +37,13 @@ export default function HomeScreen() {
               <span className="h-0.5 w-5 rounded-full bg-current" />
             </span>
           </button>
-          <div className="rounded-2xl border border-duo-border bg-white/70 px-3 py-1.5 text-sm font-black text-duo-greenShadow shadow-sm">
-            {stats.totalXp} XP
+          <div className="flex items-center gap-2">
+            <div className="rounded-2xl border border-duo-border bg-white/70 px-3 py-1.5 text-sm font-black text-duo-ink shadow-sm">
+              {profile ? `${profile.avatar} ${profile.name}` : "אורח"}
+            </div>
+            <div className="rounded-2xl border border-duo-border bg-white/70 px-3 py-1.5 text-sm font-black text-duo-greenShadow shadow-sm">
+              {stats.totalXp} XP
+            </div>
           </div>
         </header>
 
@@ -93,12 +99,12 @@ export default function HomeScreen() {
                 }}
               >
                 <span className="flex items-center justify-center gap-3">
-                  <span className="text-2xl">↔</span>
-                  תחרות עם חבר
+                  <span className="text-2xl">⚔️</span>
+                  דוקרב עם חבר
                 </span>
               </DuoButton>
               <span className="absolute -left-2 -top-2 rounded-full border border-white/70 bg-duo-gold px-2.5 py-0.5 text-xs font-black text-duo-ink shadow">
-                בקרוב
+                חדש
               </span>
             </motion.div>
           </div>
@@ -114,6 +120,7 @@ function ProfileDrawer({ open, onClose }: { open: boolean; onClose: () => void }
   const stats = useGameStore((s) => s.stats);
   const openLobby = useGameStore((s) => s.openLobby);
   const startGame = useGameStore((s) => s.startGame);
+  const profile = useGameStore((s) => s.profile);
 
   return (
     <AnimatePresence>
@@ -140,7 +147,9 @@ function ProfileDrawer({ open, onClose }: { open: boolean; onClose: () => void }
                 <p className="text-xs font-black uppercase tracking-[0.16em] text-duo-purple">
                   הפרופיל שלי
                 </p>
-                <h2 className="mt-1 text-2xl font-black text-duo-ink">את/ה</h2>
+                <h2 className="mt-1 text-2xl font-black text-duo-ink">
+                  {profile ? `${profile.avatar} ${profile.name}` : "אורח"}
+                </h2>
               </div>
               <button
                 type="button"
@@ -160,9 +169,13 @@ function ProfileDrawer({ open, onClose }: { open: boolean; onClose: () => void }
 
             <div className="mt-6 space-y-2">
               <MenuAction label="תרגול" onClick={() => void startGame()} />
-              <MenuAction label="תחרות" onClick={openLobby} />
-              <MenuAction label="התקדמות" />
-              <MenuAction label="הגדרות" />
+              <MenuAction label="דוקרב עם חבר" onClick={openLobby} />
+              <MenuAction
+                label="החלפת שם משתמש"
+                onClick={() =>
+                  useGameStore.setState({ screen: "profile", pendingRoomId: null })
+                }
+              />
             </div>
           </motion.aside>
         </>
