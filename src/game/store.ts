@@ -112,17 +112,26 @@ export const useGameStore = create<GameState>((set, get) => ({
 
     transport.onEvent((event) => {
       if (event.type === "opponentAnswer") {
+        const totalQuestions = get().questions.length || ROUND_SIZE;
         set((s) => ({
           opponent: {
             ...s.opponent,
             score: event.totalScore,
             progress: event.progress,
             correctCount: s.opponent.correctCount + (event.correct ? 1 : 0),
+            finished: s.opponent.finished || event.progress >= totalQuestions,
           },
         }));
+        if (event.progress >= totalQuestions) get().finishRound();
       } else if (event.type === "opponentFinished") {
         set((s) => ({
-          opponent: { ...s.opponent, finished: true, score: event.totalScore },
+          opponent: {
+            ...s.opponent,
+            finished: true,
+            score: event.totalScore,
+            correctCount: event.correctCount,
+            progress: Math.max(s.opponent.progress, s.questions.length || ROUND_SIZE),
+          },
         }));
         get().finishRound();
       }
@@ -211,6 +220,8 @@ export const useGameStore = create<GameState>((set, get) => ({
 
     // Round finished
     const player: PlayerState = { ...s.player, finished: true };
+    const totalQuestions = s.questions.length || ROUND_SIZE;
+    const opponentDone = s.opponent.finished || s.opponent.progress >= totalQuestions;
     s.transport?.send({
       type: "playerFinished",
       totalScore: player.score,
@@ -218,7 +229,7 @@ export const useGameStore = create<GameState>((set, get) => ({
     });
 
     set({
-      screen: s.opponent.finished ? "results" : "waiting",
+      screen: opponentDone ? "results" : "waiting",
       player,
     });
 
@@ -227,9 +238,16 @@ export const useGameStore = create<GameState>((set, get) => ({
 
   finishRound: () => {
     const s = get();
-    if (s.roundFinalized || !s.player.finished || !s.opponent.finished) return;
+    const totalQuestions = s.questions.length || ROUND_SIZE;
+    const opponentDone = s.opponent.finished || s.opponent.progress >= totalQuestions;
+    if (s.roundFinalized || !s.player.finished || !opponentDone) return;
 
     const won = s.player.score > s.opponent.score;
+    const opponent: PlayerState = {
+      ...s.opponent,
+      finished: true,
+      progress: Math.max(s.opponent.progress, totalQuestions),
+    };
     const stats: PersistentStats = {
       totalXp: s.stats.totalXp + s.xpEarned,
       gamesPlayed: s.stats.gamesPlayed + 1,
@@ -238,7 +256,7 @@ export const useGameStore = create<GameState>((set, get) => ({
     };
     saveStats(stats);
 
-    set({ screen: "results", stats, roundFinalized: true });
+    set({ screen: "results", opponent, stats, roundFinalized: true });
   },
 }));
 
