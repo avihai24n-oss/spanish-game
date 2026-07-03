@@ -115,4 +115,107 @@ body::after {
     @apply rounded-2xl border border-duo-border px-3 py-3 shadow-card backdrop-blur;
     background-color: rgba(255, 255, 255, 0.8);
   }
+
+  .result-emblem {
+    position: relative;
+    margin-inline: auto;
+    display: grid;
+    height: 112px;
+    width: 112px;
+    place-items: center;
+  }
+
+  .result-ring,
+  .result-core,
+  .result-spark {
+    position: absolute;
+    display: block;
+  }
+
+  .result-ring {
+    inset: 10px;
+    border-radius: 999px;
+    border: 3px solid currentColor;
+    opacity: 0.28;
+  }
+
+  .result-ring-one {
+    animation: result-spin 4.8s linear infinite;
+    border-inline-color: transparent;
+  }
+
+  .result-ring-two {
+    inset: 22px;
+    animation: result-spin 3.4s linear infinite reverse;
+    border-block-color: transparent;
+  }
+
+  .result-core {
+    inset: 30px;
+    border-radius: 28px;
+    background:
+      linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.2)),
+      currentColor;
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.65),
+      0 18px 38px -20px currentColor;
+    transform: rotate(45deg);
+    animation: result-pop 1.9s var(--ease) infinite;
+  }
+
+  .result-spark {
+    height: 8px;
+    width: 8px;
+    border-radius: 999px;
+    background: #ffffff;
+    opacity: 0.9;
+  }
+
+  .result-spark-one {
+    inset-inline-start: 12px;
+    inset-block-start: 17px;
+  }
+
+  .result-spark-two {
+    inset-inline-end: 16px;
+    inset-block-start: 26px;
+    height: 6px;
+    width: 6px;
+  }
+
+  .result-spark-three {
+    inset-inline-end: 23px;
+    inset-block-end: 15px;
+    height: 5px;
+    width: 5px;
+  }
+
+  .result-emblem-win {
+    color: #58cc02;
+  }
+
+  .result-emblem-loss {
+    color: #8b5cf6;
+  }
+
+  .result-emblem-tie {
+    color: #ffc800;
+  }
+}
+
+@keyframes result-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes result-pop {
+  0%,
+  100% {
+    transform: rotate(45deg) scale(0.96);
+  }
+
+  50% {
+    transform: rotate(45deg) scale(1.06);
+  }
 }
