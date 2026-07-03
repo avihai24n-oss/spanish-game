@@ -1,33 +1,3380 @@
 [
-  { "id": "w001", "es": "la casa", "he": "בית", "en": "house", "type": "noun" },
-  { "id": "w002", "es": "el perro", "he": "כלב", "en": "dog", "type": "noun" },
-  { "id": "w003", "es": "el gato", "he": "חתול", "en": "cat", "type": "noun" },
-  { "id": "w004", "es": "el agua", "he": "מים", "en": "water", "type": "noun" },
-  { "id": "w005", "es": "el pan", "he": "לחם", "en": "bread", "type": "noun" },
-  { "id": "w006", "es": "la leche", "he": "חלב", "en": "milk", "type": "noun" },
-  { "id": "w007", "es": "el libro", "he": "ספר", "en": "book", "type": "noun" },
-  { "id": "w008", "es": "la escuela", "he": "בית ספר", "en": "school", "type": "noun" },
-  { "id": "w009", "es": "el amigo", "he": "חבר", "en": "friend", "type": "noun" },
-  { "id": "w010", "es": "la familia", "he": "משפחה", "en": "family", "type": "noun" },
-  { "id": "w011", "es": "la ciudad", "he": "עיר", "en": "city", "type": "noun" },
-  { "id": "w012", "es": "la calle", "he": "רחוב", "en": "street", "type": "noun" },
-  { "id": "w013", "es": "el coche", "he": "מכונית", "en": "car", "type": "noun" },
-  { "id": "w014", "es": "el día", "he": "יום", "en": "day", "type": "noun" },
-  { "id": "w015", "es": "la noche", "he": "לילה", "en": "night", "type": "noun" },
-  { "id": "w016", "es": "el dinero", "he": "כסף", "en": "money", "type": "noun" },
-  { "id": "w017", "es": "el trabajo", "he": "עבודה", "en": "work", "type": "noun" },
-  { "id": "w018", "es": "la comida", "he": "אוכל", "en": "food", "type": "noun" },
-  { "id": "w019", "es": "comer", "he": "לאכול", "en": "to eat", "type": "verb" },
-  { "id": "w020", "es": "beber", "he": "לשתות", "en": "to drink", "type": "verb" },
-  { "id": "w021", "es": "hablar", "he": "לדבר", "en": "to speak", "type": "verb" },
-  { "id": "w022", "es": "vivir", "he": "לגור", "en": "to live", "type": "verb" },
-  { "id": "w023", "es": "trabajar", "he": "לעבוד", "en": "to work", "type": "verb" },
-  { "id": "w024", "es": "comprar", "he": "לקנות", "en": "to buy", "type": "verb" },
-  { "id": "w025", "es": "aprender", "he": "ללמוד", "en": "to learn", "type": "verb" },
-  { "id": "w026", "es": "grande", "he": "גדול", "en": "big", "type": "adjective" },
-  { "id": "w027", "es": "pequeño", "he": "קטן", "en": "small", "type": "adjective" },
-  { "id": "w028", "es": "bonito", "he": "יפה", "en": "pretty", "type": "adjective" },
-  { "id": "w029", "es": "rápido", "he": "מהיר", "en": "fast", "type": "adjective" },
-  { "id": "w030", "es": "feliz", "he": "שמח", "en": "happy", "type": "adjective" },
-  { "id": "w031", "es": "mañana", "he": "מחר", "en": "tomorrow / morning", "type": "adverb", "hardToQuiz": true }
+ {
+  "id": "w001",
+  "es": "a las",
+  "he": "בשעה",
+  "en": "at",
+  "type": "phrase"
+ },
+ {
+  "id": "w002",
+  "es": "a lo mejor",
+  "he": "אולי",
+  "en": "maybe",
+  "type": "phrase"
+ },
+ {
+  "id": "w003",
+  "es": "a punto de",
+  "he": "עומד ל...",
+  "en": "about to",
+  "type": "phrase"
+ },
+ {
+  "id": "w004",
+  "es": "a qué hora",
+  "he": "באיזו שעה",
+  "en": "what time",
+  "type": "phrase"
+ },
+ {
+  "id": "w005",
+  "es": "a ver",
+  "he": "בוא נראה",
+  "en": "now then",
+  "type": "phrase"
+ },
+ {
+  "id": "w006",
+  "es": "aceptar",
+  "he": "לקבל",
+  "en": "fall, takes",
+  "type": "word"
+ },
+ {
+  "id": "w007",
+  "es": "actualizar",
+  "he": "לעדכן",
+  "en": "update, upgrade",
+  "type": "word"
+ },
+ {
+  "id": "w008",
+  "es": "agarrar",
+  "he": "לתפוס",
+  "en": "caught, hold",
+  "type": "word"
+ },
+ {
+  "id": "w009",
+  "es": "agenda",
+  "he": "יומן",
+  "en": "diary, schedule",
+  "type": "word"
+ },
+ {
+  "id": "w010",
+  "es": "agotado",
+  "he": "מותש",
+  "en": "dead, exhausted oneself",
+  "type": "word"
+ },
+ {
+  "id": "w011",
+  "es": "agradezco",
+  "he": "אני מודה",
+  "en": "thank, thanks",
+  "type": "word"
+ },
+ {
+  "id": "w012",
+  "es": "agregar",
+  "he": "להוסיף",
+  "en": "add, written",
+  "type": "word"
+ },
+ {
+  "id": "w013",
+  "es": "ahora sí",
+  "he": "עכשיו כן",
+  "en": "now you do, now he does",
+  "type": "phrase"
+ },
+ {
+  "id": "w014",
+  "es": "al final",
+  "he": "בסוף",
+  "en": "at the end",
+  "type": "phrase"
+ },
+ {
+  "id": "w015",
+  "es": "al final de",
+  "he": "בסוף של",
+  "en": "at the end of",
+  "type": "phrase"
+ },
+ {
+  "id": "w016",
+  "es": "al mediodía",
+  "he": "בצהריים",
+  "en": "noon",
+  "type": "phrase"
+ },
+ {
+  "id": "w017",
+  "es": "al norte",
+  "he": "צפונה",
+  "en": "to the north",
+  "type": "phrase"
+ },
+ {
+  "id": "w018",
+  "es": "al sur",
+  "he": "דרומה",
+  "en": "to the south",
+  "type": "phrase"
+ },
+ {
+  "id": "w019",
+  "es": "alegre",
+  "he": "עליז",
+  "en": "lively, laughing",
+  "type": "word"
+ },
+ {
+  "id": "w020",
+  "es": "alquilar",
+  "he": "לשכור",
+  "en": "lets, takes",
+  "type": "word"
+ },
+ {
+  "id": "w021",
+  "es": "amargo",
+  "he": "מר",
+  "en": "bitter, painful",
+  "type": "word"
+ },
+ {
+  "id": "w022",
+  "es": "andar",
+  "he": "ללכת",
+  "en": "walks, move",
+  "type": "word"
+ },
+ {
+  "id": "w023",
+  "es": "antes de",
+  "he": "לפני",
+  "en": "before",
+  "type": "phrase"
+ },
+ {
+  "id": "w024",
+  "es": "apagado",
+  "he": "כבוי",
+  "en": "off, turned off",
+  "type": "word"
+ },
+ {
+  "id": "w025",
+  "es": "aplicación",
+  "he": "אפליקציה",
+  "en": "application, app",
+  "type": "word"
+ },
+ {
+  "id": "w026",
+  "es": "apoyar",
+  "he": "לתמוך",
+  "en": "stand, stood",
+  "type": "word"
+ },
+ {
+  "id": "w027",
+  "es": "aprender",
+  "he": "ללמוד",
+  "en": "learning, learn",
+  "type": "word"
+ },
+ {
+  "id": "w028",
+  "es": "apurado",
+  "he": "ממהר",
+  "en": "in a hurry, close",
+  "type": "word"
+ },
+ {
+  "id": "w029",
+  "es": "arreglar",
+  "he": "לתקן",
+  "en": "fixed, work",
+  "type": "word"
+ },
+ {
+  "id": "w030",
+  "es": "asado",
+  "he": "צלוי",
+  "en": "baked, grilled",
+  "type": "word"
+ },
+ {
+  "id": "w031",
+  "es": "asistente",
+  "he": "עוזר",
+  "en": "assistant, attendant's",
+  "type": "word"
+ },
+ {
+  "id": "w032",
+  "es": "asustado",
+  "he": "מפוחד",
+  "en": "scared, afraid",
+  "type": "word"
+ },
+ {
+  "id": "w033",
+  "es": "así",
+  "he": "ככה",
+  "en": "like that, like this",
+  "type": "word"
+ },
+ {
+  "id": "w034",
+  "es": "atracción",
+  "he": "אטרקציה",
+  "en": "entertainment, attraction",
+  "type": "word"
+ },
+ {
+  "id": "w035",
+  "es": "atractivo",
+  "he": "מושך",
+  "en": "good looking, attractive",
+  "type": "word"
+ },
+ {
+  "id": "w036",
+  "es": "aula",
+  "he": "כיתה",
+  "en": "classroom, classrooms'",
+  "type": "word"
+ },
+ {
+  "id": "w037",
+  "es": "autor",
+  "he": "מחבר",
+  "en": "perpetrator, writer",
+  "type": "word"
+ },
+ {
+  "id": "w038",
+  "es": "ayuntamiento",
+  "he": "עירייה",
+  "en": "town/city hall, town/city council",
+  "type": "word"
+ },
+ {
+  "id": "w039",
+  "es": "aún",
+  "he": "עדיין",
+  "en": "still, even",
+  "type": "word"
+ },
+ {
+  "id": "w040",
+  "es": "basta de",
+  "he": "מספיק עם",
+  "en": "enough",
+  "type": "phrase"
+ },
+ {
+  "id": "w041",
+  "es": "basura",
+  "he": "זבל",
+  "en": "trash, litter",
+  "type": "word"
+ },
+ {
+  "id": "w042",
+  "es": "bañarse",
+  "he": "לעשות אמבטיה",
+  "en": "to bathe oneself, take a bath",
+  "type": "word"
+ },
+ {
+  "id": "w043",
+  "es": "boda",
+  "he": "חתונה",
+  "en": "wedding's, wedding",
+  "type": "word"
+ },
+ {
+  "id": "w044",
+  "es": "breve",
+  "he": "קצר",
+  "en": "brief, short",
+  "type": "word"
+ },
+ {
+  "id": "w045",
+  "es": "broma",
+  "he": "בדיחה",
+  "en": "business, joke",
+  "type": "word"
+ },
+ {
+  "id": "w046",
+  "es": "buenas noches",
+  "he": "לילה טוב",
+  "en": "good night",
+  "type": "phrase"
+ },
+ {
+  "id": "w047",
+  "es": "buenas noticias",
+  "he": "חדשות טובות",
+  "en": "good news",
+  "type": "phrase"
+ },
+ {
+  "id": "w048",
+  "es": "cajero automático",
+  "he": "כספומט",
+  "en": "ATM",
+  "type": "phrase"
+ },
+ {
+  "id": "w049",
+  "es": "calmado",
+  "he": "רגוע",
+  "en": "become calm, relieved",
+  "type": "word"
+ },
+ {
+  "id": "w050",
+  "es": "camarero",
+  "he": "מלצר",
+  "en": "waiter, waiter's",
+  "type": "word"
+ },
+ {
+  "id": "w051",
+  "es": "cambiar de",
+  "he": "להחליף",
+  "en": "change",
+  "type": "phrase"
+ },
+ {
+  "id": "w052",
+  "es": "cambiar de tema",
+  "he": "להחליף נושא",
+  "en": "change the subject",
+  "type": "phrase"
+ },
+ {
+  "id": "w053",
+  "es": "cambiar dinero",
+  "he": "להחליף כסף",
+  "en": "exchange",
+  "type": "phrase"
+ },
+ {
+  "id": "w054",
+  "es": "camino",
+  "he": "דרך",
+  "en": "driven, path",
+  "type": "word"
+ },
+ {
+  "id": "w055",
+  "es": "cargar",
+  "he": "לטעון",
+  "en": "hold, upload",
+  "type": "word"
+ },
+ {
+  "id": "w056",
+  "es": "carnicería",
+  "he": "אטליז",
+  "en": "butcher’s, butcher",
+  "type": "word"
+ },
+ {
+  "id": "w057",
+  "es": "carácter",
+  "he": "אופי",
+  "en": "characteristic, nature",
+  "type": "word"
+ },
+ {
+  "id": "w058",
+  "es": "casi siempre",
+  "he": "כמעט תמיד",
+  "en": "almost always",
+  "type": "phrase"
+ },
+ {
+  "id": "w059",
+  "es": "celebrar",
+  "he": "לחגוג",
+  "en": "hold",
+  "type": "word"
+ },
+ {
+  "id": "w060",
+  "es": "centro comunitario",
+  "he": "מרכז קהילתי",
+  "en": "community center",
+  "type": "phrase"
+ },
+ {
+  "id": "w061",
+  "es": "cepillo",
+  "he": "מברשת",
+  "en": "brush, hair",
+  "type": "word"
+ },
+ {
+  "id": "w062",
+  "es": "cepillo de dientes",
+  "he": "מברשת שיניים",
+  "en": "toothbrush, toothbrushes",
+  "type": "phrase"
+ },
+ {
+  "id": "w063",
+  "es": "chismoso",
+  "he": "רכלן",
+  "en": "tattler, tattletale",
+  "type": "word"
+ },
+ {
+  "id": "w064",
+  "es": "cita a ciegas",
+  "he": "דייט עיוור",
+  "en": "blind date",
+  "type": "phrase"
+ },
+ {
+  "id": "w065",
+  "es": "clima",
+  "he": "מזג אוויר",
+  "en": "weather, climate",
+  "type": "word"
+ },
+ {
+  "id": "w066",
+  "es": "cocido",
+  "he": "מבושל",
+  "en": "cooked, boiled",
+  "type": "word"
+ },
+ {
+  "id": "w067",
+  "es": "colcha",
+  "he": "כיסוי מיטה",
+  "en": "counterpane, cover",
+  "type": "word"
+ },
+ {
+  "id": "w068",
+  "es": "colgar",
+  "he": "לתלות",
+  "en": "getting, get",
+  "type": "word"
+ },
+ {
+  "id": "w069",
+  "es": "comentario",
+  "he": "תגובה",
+  "en": "commentary, comment",
+  "type": "word"
+ },
+ {
+  "id": "w070",
+  "es": "comenzar",
+  "he": "להתחיל",
+  "en": "starting, open",
+  "type": "word"
+ },
+ {
+  "id": "w071",
+  "es": "comida rápida",
+  "he": "אוכל מהיר",
+  "en": "fast food",
+  "type": "phrase"
+ },
+ {
+  "id": "w072",
+  "es": "comienzo",
+  "he": "התחלה",
+  "en": "beginning",
+  "type": "word"
+ },
+ {
+  "id": "w073",
+  "es": "como",
+  "he": "כמו",
+  "en": "like",
+  "type": "word"
+ },
+ {
+  "id": "w074",
+  "es": "comunidad",
+  "he": "קהילה",
+  "en": "community, neighborhood's",
+  "type": "word"
+ },
+ {
+  "id": "w075",
+  "es": "con fuerza",
+  "he": "בחוזקה",
+  "en": "with force",
+  "type": "phrase"
+ },
+ {
+  "id": "w076",
+  "es": "concurso",
+  "he": "תחרות",
+  "en": "(I) compete, (I) take part",
+  "type": "word"
+ },
+ {
+  "id": "w077",
+  "es": "condimento",
+  "he": "תבלין",
+  "en": "season, seasoning",
+  "type": "word"
+ },
+ {
+  "id": "w078",
+  "es": "conduzco",
+  "he": "אני נוהג",
+  "en": "(I) drive",
+  "type": "word"
+ },
+ {
+  "id": "w079",
+  "es": "conexión",
+  "he": "חיבור",
+  "en": "contacts, connection",
+  "type": "word"
+ },
+ {
+  "id": "w080",
+  "es": "confiar en",
+  "he": "לסמוך על",
+  "en": "trust, trusted",
+  "type": "phrase"
+ },
+ {
+  "id": "w081",
+  "es": "congelado",
+  "he": "קפוא",
+  "en": "frozen, iced",
+  "type": "word"
+ },
+ {
+  "id": "w082",
+  "es": "conocer a",
+  "he": "להכיר את",
+  "en": "know",
+  "type": "phrase"
+ },
+ {
+  "id": "w083",
+  "es": "conocido",
+  "he": "מוכר",
+  "en": "well-known, met",
+  "type": "word"
+ },
+ {
+  "id": "w084",
+  "es": "conozco a",
+  "he": "אני מכיר את",
+  "en": "know",
+  "type": "phrase"
+ },
+ {
+  "id": "w085",
+  "es": "conseguir",
+  "he": "להשיג",
+  "en": "let's, score",
+  "type": "word"
+ },
+ {
+  "id": "w086",
+  "es": "consejo",
+  "he": "עצה",
+  "en": "advice, counsel",
+  "type": "word"
+ },
+ {
+  "id": "w087",
+  "es": "contar",
+  "he": "לספור",
+  "en": "numbers, let's",
+  "type": "word"
+ },
+ {
+  "id": "w088",
+  "es": "conversar",
+  "he": "לשוחח",
+  "en": "talking",
+  "type": "word"
+ },
+ {
+  "id": "w089",
+  "es": "correcto",
+  "he": "נכון",
+  "en": "well-mannered, right",
+  "type": "word"
+ },
+ {
+  "id": "w090",
+  "es": "correo electrónico",
+  "he": "דואר אלקטרוני",
+  "en": "email",
+  "type": "phrase"
+ },
+ {
+  "id": "w091",
+  "es": "cruzar",
+  "he": "לחצות",
+  "en": "crossing, let's",
+  "type": "word"
+ },
+ {
+  "id": "w092",
+  "es": "cuadro",
+  "he": "ציור",
+  "en": "painting, picture",
+  "type": "word"
+ },
+ {
+  "id": "w093",
+  "es": "cuarto de hora",
+  "he": "רבע שעה",
+  "en": "quarter of an hour",
+  "type": "phrase"
+ },
+ {
+  "id": "w094",
+  "es": "cuarto de huéspedes",
+  "he": "חדר אורחים",
+  "en": "guest room",
+  "type": "phrase"
+ },
+ {
+  "id": "w095",
+  "es": "cuelgo",
+  "he": "אני מנתק",
+  "en": "(I) will hang up",
+  "type": "word"
+ },
+ {
+  "id": "w096",
+  "es": "cuento",
+  "he": "אני מספר",
+  "en": "I'm telling, rely on",
+  "type": "word"
+ },
+ {
+  "id": "w097",
+  "es": "cuidar",
+  "he": "לטפל ב...",
+  "en": "(to) care for, (to) watch",
+  "type": "word"
+ },
+ {
+  "id": "w098",
+  "es": "cultura",
+  "he": "תרבות",
+  "en": "arts, culture",
+  "type": "word"
+ },
+ {
+  "id": "w099",
+  "es": "cuántos años",
+  "he": "בן כמה",
+  "en": "how old",
+  "type": "phrase"
+ },
+ {
+  "id": "w100",
+  "es": "código postal",
+  "he": "מיקוד",
+  "en": "postal code",
+  "type": "phrase"
+ },
+ {
+  "id": "w101",
+  "es": "dar clases",
+  "he": "ללמד",
+  "en": "teach",
+  "type": "phrase"
+ },
+ {
+  "id": "w102",
+  "es": "dañado",
+  "he": "פגום",
+  "en": "damages, injured",
+  "type": "word"
+ },
+ {
+  "id": "w103",
+  "es": "de acción",
+  "he": "של אקשן",
+  "en": "action",
+  "type": "phrase"
+ },
+ {
+  "id": "w104",
+  "es": "de acuerdo",
+  "he": "בסדר",
+  "en": "okay",
+  "type": "phrase"
+ },
+ {
+  "id": "w105",
+  "es": "de ahí",
+  "he": "משם",
+  "en": "over there",
+  "type": "phrase"
+ },
+ {
+  "id": "w106",
+  "es": "de allá",
+  "he": "משם (רחוק)",
+  "en": "over there",
+  "type": "phrase"
+ },
+ {
+  "id": "w107",
+  "es": "de cumpleaños",
+  "he": "של יום הולדת",
+  "en": "birthday",
+  "type": "phrase"
+ },
+ {
+  "id": "w108",
+  "es": "de hecho",
+  "he": "למעשה",
+  "en": "in fact",
+  "type": "phrase"
+ },
+ {
+  "id": "w109",
+  "es": "de ida y vuelta",
+  "he": "הלוך ושוב",
+  "en": "round-trip",
+  "type": "phrase"
+ },
+ {
+  "id": "w110",
+  "es": "de memoria",
+  "he": "בעל פה",
+  "en": "by heart",
+  "type": "phrase"
+ },
+ {
+  "id": "w111",
+  "es": "de nada",
+  "he": "על לא דבר",
+  "en": "you're welcome",
+  "type": "phrase"
+ },
+ {
+  "id": "w112",
+  "es": "de niño",
+  "he": "כילד",
+  "en": "as a child",
+  "type": "phrase"
+ },
+ {
+  "id": "w113",
+  "es": "de nuevo",
+  "he": "שוב",
+  "en": "again",
+  "type": "phrase"
+ },
+ {
+  "id": "w114",
+  "es": "de repente",
+  "he": "פתאום",
+  "en": "suddenly",
+  "type": "phrase"
+ },
+ {
+  "id": "w115",
+  "es": "de terror",
+  "he": "של אימה",
+  "en": "horror",
+  "type": "phrase"
+ },
+ {
+  "id": "w116",
+  "es": "debajo de",
+  "he": "מתחת ל...",
+  "en": "under",
+  "type": "phrase"
+ },
+ {
+  "id": "w117",
+  "es": "decir",
+  "he": "להגיד",
+  "en": "mean, tell",
+  "type": "word"
+ },
+ {
+  "id": "w118",
+  "es": "dejar",
+  "he": "להשאיר",
+  "en": "let's, gave",
+  "type": "word"
+ },
+ {
+  "id": "w119",
+  "es": "del",
+  "he": "של ה...",
+  "en": "company's, week's",
+  "type": "phrase",
+  "hardToQuiz": true
+ },
+ {
+  "id": "w120",
+  "es": "delante de",
+  "he": "מול",
+  "en": "before, ahead",
+  "type": "phrase"
+ },
+ {
+  "id": "w121",
+  "es": "delgado",
+  "he": "רזה",
+  "en": "thin, slim",
+  "type": "word"
+ },
+ {
+  "id": "w122",
+  "es": "demasiados",
+  "he": "יותר מדי",
+  "en": "too, too many",
+  "type": "word"
+ },
+ {
+  "id": "w123",
+  "es": "desconectar",
+  "he": "לנתק",
+  "en": "disconnect, turn",
+  "type": "word"
+ },
+ {
+  "id": "w124",
+  "es": "describir",
+  "he": "לתאר",
+  "en": "describe",
+  "type": "word"
+ },
+ {
+  "id": "w125",
+  "es": "desde hace",
+  "he": "מזה (זמן)",
+  "en": "for",
+  "type": "phrase"
+ },
+ {
+  "id": "w126",
+  "es": "despacio",
+  "he": "לאט",
+  "en": "slowly, gently",
+  "type": "word"
+ },
+ {
+  "id": "w127",
+  "es": "después de",
+  "he": "אחרי",
+  "en": "after",
+  "type": "phrase"
+ },
+ {
+  "id": "w128",
+  "es": "devolver",
+  "he": "להחזיר",
+  "en": "return, be returned",
+  "type": "word"
+ },
+ {
+  "id": "w129",
+  "es": "di",
+  "he": "תגיד",
+  "en": "tell, say",
+  "type": "word"
+ },
+ {
+  "id": "w130",
+  "es": "doblar",
+  "he": "לפנות",
+  "en": "fold, go",
+  "type": "word"
+ },
+ {
+  "id": "w131",
+  "es": "doler",
+  "he": "לכאוב",
+  "en": "hurts, hurt",
+  "type": "word"
+ },
+ {
+  "id": "w132",
+  "es": "dolor de estómago",
+  "he": "כאב בטן",
+  "en": "stomachache",
+  "type": "phrase"
+ },
+ {
+  "id": "w133",
+  "es": "dormitorio",
+  "he": "חדר שינה",
+  "en": "room, dorm",
+  "type": "word"
+ },
+ {
+  "id": "w134",
+  "es": "dos veces por",
+  "he": "פעמיים ב...",
+  "en": "twice a",
+  "type": "phrase"
+ },
+ {
+  "id": "w135",
+  "es": "doy",
+  "he": "אני נותן",
+  "en": "giving, I'm giving",
+  "type": "word"
+ },
+ {
+  "id": "w136",
+  "es": "ducharse",
+  "he": "להתקלח",
+  "en": "to shower, shower",
+  "type": "word"
+ },
+ {
+  "id": "w137",
+  "es": "duermo",
+  "he": "אני ישן",
+  "en": "I am sleeping, sleep",
+  "type": "word"
+ },
+ {
+  "id": "w138",
+  "es": "durar",
+  "he": "להימשך",
+  "en": "hold, wears",
+  "type": "word"
+ },
+ {
+  "id": "w139",
+  "es": "débil",
+  "he": "חלש",
+  "en": "weak, fragile",
+  "type": "word"
+ },
+ {
+  "id": "w140",
+  "es": "el extranjero",
+  "he": "חוץ לארץ",
+  "en": "abroad",
+  "type": "phrase"
+ },
+ {
+  "id": "w141",
+  "es": "el mejor",
+  "he": "הכי טוב",
+  "en": "best",
+  "type": "phrase"
+ },
+ {
+  "id": "w142",
+  "es": "el otro",
+  "he": "האחר",
+  "en": "the other",
+  "type": "phrase"
+ },
+ {
+  "id": "w143",
+  "es": "emocionante",
+  "he": "מרגש",
+  "en": "exciting, moving",
+  "type": "word"
+ },
+ {
+  "id": "w144",
+  "es": "empatar",
+  "he": "לסיים בתיקו",
+  "en": "drawn, tie",
+  "type": "word"
+ },
+ {
+  "id": "w145",
+  "es": "empezar a",
+  "he": "להתחיל ל...",
+  "en": "to begin to, start to",
+  "type": "phrase"
+ },
+ {
+  "id": "w146",
+  "es": "empiezo a",
+  "he": "אני מתחיל ל...",
+  "en": "start",
+  "type": "phrase"
+ },
+ {
+  "id": "w147",
+  "es": "empresario",
+  "he": "איש עסקים",
+  "en": "businessman, entrepreneur",
+  "type": "word"
+ },
+ {
+  "id": "w148",
+  "es": "en casa",
+  "he": "בבית",
+  "en": "at home",
+  "type": "phrase"
+ },
+ {
+  "id": "w149",
+  "es": "en este momento",
+  "he": "ברגע זה",
+  "en": "right now",
+  "type": "phrase"
+ },
+ {
+  "id": "w150",
+  "es": "en fin",
+  "he": "בקיצור",
+  "en": "in short",
+  "type": "phrase"
+ },
+ {
+  "id": "w151",
+  "es": "en punto",
+  "he": "בדיוק (שעה עגולה)",
+  "en": "o'clock",
+  "type": "phrase"
+ },
+ {
+  "id": "w152",
+  "es": "en vez de",
+  "he": "במקום",
+  "en": "instead of",
+  "type": "phrase"
+ },
+ {
+  "id": "w153",
+  "es": "encantar",
+  "he": "לאהוב מאוד",
+  "en": "love",
+  "type": "word"
+ },
+ {
+  "id": "w154",
+  "es": "enseguida",
+  "he": "מיד",
+  "en": "straightaway, immediately",
+  "type": "word"
+ },
+ {
+  "id": "w155",
+  "es": "entender",
+  "he": "להבין",
+  "en": "caught, made",
+  "type": "word"
+ },
+ {
+  "id": "w156",
+  "es": "entiendo",
+  "he": "אני מבין",
+  "en": "understand, get",
+  "type": "word"
+ },
+ {
+  "id": "w157",
+  "es": "entrenamiento",
+  "he": "אימון",
+  "en": "training, training session",
+  "type": "word"
+ },
+ {
+  "id": "w158",
+  "es": "es mentira",
+  "he": "זה שקר",
+  "en": "that's not true",
+  "type": "phrase"
+ },
+ {
+  "id": "w159",
+  "es": "es que",
+  "he": "העניין הוא ש...",
+  "en": "the thing is",
+  "type": "phrase"
+ },
+ {
+  "id": "w160",
+  "es": "es verdad",
+  "he": "זה נכון",
+  "en": "it's true",
+  "type": "phrase"
+ },
+ {
+  "id": "w161",
+  "es": "esa",
+  "he": "ההיא",
+  "en": "that, that one",
+  "type": "word"
+ },
+ {
+  "id": "w162",
+  "es": "escalera",
+  "he": "מדרגות",
+  "en": "stairs, steps",
+  "type": "word"
+ },
+ {
+  "id": "w163",
+  "es": "escaparse",
+  "he": "לברוח",
+  "en": "to escape, escape",
+  "type": "word"
+ },
+ {
+  "id": "w164",
+  "es": "ese",
+  "he": "ההוא",
+  "en": "the, that",
+  "type": "word"
+ },
+ {
+  "id": "w165",
+  "es": "eso",
+  "he": "זה",
+  "en": "that, it'll",
+  "type": "word"
+ },
+ {
+  "id": "w166",
+  "es": "espantoso",
+  "he": "מחריד",
+  "en": "fearful, terrible",
+  "type": "word"
+ },
+ {
+  "id": "w167",
+  "es": "especialista",
+  "he": "מומחה",
+  "en": "stuntman, specialist",
+  "type": "word"
+ },
+ {
+  "id": "w168",
+  "es": "espectáculo",
+  "he": "מופע",
+  "en": "entertainment, show",
+  "type": "word"
+ },
+ {
+  "id": "w169",
+  "es": "esperar a",
+  "he": "לחכות ל...",
+  "en": "to wait for, wait",
+  "type": "phrase"
+ },
+ {
+  "id": "w170",
+  "es": "esta",
+  "he": "הזאת",
+  "en": "this one, this",
+  "type": "word"
+ },
+ {
+  "id": "w171",
+  "es": "estadio",
+  "he": "אצטדיון",
+  "en": "stadium, parked",
+  "type": "word"
+ },
+ {
+  "id": "w172",
+  "es": "Estados unidos",
+  "he": "ארצות הברית",
+  "en": "United States",
+  "type": "phrase"
+ },
+ {
+  "id": "w173",
+  "es": "estantería",
+  "he": "כוננית",
+  "en": "bookcase, bookshelf",
+  "type": "word"
+ },
+ {
+  "id": "w174",
+  "es": "estar",
+  "he": "להיות (מצב זמני)",
+  "en": "stay, being",
+  "type": "word"
+ },
+ {
+  "id": "w175",
+  "es": "estar de acuerdo",
+  "he": "להסכים",
+  "en": "to agree, agree",
+  "type": "phrase"
+ },
+ {
+  "id": "w176",
+  "es": "estar seguro",
+  "he": "להיות בטוח",
+  "en": "sure",
+  "type": "phrase"
+ },
+ {
+  "id": "w177",
+  "es": "está bueno",
+  "he": "זה טעים",
+  "en": "taste good",
+  "type": "phrase"
+ },
+ {
+  "id": "w178",
+  "es": "etiqueta",
+  "he": "תווית",
+  "en": "tag, label",
+  "type": "word"
+ },
+ {
+  "id": "w179",
+  "es": "examen médico",
+  "he": "בדיקה רפואית",
+  "en": "medical",
+  "type": "phrase"
+ },
+ {
+  "id": "w180",
+  "es": "exigente",
+  "he": "תובעני",
+  "en": "strictest, picky",
+  "type": "word"
+ },
+ {
+  "id": "w181",
+  "es": "explicar",
+  "he": "להסביר",
+  "en": "explaining, explain",
+  "type": "word"
+ },
+ {
+  "id": "w182",
+  "es": "factura",
+  "he": "חשבונית",
+  "en": "(you-formal) register, (you-formal) turn over",
+  "type": "word"
+ },
+ {
+  "id": "w183",
+  "es": "faltar",
+  "he": "להיעדר",
+  "en": "skipping, skips",
+  "type": "word"
+ },
+ {
+  "id": "w184",
+  "es": "famoso",
+  "he": "מפורסם",
+  "en": "celebrated, famous",
+  "type": "word"
+ },
+ {
+  "id": "w185",
+  "es": "fan",
+  "he": "מעריץ",
+  "en": "fan, big",
+  "type": "word"
+ },
+ {
+  "id": "w186",
+  "es": "fecha de entrega",
+  "he": "תאריך הגשה",
+  "en": "deadline",
+  "type": "phrase"
+ },
+ {
+  "id": "w187",
+  "es": "feliz cumpleaños",
+  "he": "יום הולדת שמח",
+  "en": "happy birthday",
+  "type": "phrase"
+ },
+ {
+  "id": "w188",
+  "es": "formal",
+  "he": "אמין",
+  "en": "dependable, reliable",
+  "type": "word"
+ },
+ {
+  "id": "w189",
+  "es": "fotógrafo",
+  "he": "צלם",
+  "en": "photographer, photographers",
+  "type": "word"
+ },
+ {
+  "id": "w190",
+  "es": "fresco",
+  "he": "טרי",
+  "en": "newer, cool",
+  "type": "word"
+ },
+ {
+  "id": "w191",
+  "es": "fruto seco",
+  "he": "אגוז",
+  "en": "nuts",
+  "type": "phrase"
+ },
+ {
+  "id": "w192",
+  "es": "funcionario",
+  "he": "עובד ציבור",
+  "en": "public worker, staff member",
+  "type": "word"
+ },
+ {
+  "id": "w193",
+  "es": "gemelo",
+  "he": "תאום",
+  "en": "twin, twin brother",
+  "type": "word"
+ },
+ {
+  "id": "w194",
+  "es": "gracias por",
+  "he": "תודה על",
+  "en": "Thank you for",
+  "type": "phrase"
+ },
+ {
+  "id": "w195",
+  "es": "gratis",
+  "he": "בחינם",
+  "en": "free, free of charge",
+  "type": "word"
+ },
+ {
+  "id": "w196",
+  "es": "guardar",
+  "he": "לשמור",
+  "en": "keeping, hold",
+  "type": "word"
+ },
+ {
+  "id": "w197",
+  "es": "guerra",
+  "he": "מלחמה",
+  "en": "wartime, war",
+  "type": "word"
+ },
+ {
+  "id": "w198",
+  "es": "gusto",
+  "he": "טעם",
+  "en": "like, taste",
+  "type": "word"
+ },
+ {
+  "id": "w199",
+  "es": "hace sol",
+  "he": "יש שמש",
+  "en": "it's sunny",
+  "type": "phrase"
+ },
+ {
+  "id": "w200",
+  "es": "hacer",
+  "he": "לעשות",
+  "en": "acting, manufacture",
+  "type": "word"
+ },
+ {
+  "id": "w201",
+  "es": "hacer ejercicio",
+  "he": "להתעמל",
+  "en": "to exercise, exercise",
+  "type": "phrase"
+ },
+ {
+  "id": "w202",
+  "es": "hacer fila",
+  "he": "לעמוד בתור",
+  "en": "to get in line, stand in line",
+  "type": "phrase"
+ },
+ {
+  "id": "w203",
+  "es": "hacer la compra",
+  "he": "לעשות קניות",
+  "en": "shopping",
+  "type": "phrase"
+ },
+ {
+  "id": "w204",
+  "es": "hacer las maletas",
+  "he": "לארוז מזוודות",
+  "en": "pack, packing",
+  "type": "phrase"
+ },
+ {
+  "id": "w205",
+  "es": "hacer un viaje",
+  "he": "לצאת לטיול",
+  "en": "to take a trip, to make a trip",
+  "type": "phrase"
+ },
+ {
+  "id": "w206",
+  "es": "hacer una fiesta",
+  "he": "לעשות מסיבה",
+  "en": "throw a party",
+  "type": "phrase"
+ },
+ {
+  "id": "w207",
+  "es": "hacia",
+  "he": "לכיוון",
+  "en": "towards, to",
+  "type": "word"
+ },
+ {
+  "id": "w208",
+  "es": "hago",
+  "he": "אני עושה",
+  "en": "made, make",
+  "type": "word"
+ },
+ {
+  "id": "w209",
+  "es": "hasta pronto",
+  "he": "להתראות בקרוב",
+  "en": "see you soon",
+  "type": "phrase"
+ },
+ {
+  "id": "w210",
+  "es": "hasta tarde",
+  "he": "עד מאוחר",
+  "en": "until late",
+  "type": "phrase"
+ },
+ {
+  "id": "w211",
+  "es": "hay que",
+  "he": "צריך",
+  "en": "one must, we've got to",
+  "type": "phrase"
+ },
+ {
+  "id": "w212",
+  "es": "haz",
+  "he": "תעשה",
+  "en": "make",
+  "type": "word"
+ },
+ {
+  "id": "w213",
+  "es": "herida",
+  "he": "פצע",
+  "en": "wound, hurt",
+  "type": "word"
+ },
+ {
+  "id": "w214",
+  "es": "hijo único",
+  "he": "בן יחיד",
+  "en": "an only child",
+  "type": "phrase"
+ },
+ {
+  "id": "w215",
+  "es": "hoja",
+  "he": "דף",
+  "en": "sheet, sheets",
+  "type": "word"
+ },
+ {
+  "id": "w216",
+  "es": "hoy en día",
+  "he": "כיום",
+  "en": "nowadays",
+  "type": "phrase"
+ },
+ {
+  "id": "w217",
+  "es": "importante",
+  "he": "חשוב",
+  "en": "leading, important",
+  "type": "word"
+ },
+ {
+  "id": "w218",
+  "es": "indicación",
+  "he": "הנחיה",
+  "en": "signal, reading",
+  "type": "word"
+ },
+ {
+  "id": "w219",
+  "es": "informe",
+  "he": "דוח",
+  "en": "report, inform",
+  "type": "word"
+ },
+ {
+  "id": "w220",
+  "es": "intentar",
+  "he": "לנסות",
+  "en": "attempting to, try",
+  "type": "word"
+ },
+ {
+  "id": "w221",
+  "es": "invitar a",
+  "he": "להזמין את",
+  "en": "to invite, invite",
+  "type": "phrase"
+ },
+ {
+  "id": "w222",
+  "es": "ir a",
+  "he": "ללכת ל...",
+  "en": "attend",
+  "type": "phrase"
+ },
+ {
+  "id": "w223",
+  "es": "jugada",
+  "he": "מהלך",
+  "en": "move, play",
+  "type": "word"
+ },
+ {
+  "id": "w224",
+  "es": "jugar a",
+  "he": "לשחק ב...",
+  "en": "play",
+  "type": "phrase"
+ },
+ {
+  "id": "w225",
+  "es": "juntarse",
+  "he": "להתאסף",
+  "en": "hang out, getting",
+  "type": "word"
+ },
+ {
+  "id": "w226",
+  "es": "la otra",
+  "he": "האחרת",
+  "en": "the other",
+  "type": "phrase"
+ },
+ {
+  "id": "w227",
+  "es": "la verdad",
+  "he": "האמת",
+  "en": "the truth",
+  "type": "phrase"
+ },
+ {
+  "id": "w228",
+  "es": "lavabo",
+  "he": "כיור",
+  "en": "sink, bathroom's",
+  "type": "word"
+ },
+ {
+  "id": "w229",
+  "es": "lavarse",
+  "he": "להתרחץ",
+  "en": "to wash oneself, wash",
+  "type": "word"
+ },
+ {
+  "id": "w230",
+  "es": "le",
+  "he": "לו/לה",
+  "en": "her, to her",
+  "type": "phrase",
+  "hardToQuiz": true
+ },
+ {
+  "id": "w231",
+  "es": "le gusta",
+  "he": "הוא אוהב",
+  "en": "likes",
+  "type": "phrase"
+ },
+ {
+  "id": "w232",
+  "es": "le gustan",
+  "he": "הוא אוהב (רבים)",
+  "en": "likes",
+  "type": "phrase"
+ },
+ {
+  "id": "w233",
+  "es": "le interesa",
+  "he": "מעניין אותו",
+  "en": "is into",
+  "type": "phrase"
+ },
+ {
+  "id": "w234",
+  "es": "le interesan",
+  "he": "מעניינים אותו",
+  "en": "interest him, interest her",
+  "type": "phrase"
+ },
+ {
+  "id": "w235",
+  "es": "lentes de sol",
+  "he": "משקפי שמש",
+  "en": "sunglasses",
+  "type": "phrase"
+ },
+ {
+  "id": "w236",
+  "es": "les",
+  "he": "להם",
+  "en": "hers, they",
+  "type": "phrase",
+  "hardToQuiz": true
+ },
+ {
+  "id": "w237",
+  "es": "les gusta",
+  "he": "הם אוהבים",
+  "en": "like",
+  "type": "phrase"
+ },
+ {
+  "id": "w238",
+  "es": "les gustan",
+  "he": "הם אוהבים (רבים)",
+  "en": "like",
+  "type": "phrase"
+ },
+ {
+  "id": "w239",
+  "es": "les interesa",
+  "he": "מעניין אותם",
+  "en": "(?) are you interested in, (they) are interested in",
+  "type": "phrase"
+ },
+ {
+  "id": "w240",
+  "es": "les interesan",
+  "he": "מעניינים אותם",
+  "en": "to interest, they are interested in",
+  "type": "phrase"
+ },
+ {
+  "id": "w241",
+  "es": "levantarse",
+  "he": "לקום",
+  "en": "to get up, get up",
+  "type": "word"
+ },
+ {
+  "id": "w242",
+  "es": "libre",
+  "he": "חופשי",
+  "en": "off, free",
+  "type": "word"
+ },
+ {
+  "id": "w243",
+  "es": "lista de la compra",
+  "he": "רשימת קניות",
+  "en": "shopping list",
+  "type": "phrase"
+ },
+ {
+  "id": "w244",
+  "es": "llamar",
+  "he": "להתקשר",
+  "en": "let's, calling",
+  "type": "word"
+ },
+ {
+  "id": "w245",
+  "es": "llamar a",
+  "he": "להתקשר ל...",
+  "en": "to call, call",
+  "type": "phrase"
+ },
+ {
+  "id": "w246",
+  "es": "llamarse",
+  "he": "להיקרא",
+  "en": "called, name's",
+  "type": "word"
+ },
+ {
+  "id": "w247",
+  "es": "lleno de",
+  "he": "מלא ב...",
+  "en": "full of",
+  "type": "phrase"
+ },
+ {
+  "id": "w248",
+  "es": "lo",
+  "he": "אותו",
+  "en": "they, him",
+  "type": "phrase",
+  "hardToQuiz": true
+ },
+ {
+  "id": "w249",
+  "es": "lograr",
+  "he": "להצליח",
+  "en": "score, achieving",
+  "type": "word"
+ },
+ {
+  "id": "w250",
+  "es": "luna de miel",
+  "he": "ירח דבש",
+  "en": "honeymoon",
+  "type": "phrase"
+ },
+ {
+  "id": "w251",
+  "es": "madrastra",
+  "he": "אם חורגת",
+  "en": "stepmother, stepmom",
+  "type": "word"
+ },
+ {
+  "id": "w252",
+  "es": "maravilloso",
+  "he": "נפלא",
+  "en": "wonderful, marvelous",
+  "type": "word"
+ },
+ {
+  "id": "w253",
+  "es": "mayor",
+  "he": "מבוגר",
+  "en": "elderly, old",
+  "type": "word"
+ },
+ {
+  "id": "w254",
+  "es": "me",
+  "he": "אותי",
+  "en": "myself, I",
+  "type": "phrase",
+  "hardToQuiz": true
+ },
+ {
+  "id": "w255",
+  "es": "me despierto",
+  "he": "אני מתעורר",
+  "en": "I wake up",
+  "type": "phrase"
+ },
+ {
+  "id": "w256",
+  "es": "me esfuerzo",
+  "he": "אני מתאמץ",
+  "en": "strive",
+  "type": "phrase"
+ },
+ {
+  "id": "w257",
+  "es": "me gustan",
+  "he": "אני אוהב (רבים)",
+  "en": "like",
+  "type": "phrase"
+ },
+ {
+  "id": "w258",
+  "es": "me interesa",
+  "he": "מעניין אותי",
+  "en": "I'm interested in, I am interested in",
+  "type": "phrase"
+ },
+ {
+  "id": "w259",
+  "es": "me interesan",
+  "he": "מעניינים אותי",
+  "en": "I'm interested, I'm into",
+  "type": "phrase"
+ },
+ {
+  "id": "w260",
+  "es": "me puede ayudar",
+  "he": "אתה יכול לעזור לי",
+  "en": "can you help me",
+  "type": "phrase"
+ },
+ {
+  "id": "w261",
+  "es": "media hora",
+  "he": "חצי שעה",
+  "en": "half an hour",
+  "type": "phrase"
+ },
+ {
+  "id": "w262",
+  "es": "mejor",
+  "he": "יותר טוב",
+  "en": "the better, better",
+  "type": "word"
+ },
+ {
+  "id": "w263",
+  "es": "mejor amigo",
+  "he": "חבר הכי טוב",
+  "en": "best friend",
+  "type": "phrase"
+ },
+ {
+  "id": "w264",
+  "es": "menor",
+  "he": "צעיר",
+  "en": "little, younger",
+  "type": "word"
+ },
+ {
+  "id": "w265",
+  "es": "meter",
+  "he": "להכניס",
+  "en": "hold, engaged",
+  "type": "word"
+ },
+ {
+  "id": "w266",
+  "es": "molestar",
+  "he": "להפריע",
+  "en": "bothering, trouble",
+  "type": "word"
+ },
+ {
+  "id": "w267",
+  "es": "montar en bicicleta",
+  "he": "לרכוב על אופניים",
+  "en": "ride a bicycle",
+  "type": "phrase"
+ },
+ {
+  "id": "w268",
+  "es": "montón de",
+  "he": "המון",
+  "en": "lot of",
+  "type": "phrase"
+ },
+ {
+  "id": "w269",
+  "es": "mover",
+  "he": "להזיז",
+  "en": "get around, driven",
+  "type": "word"
+ },
+ {
+  "id": "w270",
+  "es": "muchacho",
+  "he": "בחור",
+  "en": "kid, guy",
+  "type": "word"
+ },
+ {
+  "id": "w271",
+  "es": "muchas veces",
+  "he": "פעמים רבות",
+  "en": "many times",
+  "type": "phrase"
+ },
+ {
+  "id": "w272",
+  "es": "mueble",
+  "he": "רהיט",
+  "en": "piece of furniture, furniture",
+  "type": "word"
+ },
+ {
+  "id": "w273",
+  "es": "muevo",
+  "he": "אני מזיז",
+  "en": "move, drive",
+  "type": "word"
+ },
+ {
+  "id": "w274",
+  "es": "muñeca",
+  "he": "בובה",
+  "en": "dolly, wrist",
+  "type": "word"
+ },
+ {
+  "id": "w275",
+  "es": "más de",
+  "he": "יותר מ...",
+  "en": "more than",
+  "type": "phrase"
+ },
+ {
+  "id": "w276",
+  "es": "más o menos",
+  "he": "פחות או יותר",
+  "en": "more or less",
+  "type": "phrase"
+ },
+ {
+  "id": "w277",
+  "es": "más tarde",
+  "he": "יותר מאוחר",
+  "en": "later",
+  "type": "phrase"
+ },
+ {
+  "id": "w278",
+  "es": "música en vivo",
+  "he": "מוזיקה חיה",
+  "en": "live music",
+  "type": "phrase"
+ },
+ {
+  "id": "w279",
+  "es": "navegar",
+  "he": "לגלוש",
+  "en": "surf, sailing",
+  "type": "word"
+ },
+ {
+  "id": "w280",
+  "es": "nieta",
+  "he": "נכדה",
+  "en": "grandkid, grandchild",
+  "type": "word"
+ },
+ {
+  "id": "w281",
+  "es": "nieto",
+  "he": "נכד",
+  "en": "grandson, grandchild",
+  "type": "word"
+ },
+ {
+  "id": "w282",
+  "es": "ningún",
+  "he": "שום",
+  "en": "any, no",
+  "type": "phrase",
+  "hardToQuiz": true
+ },
+ {
+  "id": "w283",
+  "es": "niño",
+  "he": "ילד",
+  "en": "child, boy",
+  "type": "word"
+ },
+ {
+  "id": "w284",
+  "es": "no entiendo",
+  "he": "אני לא מבין",
+  "en": "understand",
+  "type": "phrase"
+ },
+ {
+  "id": "w285",
+  "es": "no importa",
+  "he": "לא משנה",
+  "en": "doesn't matter",
+  "type": "phrase"
+ },
+ {
+  "id": "w286",
+  "es": "no sé",
+  "he": "אני לא יודע",
+  "en": "I don't know",
+  "type": "phrase"
+ },
+ {
+  "id": "w287",
+  "es": "no te preocupes",
+  "he": "אל תדאג",
+  "en": "never mind, don't worry",
+  "type": "phrase"
+ },
+ {
+  "id": "w288",
+  "es": "nombre",
+  "he": "שם",
+  "en": "name, named",
+  "type": "word"
+ },
+ {
+  "id": "w289",
+  "es": "nos",
+  "he": "אותנו",
+  "en": "we, for us",
+  "type": "phrase",
+  "hardToQuiz": true
+ },
+ {
+  "id": "w290",
+  "es": "nos gusta",
+  "he": "אנחנו אוהבים",
+  "en": "like",
+  "type": "phrase"
+ },
+ {
+  "id": "w291",
+  "es": "nos gustan",
+  "he": "אנחנו אוהבים (רבים)",
+  "en": "like",
+  "type": "phrase"
+ },
+ {
+  "id": "w292",
+  "es": "nos interesa",
+  "he": "מעניין אותנו",
+  "en": "(we) are interested in",
+  "type": "phrase"
+ },
+ {
+  "id": "w293",
+  "es": "nos vemos",
+  "he": "נתראה",
+  "en": "see you",
+  "type": "phrase"
+ },
+ {
+  "id": "w294",
+  "es": "oficina de correos",
+  "he": "סניף דואר",
+  "en": "post office",
+  "type": "phrase"
+ },
+ {
+  "id": "w295",
+  "es": "olvidar",
+  "he": "לשכוח",
+  "en": "let's, forgetting",
+  "type": "word"
+ },
+ {
+  "id": "w296",
+  "es": "otra vez",
+  "he": "שוב פעם",
+  "en": "again",
+  "type": "phrase"
+ },
+ {
+  "id": "w297",
+  "es": "para nada",
+  "he": "בכלל לא",
+  "en": "at all",
+  "type": "phrase"
+ },
+ {
+  "id": "w298",
+  "es": "parada",
+  "he": "תחנה",
+  "en": "stops, stop",
+  "type": "word"
+ },
+ {
+  "id": "w299",
+  "es": "parece que",
+  "he": "נראה ש...",
+  "en": "looks like, seems like",
+  "type": "phrase"
+ },
+ {
+  "id": "w300",
+  "es": "parecer",
+  "he": "להיראות",
+  "en": "seeming, looked",
+  "type": "word"
+ },
+ {
+  "id": "w301",
+  "es": "pariente",
+  "he": "קרוב משפחה",
+  "en": "relation, relative",
+  "type": "word"
+ },
+ {
+  "id": "w302",
+  "es": "parque de diversiones",
+  "he": "לונה פארק",
+  "en": "amusement park",
+  "type": "phrase"
+ },
+ {
+  "id": "w303",
+  "es": "parte",
+  "he": "חלק",
+  "en": "breaks, part",
+  "type": "word"
+ },
+ {
+  "id": "w304",
+  "es": "pasado",
+  "he": "עבר",
+  "en": "spent, past",
+  "type": "word"
+ },
+ {
+  "id": "w305",
+  "es": "pasar",
+  "he": "לעבור",
+  "en": "let's, passing",
+  "type": "word"
+ },
+ {
+  "id": "w306",
+  "es": "patear",
+  "he": "לבעוט",
+  "en": "kicking, kick",
+  "type": "word"
+ },
+ {
+  "id": "w307",
+  "es": "pedir",
+  "he": "לבקש",
+  "en": "let's, beg",
+  "type": "word"
+ },
+ {
+  "id": "w308",
+  "es": "peinarse",
+  "he": "להסתרק",
+  "en": "to comb, comb",
+  "type": "word"
+ },
+ {
+  "id": "w309",
+  "es": "perder",
+  "he": "לאבד",
+  "en": "waste, grows",
+  "type": "word"
+ },
+ {
+  "id": "w310",
+  "es": "periodista",
+  "he": "עיתונאי",
+  "en": "reporter, journalist",
+  "type": "word"
+ },
+ {
+  "id": "w311",
+  "es": "periódico",
+  "he": "עיתון",
+  "en": "newspaper, daily newspaper",
+  "type": "word"
+ },
+ {
+  "id": "w312",
+  "es": "pido",
+  "he": "אני מבקש",
+  "en": "ask",
+  "type": "word"
+ },
+ {
+  "id": "w313",
+  "es": "piel",
+  "he": "עור",
+  "en": "peel, fur",
+  "type": "word"
+ },
+ {
+  "id": "w314",
+  "es": "pienso que",
+  "he": "אני חושב ש...",
+  "en": "think",
+  "type": "phrase"
+ },
+ {
+  "id": "w315",
+  "es": "pista de baile",
+  "he": "רחבת ריקודים",
+  "en": "dance floor",
+  "type": "phrase"
+ },
+ {
+  "id": "w316",
+  "es": "plantar",
+  "he": "לשתול",
+  "en": "getting, planting",
+  "type": "word"
+ },
+ {
+  "id": "w317",
+  "es": "plomero",
+  "he": "שרברב",
+  "en": "plumbers, plumber's",
+  "type": "word"
+ },
+ {
+  "id": "w318",
+  "es": "pon",
+  "he": "שים",
+  "en": "put, place",
+  "type": "word"
+ },
+ {
+  "id": "w319",
+  "es": "poner",
+  "he": "לשים",
+  "en": "stick, let's",
+  "type": "word"
+ },
+ {
+  "id": "w320",
+  "es": "pongo",
+  "he": "אני שם",
+  "en": "(?) should I put, (I) get",
+  "type": "word"
+ },
+ {
+  "id": "w321",
+  "es": "por",
+  "he": "עבור/בגלל",
+  "en": "to, because",
+  "type": "phrase",
+  "hardToQuiz": true
+ },
+ {
+  "id": "w322",
+  "es": "por algo",
+  "he": "מסיבה כלשהי",
+  "en": "for some reason",
+  "type": "phrase"
+ },
+ {
+  "id": "w323",
+  "es": "por allí",
+  "he": "שם בסביבה",
+  "en": "around there",
+  "type": "phrase"
+ },
+ {
+  "id": "w324",
+  "es": "por casualidad",
+  "he": "במקרה",
+  "en": "by chance",
+  "type": "phrase"
+ },
+ {
+  "id": "w325",
+  "es": "por cierto",
+  "he": "דרך אגב",
+  "en": "by the way",
+  "type": "phrase"
+ },
+ {
+  "id": "w326",
+  "es": "por curiosidad",
+  "he": "מתוך סקרנות",
+  "en": "Out of curiosity",
+  "type": "phrase"
+ },
+ {
+  "id": "w327",
+  "es": "por eso",
+  "he": "לכן",
+  "en": "that's why",
+  "type": "phrase"
+ },
+ {
+  "id": "w328",
+  "es": "por fin",
+  "he": "סוף סוף",
+  "en": "finally",
+  "type": "phrase"
+ },
+ {
+  "id": "w329",
+  "es": "por la derecha",
+  "he": "מצד ימין",
+  "en": "on the right",
+  "type": "phrase"
+ },
+ {
+  "id": "w330",
+  "es": "por lo menos",
+  "he": "לפחות",
+  "en": "at least",
+  "type": "phrase"
+ },
+ {
+  "id": "w331",
+  "es": "por suerte",
+  "he": "למרבה המזל",
+  "en": "luckily",
+  "type": "phrase"
+ },
+ {
+  "id": "w332",
+  "es": "por supuesto",
+  "he": "כמובן",
+  "en": "of course",
+  "type": "phrase"
+ },
+ {
+  "id": "w333",
+  "es": "por último",
+  "he": "לבסוף",
+  "en": "finally",
+  "type": "phrase"
+ },
+ {
+  "id": "w334",
+  "es": "portero",
+  "he": "שוער",
+  "en": "goalkeeper, doorman",
+  "type": "word"
+ },
+ {
+  "id": "w335",
+  "es": "preferimos",
+  "he": "אנחנו מעדיפים",
+  "en": "preferred",
+  "type": "word"
+ },
+ {
+  "id": "w336",
+  "es": "prefiero",
+  "he": "אני מעדיף",
+  "en": "prefer",
+  "type": "word"
+ },
+ {
+  "id": "w337",
+  "es": "preguntar",
+  "he": "לשאול",
+  "en": "let's, ask",
+  "type": "word"
+ },
+ {
+  "id": "w338",
+  "es": "preocuparse",
+  "he": "לדאוג",
+  "en": "to worry, worry",
+  "type": "word"
+ },
+ {
+  "id": "w339",
+  "es": "presentar",
+  "he": "להציג",
+  "en": "hold",
+  "type": "word"
+ },
+ {
+  "id": "w340",
+  "es": "presionar",
+  "he": "ללחוץ",
+  "en": "press, pressure",
+  "type": "word"
+ },
+ {
+  "id": "w341",
+  "es": "prestar atención",
+  "he": "לשים לב",
+  "en": "pay attention, watch",
+  "type": "phrase"
+ },
+ {
+  "id": "w342",
+  "es": "primer",
+  "he": "ראשון",
+  "en": "1st, first",
+  "type": "word"
+ },
+ {
+  "id": "w343",
+  "es": "principal",
+  "he": "ראשי",
+  "en": "main, central",
+  "type": "word"
+ },
+ {
+  "id": "w344",
+  "es": "principiante",
+  "he": "מתחיל",
+  "en": "beginner, beginning",
+  "type": "word"
+ },
+ {
+  "id": "w345",
+  "es": "probar",
+  "he": "לטעום",
+  "en": "prove, try",
+  "type": "word"
+ },
+ {
+  "id": "w346",
+  "es": "profesión",
+  "he": "מקצוע",
+  "en": "calling, profession",
+  "type": "word"
+ },
+ {
+  "id": "w347",
+  "es": "profesor",
+  "he": "מורה",
+  "en": "instructor, teacher",
+  "type": "word"
+ },
+ {
+  "id": "w348",
+  "es": "programa",
+  "he": "תוכנית",
+  "en": "show, curriculum",
+  "type": "word"
+ },
+ {
+  "id": "w349",
+  "es": "propietario",
+  "he": "בעלים",
+  "en": "landowner, owner",
+  "type": "word"
+ },
+ {
+  "id": "w350",
+  "es": "proponer",
+  "he": "להציע",
+  "en": "move, proposes",
+  "type": "word"
+ },
+ {
+  "id": "w351",
+  "es": "propongo",
+  "he": "אני מציע",
+  "en": "move, resolve",
+  "type": "word"
+ },
+ {
+  "id": "w352",
+  "es": "pruebo",
+  "he": "אני טועם",
+  "en": "try, touch",
+  "type": "word"
+ },
+ {
+  "id": "w353",
+  "es": "publicar",
+  "he": "לפרסם",
+  "en": "publishes, getting",
+  "type": "word"
+ },
+ {
+  "id": "w354",
+  "es": "puedo",
+  "he": "אני יכול",
+  "en": "can, may I",
+  "type": "word"
+ },
+ {
+  "id": "w355",
+  "es": "puente",
+  "he": "גשר",
+  "en": "long weekend, bridge",
+  "type": "word"
+ },
+ {
+  "id": "w356",
+  "es": "puesto",
+  "he": "דוכן",
+  "en": "stand, stood",
+  "type": "word"
+ },
+ {
+  "id": "w357",
+  "es": "página web",
+  "he": "אתר אינטרנט",
+  "en": "website",
+  "type": "phrase"
+ },
+ {
+  "id": "w358",
+  "es": "que",
+  "he": "ש...",
+  "en": "because, that",
+  "type": "phrase",
+  "hardToQuiz": true
+ },
+ {
+  "id": "w359",
+  "es": "que viene",
+  "he": "הבא",
+  "en": "next",
+  "type": "phrase"
+ },
+ {
+  "id": "w360",
+  "es": "quedarse",
+  "he": "להישאר",
+  "en": "to stay, stay",
+  "type": "word"
+ },
+ {
+  "id": "w361",
+  "es": "quedarse dormido",
+  "he": "להירדם",
+  "en": "go, goes",
+  "type": "phrase"
+ },
+ {
+  "id": "w362",
+  "es": "queremos",
+  "he": "אנחנו רוצים",
+  "en": "want, love",
+  "type": "word"
+ },
+ {
+  "id": "w363",
+  "es": "qué alivio",
+  "he": "איזו הקלה",
+  "en": "what a relief",
+  "type": "phrase"
+ },
+ {
+  "id": "w364",
+  "es": "qué asco",
+  "he": "איזה גועל",
+  "en": "how disgusting, yuck",
+  "type": "phrase"
+ },
+ {
+  "id": "w365",
+  "es": "qué bien",
+  "he": "איזה יופי",
+  "en": "great",
+  "type": "phrase"
+ },
+ {
+  "id": "w366",
+  "es": "qué emoción",
+  "he": "איזו התרגשות",
+  "en": "exciting",
+  "type": "phrase"
+ },
+ {
+  "id": "w367",
+  "es": "qué lástima",
+  "he": "כמה חבל",
+  "en": "what a shame",
+  "type": "phrase"
+ },
+ {
+  "id": "w368",
+  "es": "qué mala suerte",
+  "he": "איזה מזל רע",
+  "en": "what bad luck",
+  "type": "phrase"
+ },
+ {
+  "id": "w369",
+  "es": "qué más",
+  "he": "מה עוד",
+  "en": "what else",
+  "type": "phrase"
+ },
+ {
+  "id": "w370",
+  "es": "qué tiempo hace",
+  "he": "מה מזג האוויר",
+  "en": "What's the weather like",
+  "type": "phrase"
+ },
+ {
+  "id": "w371",
+  "es": "qué tonto",
+  "he": "איזה טיפשי",
+  "en": "silly",
+  "type": "phrase"
+ },
+ {
+  "id": "w372",
+  "es": "recomiendo",
+  "he": "אני ממליץ",
+  "en": "I recommend, recommend",
+  "type": "word"
+ },
+ {
+  "id": "w373",
+  "es": "red social",
+  "he": "רשת חברתית",
+  "en": "social media",
+  "type": "phrase"
+ },
+ {
+  "id": "w374",
+  "es": "refrigerador",
+  "he": "מקרר",
+  "en": "fridge, refrigerators",
+  "type": "word"
+ },
+ {
+  "id": "w375",
+  "es": "regalar",
+  "he": "לתת במתנה",
+  "en": "gave",
+  "type": "word"
+ },
+ {
+  "id": "w376",
+  "es": "regar",
+  "he": "להשקות",
+  "en": "water, shower",
+  "type": "word"
+ },
+ {
+  "id": "w377",
+  "es": "regular",
+  "he": "רגיל",
+  "en": "scheduled, ordinary",
+  "type": "word"
+ },
+ {
+  "id": "w378",
+  "es": "relación",
+  "he": "מערכת יחסים",
+  "en": "relationship, account",
+  "type": "word"
+ },
+ {
+  "id": "w379",
+  "es": "relajarse",
+  "he": "להירגע",
+  "en": "to relax, relax",
+  "type": "word"
+ },
+ {
+  "id": "w380",
+  "es": "reparar",
+  "he": "לתקן (מכשיר)",
+  "en": "repaired, repairing",
+  "type": "word"
+ },
+ {
+  "id": "w381",
+  "es": "repetir",
+  "he": "לחזור על",
+  "en": "repeat, repeating",
+  "type": "word"
+ },
+ {
+  "id": "w382",
+  "es": "repito",
+  "he": "אני חוזר על",
+  "en": "have seconds of",
+  "type": "word"
+ },
+ {
+  "id": "w383",
+  "es": "resolver",
+  "he": "לפתור",
+  "en": "work, figure",
+  "type": "word"
+ },
+ {
+  "id": "w384",
+  "es": "resulta que",
+  "he": "מסתבר ש...",
+  "en": "it turns out that",
+  "type": "phrase"
+ },
+ {
+  "id": "w385",
+  "es": "resultado",
+  "he": "תוצאה",
+  "en": "worked, result",
+  "type": "word"
+ },
+ {
+  "id": "w386",
+  "es": "retrasado",
+  "he": "מתעכב",
+  "en": "delayed, late",
+  "type": "word"
+ },
+ {
+  "id": "w387",
+  "es": "robar",
+  "he": "לגנוב",
+  "en": "robs, drawn",
+  "type": "word"
+ },
+ {
+  "id": "w388",
+  "es": "ropa interior",
+  "he": "הלבשה תחתונה",
+  "en": "underwear",
+  "type": "phrase"
+ },
+ {
+  "id": "w389",
+  "es": "rosado",
+  "he": "ורוד",
+  "en": "pink, pink's",
+  "type": "word"
+ },
+ {
+  "id": "w390",
+  "es": "saber",
+  "he": "לדעת",
+  "en": "know, hear",
+  "type": "word"
+ },
+ {
+  "id": "w391",
+  "es": "saberse",
+  "he": "לדעת בעל פה",
+  "en": "getting, get",
+  "type": "word"
+ },
+ {
+  "id": "w392",
+  "es": "sala de reuniones",
+  "he": "חדר ישיבות",
+  "en": "meeting room",
+  "type": "phrase"
+ },
+ {
+  "id": "w393",
+  "es": "sala de urgencias",
+  "he": "חדר מיון",
+  "en": "emergency room",
+  "type": "phrase"
+ },
+ {
+  "id": "w394",
+  "es": "salado",
+  "he": "מלוח",
+  "en": "salted, risqué",
+  "type": "word"
+ },
+ {
+  "id": "w395",
+  "es": "salgo de",
+  "he": "אני יוצא מ...",
+  "en": "leave",
+  "type": "phrase"
+ },
+ {
+  "id": "w396",
+  "es": "salir de",
+  "he": "לצאת מ...",
+  "en": "leave",
+  "type": "phrase"
+ },
+ {
+  "id": "w397",
+  "es": "se",
+  "he": "את עצמו",
+  "en": "she, is",
+  "type": "phrase",
+  "hardToQuiz": true
+ },
+ {
+  "id": "w398",
+  "es": "segundo",
+  "he": "שני",
+  "en": "2, second",
+  "type": "word"
+ },
+ {
+  "id": "w399",
+  "es": "semáforo",
+  "he": "רמזור",
+  "en": "stoplight, lit",
+  "type": "word"
+ },
+ {
+  "id": "w400",
+  "es": "sentir",
+  "he": "להרגיש",
+  "en": "view",
+  "type": "word"
+ },
+ {
+  "id": "w401",
+  "es": "sentirse",
+  "he": "לחוש",
+  "en": "become, wasn't",
+  "type": "word"
+ },
+ {
+  "id": "w402",
+  "es": "ser",
+  "he": "להיות",
+  "en": "made, being",
+  "type": "word"
+ },
+ {
+  "id": "w403",
+  "es": "servir",
+  "he": "להגיש",
+  "en": "serving, serve",
+  "type": "word"
+ },
+ {
+  "id": "w404",
+  "es": "sillón",
+  "he": "כורסה",
+  "en": "armchair, chair",
+  "type": "word"
+ },
+ {
+  "id": "w405",
+  "es": "sin duda",
+  "he": "ללא ספק",
+  "en": "without a doubt",
+  "type": "phrase"
+ },
+ {
+  "id": "w406",
+  "es": "sin embargo",
+  "he": "עם זאת",
+  "en": "however",
+  "type": "phrase"
+ },
+ {
+  "id": "w407",
+  "es": "sin parar",
+  "he": "בלי הפסקה",
+  "en": "nonstop",
+  "type": "phrase"
+ },
+ {
+  "id": "w408",
+  "es": "sinceramente",
+  "he": "בכנות",
+  "en": "honestly, sincerely",
+  "type": "word"
+ },
+ {
+  "id": "w409",
+  "es": "sirvo",
+  "he": "אני מגיש",
+  "en": "(?) should I serve",
+  "type": "word"
+ },
+ {
+  "id": "w410",
+  "es": "sobre",
+  "he": "על",
+  "en": "on top of, around",
+  "type": "word"
+ },
+ {
+  "id": "w411",
+  "es": "sobre todo",
+  "he": "בעיקר",
+  "en": "mainly",
+  "type": "phrase"
+ },
+ {
+  "id": "w412",
+  "es": "sofá",
+  "he": "ספה",
+  "en": "sofa, couch",
+  "type": "word"
+ },
+ {
+  "id": "w413",
+  "es": "suegra",
+  "he": "חמות",
+  "en": "mother in law, law's",
+  "type": "word"
+ },
+ {
+  "id": "w414",
+  "es": "sábana",
+  "he": "סדין",
+  "en": "sheet, bedsheet",
+  "type": "word"
+ },
+ {
+  "id": "w415",
+  "es": "sé",
+  "he": "אני יודע",
+  "en": "know, can",
+  "type": "word"
+ },
+ {
+  "id": "w416",
+  "es": "sí o sí",
+  "he": "ויהי מה",
+  "en": "no matter what",
+  "type": "phrase"
+ },
+ {
+  "id": "w417",
+  "es": "síntoma",
+  "he": "תסמין",
+  "en": "symptom, indication",
+  "type": "word"
+ },
+ {
+  "id": "w418",
+  "es": "tal vez",
+  "he": "ייתכן",
+  "en": "maybe",
+  "type": "phrase"
+ },
+ {
+  "id": "w419",
+  "es": "taller",
+  "he": "מוסך",
+  "en": "garage, repair shop",
+  "type": "word"
+ },
+ {
+  "id": "w420",
+  "es": "tarjeta de crédito",
+  "he": "כרטיס אשראי",
+  "en": "credit card",
+  "type": "phrase"
+ },
+ {
+  "id": "w421",
+  "es": "te",
+  "he": "אותך",
+  "en": "your, you'll",
+  "type": "phrase",
+  "hardToQuiz": true
+ },
+ {
+  "id": "w422",
+  "es": "te gusta",
+  "he": "אתה אוהב",
+  "en": "you",
+  "type": "phrase"
+ },
+ {
+  "id": "w423",
+  "es": "te gustan",
+  "he": "אתה אוהב (רבים)",
+  "en": "like",
+  "type": "phrase"
+ },
+ {
+  "id": "w424",
+  "es": "te interesa",
+  "he": "מעניין אותך",
+  "en": "(?) does it interest you, (?) are you interested in",
+  "type": "phrase"
+ },
+ {
+  "id": "w425",
+  "es": "te interesan",
+  "he": "מעניינים אותך",
+  "en": "are you into",
+  "type": "phrase"
+ },
+ {
+  "id": "w426",
+  "es": "te quiero",
+  "he": "אני אוהב אותך",
+  "en": "(I) want (you), (I) love (you)",
+  "type": "phrase"
+ },
+ {
+  "id": "w427",
+  "es": "tema",
+  "he": "נושא",
+  "en": "subject, matter",
+  "type": "word"
+ },
+ {
+  "id": "w428",
+  "es": "ten cuidado",
+  "he": "היזהר",
+  "en": "careful",
+  "type": "phrase"
+ },
+ {
+  "id": "w429",
+  "es": "tenemos",
+  "he": "יש לנו",
+  "en": "we're having",
+  "type": "word"
+ },
+ {
+  "id": "w430",
+  "es": "tener cuidado",
+  "he": "להיזהר",
+  "en": "be careful, mind",
+  "type": "phrase"
+ },
+ {
+  "id": "w431",
+  "es": "tener hambre",
+  "he": "להיות רעב",
+  "en": "be hungry",
+  "type": "phrase"
+ },
+ {
+  "id": "w432",
+  "es": "tener prisa",
+  "he": "למהר",
+  "en": "in a hurry",
+  "type": "phrase"
+ },
+ {
+  "id": "w433",
+  "es": "tener que",
+  "he": "להיות חייב",
+  "en": "have to",
+  "type": "phrase"
+ },
+ {
+  "id": "w434",
+  "es": "tener razón",
+  "he": "לצדוק",
+  "en": "to be right, be right",
+  "type": "phrase"
+ },
+ {
+  "id": "w435",
+  "es": "tengo que",
+  "he": "אני חייב",
+  "en": "have",
+  "type": "phrase"
+ },
+ {
+  "id": "w436",
+  "es": "tenis de mesa",
+  "he": "טניס שולחן",
+  "en": "table tennis",
+  "type": "phrase"
+ },
+ {
+  "id": "w437",
+  "es": "terminar de",
+  "he": "לסיים ל...",
+  "en": "to finish, finish",
+  "type": "phrase"
+ },
+ {
+  "id": "w438",
+  "es": "tiene sentido",
+  "he": "זה הגיוני",
+  "en": "(you-formal) make sense, (he/she/it) makes sense",
+  "type": "phrase"
+ },
+ {
+  "id": "w439",
+  "es": "tienes que",
+  "he": "אתה חייב",
+  "en": "(you) need, (you) have to",
+  "type": "phrase"
+ },
+ {
+  "id": "w440",
+  "es": "tipo de",
+  "he": "סוג של",
+  "en": "type of",
+  "type": "phrase"
+ },
+ {
+  "id": "w441",
+  "es": "toalla",
+  "he": "מגבת",
+  "en": "towel, toweling",
+  "type": "word"
+ },
+ {
+  "id": "w442",
+  "es": "todo el mundo",
+  "he": "כולם",
+  "en": "everyone",
+  "type": "phrase"
+ },
+ {
+  "id": "w443",
+  "es": "todo el tiempo",
+  "he": "כל הזמן",
+  "en": "all the time",
+  "type": "phrase"
+ },
+ {
+  "id": "w444",
+  "es": "todo recto",
+  "he": "ישר קדימה",
+  "en": "straight ahead",
+  "type": "phrase"
+ },
+ {
+  "id": "w445",
+  "es": "tomarse",
+  "he": "לקחת לעצמו",
+  "en": "take, drink",
+  "type": "word"
+ },
+ {
+  "id": "w446",
+  "es": "traduzco",
+  "he": "אני מתרגם",
+  "en": "I'm translating, translate",
+  "type": "word"
+ },
+ {
+  "id": "w447",
+  "es": "traigo",
+  "he": "אני מביא",
+  "en": "get",
+  "type": "word"
+ },
+ {
+  "id": "w448",
+  "es": "travieso",
+  "he": "שובב",
+  "en": "naughty, mischievous",
+  "type": "word"
+ },
+ {
+  "id": "w449",
+  "es": "tráfico",
+  "he": "תנועה",
+  "en": "traffic, traffic's",
+  "type": "word"
+ },
+ {
+  "id": "w450",
+  "es": "turístico",
+  "he": "תיירותי",
+  "en": "tourist, tour",
+  "type": "word"
+ },
+ {
+  "id": "w451",
+  "es": "técnico",
+  "he": "טכנאי",
+  "en": "coach's, repairman",
+  "type": "word"
+ },
+ {
+  "id": "w452",
+  "es": "un par de",
+  "he": "זוג של",
+  "en": "a couple of",
+  "type": "phrase"
+ },
+ {
+  "id": "w453",
+  "es": "un rato",
+  "he": "קצת זמן",
+  "en": "a while",
+  "type": "phrase"
+ },
+ {
+  "id": "w454",
+  "es": "una vez por",
+  "he": "פעם ב...",
+  "en": "once",
+  "type": "phrase"
+ },
+ {
+  "id": "w455",
+  "es": "va a",
+  "he": "הוא הולך ל...",
+  "en": "is, she's",
+  "type": "phrase"
+ },
+ {
+  "id": "w456",
+  "es": "va a estar bien",
+  "he": "זה יהיה בסדר",
+  "en": "is going to be fine",
+  "type": "phrase"
+ },
+ {
+  "id": "w457",
+  "es": "vamos a",
+  "he": "אנחנו הולכים ל...",
+  "en": "will",
+  "type": "phrase"
+ },
+ {
+  "id": "w458",
+  "es": "van",
+  "he": "הם הולכים",
+  "en": "go",
+  "type": "word"
+ },
+ {
+  "id": "w459",
+  "es": "van a",
+  "he": "הם הולכים ל...",
+  "en": "will",
+  "type": "phrase"
+ },
+ {
+  "id": "w460",
+  "es": "varios",
+  "he": "כמה",
+  "en": "many, several",
+  "type": "word"
+ },
+ {
+  "id": "w461",
+  "es": "vas",
+  "he": "אתה הולך",
+  "en": "go, going",
+  "type": "word"
+ },
+ {
+  "id": "w462",
+  "es": "vas a",
+  "he": "אתה הולך ל...",
+  "en": "you're, attend",
+  "type": "phrase"
+ },
+ {
+  "id": "w463",
+  "es": "ve",
+  "he": "הוא רואה",
+  "en": "hears",
+  "type": "word"
+ },
+ {
+  "id": "w464",
+  "es": "vecindario",
+  "he": "שכונה",
+  "en": "neighborhood, neighborhood's",
+  "type": "word"
+ },
+ {
+  "id": "w465",
+  "es": "ven",
+  "he": "הם רואים",
+  "en": "(they) are seeing, (they) are watching",
+  "type": "word"
+ },
+ {
+  "id": "w466",
+  "es": "vengo",
+  "he": "אני בא",
+  "en": "I'm coming, come",
+  "type": "word"
+ },
+ {
+  "id": "w467",
+  "es": "venimos",
+  "he": "אנחנו באים",
+  "en": "(we) are coming, (we) come",
+  "type": "word"
+ },
+ {
+  "id": "w468",
+  "es": "venir a",
+  "he": "לבוא ל...",
+  "en": "come",
+  "type": "phrase"
+ },
+ {
+  "id": "w469",
+  "es": "verse",
+  "he": "להיפגש",
+  "en": "show, getting together",
+  "type": "word"
+ },
+ {
+  "id": "w470",
+  "es": "versión",
+  "he": "גרסה",
+  "en": "model, covers",
+  "type": "word"
+ },
+ {
+  "id": "w471",
+  "es": "ves",
+  "he": "אתה רואה",
+  "en": "watching, see",
+  "type": "word"
+ },
+ {
+  "id": "w472",
+  "es": "vienen",
+  "he": "הם באים",
+  "en": "(you) are coming, (they) come",
+  "type": "word"
+ },
+ {
+  "id": "w473",
+  "es": "volver",
+  "he": "לחזור",
+  "en": "get back, return",
+  "type": "word"
+ },
+ {
+  "id": "w474",
+  "es": "voy",
+  "he": "אני הולך",
+  "en": "go, I will leave",
+  "type": "word"
+ },
+ {
+  "id": "w475",
+  "es": "voy a",
+  "he": "אני הולך ל...",
+  "en": "will, i'm",
+  "type": "phrase"
+ },
+ {
+  "id": "w476",
+  "es": "vuelvo",
+  "he": "אני חוזר",
+  "en": "return",
+  "type": "word"
+ },
+ {
+  "id": "w477",
+  "es": "y cuarto",
+  "he": "ורבע",
+  "en": "a quarter past",
+  "type": "phrase"
+ },
+ {
+  "id": "w478",
+  "es": "y media",
+  "he": "וחצי",
+  "en": "half past",
+  "type": "phrase"
+ },
+ {
+  "id": "w479",
+  "es": "y si",
+  "he": "ומה אם",
+  "en": "what if",
+  "type": "phrase"
+ },
+ {
+  "id": "w480",
+  "es": "y usted",
+  "he": "ואתה",
+  "en": "and you",
+  "type": "phrase"
+ },
+ {
+  "id": "w481",
+  "es": "época",
+  "he": "תקופה",
+  "en": "time of year, season",
+  "type": "word"
+ }
 ]
