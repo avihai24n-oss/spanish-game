@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useGameStore } from "./game/store";
 import HomeScreen from "./components/HomeScreen";
@@ -8,6 +9,14 @@ import ResultsScreen from "./components/ResultsScreen";
 
 export default function App() {
   const screen = useGameStore((s) => s.screen);
+  const showDemoScreen = useGameStore((s) => s.showDemoScreen);
+
+  useEffect(() => {
+    const demo = new URLSearchParams(window.location.search).get("demo");
+    if (demo === "waiting" || demo === "results") {
+      showDemoScreen(demo);
+    }
+  }, [showDemoScreen]);
 
   return (
     <div className="min-h-full">

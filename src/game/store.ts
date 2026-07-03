@@ -75,6 +75,7 @@ interface GameState {
   submitAnswer: (correct: boolean, timeMs: number) => void;
   nextQuestion: () => void;
   finishRound: () => void;
+  showDemoScreen: (screen: "waiting" | "results") => void;
 }
 
 export const useGameStore = create<GameState>((set, get) => ({
@@ -257,6 +258,51 @@ export const useGameStore = create<GameState>((set, get) => ({
     saveStats(stats);
 
     set({ screen: "results", opponent, stats, roundFinalized: true });
+  },
+
+  showDemoScreen: (screen) => {
+    get().transport?.dispose();
+    const questions = generateRound(`demo-${screen}`);
+    const player: PlayerState = {
+      name: "את/ה",
+      avatar: "🦸",
+      score: screen === "results" ? 1320 : 1245,
+      progress: ROUND_SIZE,
+      correctCount: screen === "results" ? 9 : 8,
+      finished: true,
+    };
+    const opponent: PlayerState = {
+      name: "בוט",
+      avatar: "🤖",
+      score: screen === "results" ? 1085 : 760,
+      progress: screen === "results" ? ROUND_SIZE : 6,
+      correctCount: screen === "results" ? 7 : 5,
+      finished: screen === "results",
+    };
+
+    set({
+      screen,
+      seed: `demo-${screen}`,
+      questions,
+      questionIndex: ROUND_SIZE - 1,
+      phase: "feedback",
+      lastCorrect: true,
+      lastPoints: 142,
+      combo: 4,
+      bestComboThisRound: 5,
+      hearts: 2,
+      xpEarned: 90,
+      answers: questions.map((_, questionIndex) => ({
+        questionIndex,
+        correct: questionIndex < player.correctCount,
+        timeMs: 4200 + questionIndex * 350,
+        points: questionIndex < player.correctCount ? 135 - questionIndex : 0,
+      })),
+      player,
+      opponent,
+      transport: null,
+      roundFinalized: screen === "results",
+    });
   },
 }));
 
