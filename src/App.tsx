@@ -6,6 +6,7 @@ import LobbyScreen from "./components/LobbyScreen";
 import GameScreen from "./components/GameScreen";
 import WaitingScreen from "./components/WaitingScreen";
 import ResultsScreen from "./components/ResultsScreen";
+import FlashcardsScreen from "./components/FlashcardsScreen";
 
 export default function App() {
   const screen = useGameStore((s) => s.screen);
@@ -42,6 +43,7 @@ export default function App() {
       {screen === "game" && <GameScreen />}
       {screen === "waiting" && <WaitingScreen />}
       {screen === "results" && <ResultsScreen />}
+      {screen === "flashcards" && <FlashcardsScreen />}
     </div>
   );
 }

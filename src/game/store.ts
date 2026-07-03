@@ -14,7 +14,14 @@ import { BotTransport } from "../transport/BotTransport";
 import { RealtimeTransport } from "../transport/RealtimeTransport";
 import { loadProfile, saveProfile, statsKeyFor, type Profile } from "./profile";
 
-export type Screen = "profile" | "home" | "lobby" | "game" | "waiting" | "results";
+export type Screen =
+  | "profile"
+  | "home"
+  | "lobby"
+  | "game"
+  | "waiting"
+  | "results"
+  | "flashcards";
 export type Phase = "answering" | "feedback";
 export type Mode = "bot" | "duel";
 export type LobbyStatus =
@@ -125,6 +132,7 @@ interface GameState {
   setLevels: (levels: Level[]) => void;
   goHome: () => void;
   openLobby: () => void;
+  openFlashcards: () => void;
   startGame: () => Promise<void>;
   createDuel: () => Promise<void>;
   joinDuel: (roomId: string) => Promise<void>;
@@ -412,6 +420,11 @@ export const useGameStore = create<GameState>((set, get) => {
 
     openLobby: () => {
       void get().createDuel();
+    },
+
+    openFlashcards: () => {
+      get().transport?.dispose();
+      set({ screen: "flashcards", transport: null, mode: "bot" });
     },
 
     startGame: async () => {

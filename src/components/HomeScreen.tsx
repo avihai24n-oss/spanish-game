@@ -24,6 +24,7 @@ const stagger = {
 export default function HomeScreen() {
   const startGame = useGameStore((s) => s.startGame);
   const openLobby = useGameStore((s) => s.openLobby);
+  const openFlashcards = useGameStore((s) => s.openFlashcards);
   const stats = useGameStore((s) => s.stats);
   const profile = useGameStore((s) => s.profile);
   const { play } = useSound();
@@ -125,6 +126,23 @@ export default function HomeScreen() {
                 חדש
               </span>
             </motion.div>
+
+            <motion.div variants={stagger} custom={4} initial="hidden" animate="show">
+              <DuoButton
+                variant="blue"
+                size="xl"
+                className="w-full"
+                onClick={() => {
+                  play("click");
+                  openFlashcards();
+                }}
+              >
+                <span className="flex items-center justify-center gap-3">
+                  <span className="text-2xl">🃏</span>
+                  תרגול מילים
+                </span>
+              </DuoButton>
+            </motion.div>
           </div>
         </motion.section>
 
@@ -198,6 +216,7 @@ function ProfileDrawer({ open, onClose }: { open: boolean; onClose: () => void }
   const stats = useGameStore((s) => s.stats);
   const openLobby = useGameStore((s) => s.openLobby);
   const startGame = useGameStore((s) => s.startGame);
+  const openFlashcards = useGameStore((s) => s.openFlashcards);
   const profile = useGameStore((s) => s.profile);
 
   return (
@@ -246,7 +265,8 @@ function ProfileDrawer({ open, onClose }: { open: boolean; onClose: () => void }
             </div>
 
             <div className="mt-6 space-y-2">
-              <MenuAction label="תרגול" onClick={() => void startGame()} />
+              <MenuAction label="תרגול נגד בוט" onClick={() => void startGame()} />
+              <MenuAction label="תרגול מילים" onClick={openFlashcards} />
               <MenuAction label="דוקרב עם חבר" onClick={openLobby} />
               <MenuAction
                 label="החלפת שם משתמש"
