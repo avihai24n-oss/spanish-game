@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import type { SentenceQuestion } from "../../game/types";
 import { checkSentenceAnswer } from "../../game/questionGen";
 import DuoButton from "../ui/DuoButton";
+import { IconMic } from "../ui/icons";
 
 interface SentenceExerciseProps {
   question: SentenceQuestion;
@@ -333,7 +334,7 @@ export default function SentenceExercise({
             {listening && (
               <span className="absolute inset-[-5px] rounded-full border-2 border-duo-red/35 animate-ping" />
             )}
-            <span aria-hidden="true">🎙</span>
+            <IconMic className="h-6 w-6" />
           </button>
         </div>
       )}

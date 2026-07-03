@@ -2,16 +2,10 @@ import { useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useGameStore } from "../game/store";
 import { words } from "../data";
-import { ALL_LEVELS, LEVEL_LABELS, type Level, type WordEntry } from "../game/types";
+import { ALL_LEVELS, LEVEL_LABELS, type WordEntry } from "../game/types";
 import DuoButton from "./ui/DuoButton";
 import { useSound } from "../hooks/useSound";
-
-const LEVEL_ICONS: Record<Level, string> = {
-  easy: "🌱",
-  medium: "⭐",
-  hard: "🔥",
-  expert: "👑",
-};
+import { IconCards, LevelIcon } from "./ui/icons";
 
 type FlashDirection = "es-front" | "he-front";
 
@@ -81,7 +75,9 @@ function FlashcardsSetup({
         className="panel w-full max-w-md rounded-[2rem] p-7 text-center"
       >
         <span className="eyebrow">תרגול מילים</span>
-        <div className="mt-4 text-6xl">🃏</div>
+        <div className="mx-auto mt-4 flex h-20 w-20 items-center justify-center rounded-[1.4rem] border border-duo-blue/25 bg-duo-blueLight text-duo-blue shadow-card">
+          <IconCards className="h-11 w-11" />
+        </div>
         <h1 className="mt-3 text-3xl font-black text-duo-ink">כרטיסיות</h1>
         <p className="mt-1 text-sm font-bold text-duo-gray">
           הקישו על כרטיס כדי להפוך אותו ולראות את התרגום. בלי שעון, בלי לחץ.
@@ -123,7 +119,7 @@ function FlashcardsSetup({
                       : "border-duo-border bg-white/60 text-duo-gray opacity-70"
                   }`}
                 >
-                  <span className="text-lg leading-none">{LEVEL_ICONS[level]}</span>
+                  <LevelIcon level={level} className={`h-5 w-5 ${active ? "" : "grayscale opacity-80"}`} />
                   {LEVEL_LABELS[level]}
                 </button>
               );
@@ -329,8 +325,9 @@ function CardFace({
         transform: back ? "rotateY(180deg)" : undefined,
       }}
     >
-      <span className="absolute right-4 top-4 rounded-full border border-duo-border bg-white/80 px-2.5 py-0.5 text-xs font-black text-duo-gray">
-        {LEVEL_ICONS[word.level]} {LEVEL_LABELS[word.level]}
+      <span className="absolute right-4 top-4 flex items-center gap-1 rounded-full border border-duo-border bg-white/80 px-2.5 py-0.5 text-xs font-black text-duo-gray">
+        <LevelIcon level={word.level} className="h-3.5 w-3.5" />
+        {LEVEL_LABELS[word.level]}
       </span>
       <span
         dir={lang === "es" ? "ltr" : "rtl"}

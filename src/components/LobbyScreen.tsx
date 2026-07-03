@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useGameStore } from "../game/store";
 import { LEVEL_LABELS } from "../game/types";
 import DuoButton from "./ui/DuoButton";
+import { Avatar, IconChat, IconRetry, IconSwords } from "./ui/icons";
 
 function roomLink(roomId: string): string {
   const baseUrl = new URL(import.meta.env.BASE_URL, window.location.origin);
@@ -45,7 +46,9 @@ export default function LobbyScreen() {
     <main className="screen-shell flex items-center justify-center">
       <div className="panel w-full max-w-md overflow-hidden rounded-[2rem] p-7 text-center">
         <span className="eyebrow">דוקרב חי</span>
-        <div className="mt-5 text-6xl">⚔️</div>
+        <div className="mx-auto mt-5 flex h-20 w-20 items-center justify-center rounded-[1.4rem] border border-duo-purple/25 bg-duo-purpleLight text-duo-purple shadow-card">
+          <IconSwords className="h-11 w-11" />
+        </div>
         <h2 className="mt-3 text-3xl font-black text-duo-ink">תחרות עם חבר</h2>
 
         <AnimatePresence mode="popLayout">
@@ -112,7 +115,8 @@ export default function LobbyScreen() {
                 rel="noreferrer"
                 className="mt-3 flex w-full items-center justify-center gap-2 rounded-2xl border-b-4 border-[#128C7E] bg-[#25D366] px-4 py-3 text-base font-black text-white transition-all active:translate-y-[2px] active:border-b-0"
               >
-                שליחה בוואטסאפ 💬
+                <IconChat className="h-5 w-5" />
+                שליחה בוואטסאפ
               </a>
 
               <div className="mt-5 flex items-center justify-center gap-2 text-sm font-bold text-duo-gray">
@@ -146,7 +150,7 @@ export default function LobbyScreen() {
                 <LobbyPlayer avatar={opponent.avatar} name={opponent.name} />
               </div>
               <p className="mt-5 text-xl font-black text-duo-green">
-                {opponent.name} בפנים! מתחילים... 🏁
+                {opponent.name} בפנים! מתחילים...
               </p>
             </motion.div>
           )}
@@ -159,7 +163,7 @@ export default function LobbyScreen() {
               className="mt-6"
             >
               <div className="rounded-2xl border border-duo-red/30 bg-duo-redLight px-4 py-3 font-bold text-duo-red">
-                לא הצלחנו להתחבר לשרת המשחק 😕
+                לא הצלחנו להתחבר לשרת המשחק
               </div>
               <div className="mt-4">
                 <DuoButton
@@ -168,7 +172,10 @@ export default function LobbyScreen() {
                   className="w-full"
                   onClick={retryLobby}
                 >
-                  נסיון נוסף 🔄
+                  <span className="flex items-center justify-center gap-2">
+                    <IconRetry className="h-5 w-5" />
+                    נסיון נוסף
+                  </span>
                 </DuoButton>
               </div>
             </motion.div>
@@ -199,7 +206,7 @@ export default function LobbyScreen() {
 function LobbyPlayer({ avatar, name }: { avatar: string; name: string }) {
   return (
     <div className="flex w-28 flex-col items-center rounded-2xl border border-duo-border bg-white/80 px-3 py-3 shadow-card">
-      <span className="text-4xl">{avatar}</span>
+      <Avatar id={avatar} className="h-10 w-10" />
       <span className="mt-1 max-w-full truncate text-sm font-black text-duo-ink">
         {name}
       </span>

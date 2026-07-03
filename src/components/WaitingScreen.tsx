@@ -4,6 +4,7 @@ import { useGameStore } from "../game/store";
 import { ROUND_SIZE } from "../game/types";
 import RaceTrack from "./RaceTrack";
 import DuoButton from "./ui/DuoButton";
+import { IconFlag } from "./ui/icons";
 
 export default function WaitingScreen() {
   const player = useGameStore((s) => s.player);
@@ -31,9 +32,9 @@ export default function WaitingScreen() {
           initial={{ scale: 0.7, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ type: "spring", stiffness: 260, damping: 18 }}
-          className="mx-auto flex h-20 w-20 items-center justify-center rounded-[1.4rem] border border-duo-green/30 bg-duo-greenLight text-5xl shadow-card"
+          className="mx-auto flex h-20 w-20 items-center justify-center rounded-[1.4rem] border border-duo-green/30 bg-duo-greenLight shadow-card"
         >
-          🏁
+          <IconFlag className="h-11 w-11" />
         </motion.div>
 
         <h1 className="mt-5 text-4xl font-black text-duo-ink">

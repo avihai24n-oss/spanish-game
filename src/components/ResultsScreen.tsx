@@ -4,6 +4,7 @@ import confetti from "canvas-confetti";
 import { useGameStore } from "../game/store";
 import DuoButton from "./ui/DuoButton";
 import { useSound } from "../hooks/useSound";
+import { IconSwords } from "./ui/icons";
 
 export default function ResultsScreen() {
   const {
@@ -107,7 +108,10 @@ export default function ResultsScreen() {
             animate={{ scale: 1, opacity: 1 }}
             className="mx-auto mt-5 max-w-md rounded-2xl border border-duo-green/40 bg-duo-greenLight px-4 py-2.5 text-sm font-black text-duo-greenShadow"
           >
-            ⚔️ {opponent.name} רוצה עוד סיבוב!
+            <span className="flex items-center justify-center gap-2">
+              <IconSwords className="h-4 w-4" />
+              {opponent.name} רוצה עוד סיבוב!
+            </span>
           </motion.div>
         )}
 
@@ -120,7 +124,10 @@ export default function ResultsScreen() {
                 className="w-full"
                 onClick={() => void createDuel()}
               >
-                חדר חדש ⚔️
+                <span className="flex items-center justify-center gap-2">
+                  <IconSwords className="h-5 w-5" />
+                  חדר חדש
+                </span>
               </DuoButton>
             ) : (
               <DuoButton
@@ -130,7 +137,14 @@ export default function ResultsScreen() {
                 disabled={rematchRequested}
                 onClick={requestRematch}
               >
-                {rematchRequested ? "מחכים ליריב..." : "עוד סיבוב ⚔️"}
+                {rematchRequested ? (
+                  "מחכים ליריב..."
+                ) : (
+                  <span className="flex items-center justify-center gap-2">
+                    <IconSwords className="h-5 w-5" />
+                    עוד סיבוב
+                  </span>
+                )}
               </DuoButton>
             )
           ) : (

@@ -8,6 +8,7 @@ import RaceTrack from "./RaceTrack";
 import McqExercise from "./exercises/McqExercise";
 import SentenceExercise from "./exercises/SentenceExercise";
 import { useSound } from "../hooks/useSound";
+import { IconFlag, IconFlame, IconHeart } from "./ui/icons";
 
 export default function GameScreen() {
   const {
@@ -77,8 +78,8 @@ export default function GameScreen() {
     return (
       <main className="screen-shell flex items-center justify-center">
         <section className="panel w-full max-w-md rounded-[2rem] p-7 text-center">
-          <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-duo-greenLight text-4xl">
-            🏁
+          <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-duo-greenLight">
+            <IconFlag className="h-9 w-9" />
           </div>
           <h1 className="mt-4 text-3xl font-black text-duo-ink">
             מסיימים סיבוב...
@@ -146,7 +147,7 @@ export default function GameScreen() {
           <ProgressBar value={player.progress / ROUND_SIZE} />
         </div>
         <div className="flex items-center gap-1 rounded-full bg-duo-redLight px-3 py-1 text-lg font-black text-duo-red">
-          <span>❤️</span>
+          <IconHeart className="h-5 w-5" />
           <span className="tabular-nums">{hearts}</span>
         </div>
       </div>
@@ -172,7 +173,9 @@ export default function GameScreen() {
               transition={{ type: "spring", stiffness: 400, damping: 15 }}
               className="rounded-full border border-white/70 bg-duo-gold px-3 py-1 text-sm font-black text-duo-ink shadow"
             >
-              🔥 רצף ×{combo}
+              <span className="flex items-center gap-1">
+                <IconFlame className="h-4 w-4" /> רצף ×{combo}
+              </span>
             </motion.div>
           )}
         </AnimatePresence>

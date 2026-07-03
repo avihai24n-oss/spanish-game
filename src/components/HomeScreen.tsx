@@ -1,16 +1,10 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { useGameStore } from "../game/store";
-import { ALL_LEVELS, LEVEL_LABELS, type Level } from "../game/types";
+import { ALL_LEVELS, LEVEL_LABELS } from "../game/types";
 import DuoButton from "./ui/DuoButton";
 import { useSound } from "../hooks/useSound";
-
-const LEVEL_ICONS: Record<Level, string> = {
-  easy: "🌱",
-  medium: "⭐",
-  hard: "🔥",
-  expert: "👑",
-};
+import { Avatar, IconCards, IconPlay, IconSwords, LevelIcon } from "./ui/icons";
 
 const stagger = {
   hidden: { opacity: 0, y: 20 },
@@ -47,8 +41,15 @@ export default function HomeScreen() {
             </span>
           </button>
           <div className="flex items-center gap-2">
-            <div className="rounded-2xl border border-duo-border bg-white/70 px-3 py-1.5 text-sm font-black text-duo-ink shadow-sm">
-              {profile ? `${profile.avatar} ${profile.name}` : "אורח"}
+            <div className="flex items-center gap-1.5 rounded-2xl border border-duo-border bg-white/70 py-1.5 pe-3 ps-1.5 text-sm font-black text-duo-ink shadow-sm">
+              {profile ? (
+                <>
+                  <Avatar id={profile.avatar} className="h-6 w-6" />
+                  {profile.name}
+                </>
+              ) : (
+                "אורח"
+              )}
             </div>
             <div className="rounded-2xl border border-duo-border bg-white/70 px-3 py-1.5 text-sm font-black text-duo-greenShadow shadow-sm">
               {stats.totalXp} XP
@@ -95,7 +96,7 @@ export default function HomeScreen() {
                 }}
               >
                 <span className="flex items-center justify-center gap-3">
-                  <span className="text-2xl">▶</span>
+                  <IconPlay className="h-6 w-6" />
                   תרגול נגד בוט
                 </span>
               </DuoButton>
@@ -118,7 +119,7 @@ export default function HomeScreen() {
                 }}
               >
                 <span className="flex items-center justify-center gap-3">
-                  <span className="text-2xl">⚔️</span>
+                  <IconSwords className="h-6 w-6" />
                   דוקרב עם חבר
                 </span>
               </DuoButton>
@@ -138,7 +139,7 @@ export default function HomeScreen() {
                 }}
               >
                 <span className="flex items-center justify-center gap-3">
-                  <span className="text-2xl">🃏</span>
+                  <IconCards className="h-6 w-6" />
                   תרגול מילים
                 </span>
               </DuoButton>
@@ -199,7 +200,7 @@ function LevelPicker() {
                   : "border-duo-border bg-white/60 text-duo-gray opacity-70"
               }`}
             >
-              <span className="text-lg leading-none">{LEVEL_ICONS[level]}</span>
+              <LevelIcon level={level} className={`h-5 w-5 ${active ? "" : "grayscale opacity-80"}`} />
               {LEVEL_LABELS[level]}
             </button>
           );
@@ -244,8 +245,15 @@ function ProfileDrawer({ open, onClose }: { open: boolean; onClose: () => void }
                 <p className="text-xs font-black uppercase tracking-[0.16em] text-duo-purple">
                   הפרופיל שלי
                 </p>
-                <h2 className="mt-1 text-2xl font-black text-duo-ink">
-                  {profile ? `${profile.avatar} ${profile.name}` : "אורח"}
+                <h2 className="mt-1 flex items-center gap-2 text-2xl font-black text-duo-ink">
+                  {profile ? (
+                    <>
+                      <Avatar id={profile.avatar} className="h-8 w-8" />
+                      {profile.name}
+                    </>
+                  ) : (
+                    "אורח"
+                  )}
                 </h2>
               </div>
               <button

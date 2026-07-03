@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import type { PlayerState } from "../game/types";
 import { ROUND_SIZE } from "../game/types";
+import { Avatar, IconFlag } from "./ui/icons";
 
 interface RaceTrackProps {
   player: PlayerState;
@@ -39,23 +40,21 @@ function Lane({
             isPlayer
               ? "border-duo-greenShadow bg-duo-greenLight"
               : "border-duo-purpleShadow bg-duo-purpleLight"
-          } ${compact ? "h-5 w-5 text-[10px]" : "h-9 w-9 text-lg"}`}
+          } ${compact ? "h-5 w-5" : "h-9 w-9"}`}
           initial={false}
           animate={{
             left: `calc(${pct}% - ${(pct / 100) * (compact ? 20 : 36)}px)`,
           }}
           transition={{ type: "spring", stiffness: 120, damping: 16 }}
         >
-          {state.avatar}
+          <Avatar id={state.avatar} className={compact ? "h-4 w-4" : "h-7 w-7"} />
         </motion.div>
         {/* finish flag */}
-        <span
+        <IconFlag
           className={`absolute -right-1 top-1/2 -translate-y-1/2 ${
-            compact ? "text-xs" : "text-lg"
+            compact ? "h-3.5 w-3.5" : "h-5 w-5"
           }`}
-        >
-          🏁
-        </span>
+        />
       </div>
       <div className={`${compact ? "w-12" : "w-20"} text-right`} dir="rtl">
         <div className={`${compact ? "text-[9px]" : "text-[11px]"} font-bold leading-tight text-duo-gray`}>

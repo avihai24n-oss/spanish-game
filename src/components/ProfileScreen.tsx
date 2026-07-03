@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useGameStore } from "../game/store";
 import { AVATAR_CHOICES } from "../game/profile";
 import DuoButton from "./ui/DuoButton";
+import { Avatar, IconSwords } from "./ui/icons";
 
 /**
  * Username-only "login": pick a name + avatar, no password. Stats are saved
@@ -36,9 +37,9 @@ export default function ProfileScreen() {
           initial={{ scale: 0.6 }}
           animate={{ scale: 1 }}
           transition={{ type: "spring", stiffness: 320, damping: 14 }}
-          className="mt-5 text-7xl"
+          className="mt-5 flex justify-center"
         >
-          {avatar}
+          <Avatar id={avatar} className="h-24 w-24 drop-shadow-md" />
         </motion.div>
 
         <h1 className="mt-3 text-3xl font-black text-duo-ink">
@@ -46,7 +47,7 @@ export default function ProfileScreen() {
         </h1>
         <p className="mt-1 text-sm font-bold text-duo-gray">
           {pendingRoomId
-            ? "רק שם — כדי שהיריב ידע את מי הוא מנצח 😉"
+            ? "רק שם — כדי שהיריב ידע מול מי הוא משחק"
             : "בלי סיסמאות. השם שומר את הנקודות והנצחונות שלך."}
         </p>
 
@@ -67,13 +68,13 @@ export default function ProfileScreen() {
               type="button"
               onClick={() => setAvatar(a)}
               aria-label={`בחירת אווטר ${a}`}
-              className={`rounded-2xl border-2 border-b-4 py-2.5 text-3xl transition-all ${
+              className={`flex items-center justify-center rounded-2xl border-2 border-b-4 py-2.5 transition-all ${
                 avatar === a
                   ? "border-duo-blue bg-duo-blueLight"
                   : "border-duo-border bg-white hover:bg-duo-bg"
               }`}
             >
-              {a}
+              <Avatar id={a} className="h-9 w-9" />
             </button>
           ))}
         </div>
@@ -86,7 +87,14 @@ export default function ProfileScreen() {
             disabled={!valid}
             onClick={submit}
           >
-            {pendingRoomId ? "יאללה, לדוקרב ⚔️" : "יאללה, מתחילים!"}
+            {pendingRoomId ? (
+              <span className="flex items-center justify-center gap-2">
+                <IconSwords className="h-5 w-5" />
+                יאללה, לדוקרב
+              </span>
+            ) : (
+              "יאללה, מתחילים!"
+            )}
           </DuoButton>
         </div>
       </motion.section>
