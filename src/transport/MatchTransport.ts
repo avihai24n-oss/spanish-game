@@ -40,6 +40,8 @@ export type MatchEvent =
   | { type: "opponentFinished"; totalScore: number; correctCount: number }
   /** Received: an opponent connected to the room and introduced themselves. */
   | { type: "opponentJoined"; name: string; avatar: string }
+  /** Received on join: how many players (including you) are in the room. */
+  | { type: "roomState"; players: number }
   /** Received: both players are in — the round starts with this shared seed. */
   | { type: "matchStart"; seed: string }
   /** Received: the opponent wants a rematch. */

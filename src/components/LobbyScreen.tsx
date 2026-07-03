@@ -16,6 +16,7 @@ export default function LobbyScreen() {
   const lobbyStatus = useGameStore((s) => s.lobbyStatus);
   const opponent = useGameStore((s) => s.opponent);
   const player = useGameStore((s) => s.player);
+  const retryLobby = useGameStore((s) => s.retryLobby);
   const [copied, setCopied] = useState(false);
 
   const link = roomId ? roomLink(roomId) : "";
@@ -131,6 +132,29 @@ export default function LobbyScreen() {
               <p className="mt-5 text-xl font-black text-duo-green">
                 {opponent.name} בפנים! מתחילים... 🏁
               </p>
+            </motion.div>
+          )}
+
+          {lobbyStatus === "error" && (
+            <motion.div
+              key="error"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="mt-6"
+            >
+              <div className="rounded-2xl border border-duo-red/30 bg-duo-redLight px-4 py-3 font-bold text-duo-red">
+                לא הצלחנו להתחבר לשרת המשחק 😕
+              </div>
+              <div className="mt-4">
+                <DuoButton
+                  variant="blue"
+                  size="lg"
+                  className="w-full"
+                  onClick={retryLobby}
+                >
+                  נסיון נוסף 🔄
+                </DuoButton>
+              </div>
             </motion.div>
           )}
 

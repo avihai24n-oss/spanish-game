@@ -56,6 +56,11 @@ export class QuizRoom extends Server<Env> {
             })
           );
         }
+        // Tell the newcomer how many players are in — a lone player becomes
+        // the "waiting host" in the UI instead of spinning forever.
+        conn.send(
+          JSON.stringify({ type: "roomState", players: this.players.size })
+        );
         this.maybeStart();
         break;
       }

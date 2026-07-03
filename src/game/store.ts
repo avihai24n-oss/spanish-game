@@ -18,7 +18,8 @@ export type LobbyStatus =
   | "joining"
   | "ready"
   | "starting"
-  | "full";
+  | "full"
+  | "error";
 
 const LEGACY_STATS_KEY = "vamos-stats-v1";
 
@@ -99,6 +100,7 @@ interface GameState {
   startGame: () => Promise<void>;
   createDuel: () => Promise<void>;
   joinDuel: (roomId: string) => Promise<void>;
+  retryLobby: () => void;
   requestRematch: () => void;
   submitAnswer: (correct: boolean, timeMs: number) => void;
   nextQuestion: () => void;
@@ -107,6 +109,9 @@ interface GameState {
 }
 
 const initialProfile = loadProfile();
+
+/** boot() guard — React StrictMode runs mount effects twice in dev. */
+let booted = false;
 
 export const useGameStore = create<GameState>((set, get) => {
   /** Common state reset for the start of any round (bot or duel). */
@@ -170,6 +175,16 @@ export const useGameStore = create<GameState>((set, get) => {
       if (get().transport !== transport) return;
 
       switch (event.type) {
+        case "roomState": {
+          // Alone in the room (host, or a joiner whose host already left):
+          // show the share-link waiting UI instead of an endless spinner.
+          const s = get();
+          if (s.screen === "lobby" && event.players <= 1) {
+            set({ lobbyStatus: "waiting" });
+          }
+          break;
+        }
+
         case "opponentJoined": {
           const s = get();
           const midMatch =
@@ -252,13 +267,28 @@ export const useGameStore = create<GameState>((set, get) => {
       opponentWantsRematch: false,
     });
 
-    const finalRoomId = roomId ?? (await transport.createRoom());
-    await transport.joinRoom(finalRoomId);
-    if (get().transport !== transport) return;
-    set((st) => ({
-      roomId: finalRoomId,
-      lobbyStatus: st.lobbyStatus === "creating" ? "waiting" : st.lobbyStatus,
-    }));
+    try {
+      const finalRoomId = roomId ?? (await transport.createRoom());
+      await transport.joinRoom(finalRoomId);
+      if (get().transport !== transport) return;
+      set({ roomId: finalRoomId });
+    } catch {
+      if (get().transport === transport) set({ lobbyStatus: "error" });
+      return;
+    }
+
+    // The server acks with roomState/opponentJoined; if nothing arrives the
+    // realtime server is unreachable — surface an error instead of spinning.
+    setTimeout(() => {
+      if (get().transport !== transport) return;
+      const st = get();
+      if (
+        st.screen === "lobby" &&
+        (st.lobbyStatus === "creating" || st.lobbyStatus === "joining")
+      ) {
+        set({ lobbyStatus: "error" });
+      }
+    }, 6000);
   };
 
   return {
@@ -290,6 +320,9 @@ export const useGameStore = create<GameState>((set, get) => {
     opponentWantsRematch: false,
 
     boot: (roomFromUrl) => {
+      // StrictMode mounts effects twice in dev — join the room only once
+      if (booted) return;
+      booted = true;
       if (!roomFromUrl) return;
       if (get().profile) {
         void get().joinDuel(roomFromUrl);
@@ -372,6 +405,15 @@ export const useGameStore = create<GameState>((set, get) => {
     createDuel: () => startDuel(null),
 
     joinDuel: (roomId) => startDuel(roomId),
+
+    retryLobby: () => {
+      const s = get();
+      if (!s.isHost && s.roomId) {
+        void get().joinDuel(s.roomId);
+      } else {
+        void get().createDuel();
+      }
+    },
 
     requestRematch: () => {
       const s = get();

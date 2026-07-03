@@ -133,6 +133,8 @@ export class RealtimeTransport implements MatchTransport {
           name: String(msg.name ?? "יריב"),
           avatar: String(msg.avatar ?? "🙂"),
         };
+      case "roomState":
+        return { type: "roomState", players: Number(msg.players ?? 1) };
       case "start":
         return { type: "matchStart", seed: String(msg.seed) };
       case "answer": {
