@@ -1,6 +1,11 @@
 import { create } from "zustand";
-import type { AnswerRecord, PlayerState, Question } from "./types";
-import { ROUND_SIZE, XP_PER_CORRECT, questionTimeMs } from "./types";
+import type { AnswerRecord, Level, PlayerState, Question } from "./types";
+import {
+  ROUND_SIZE,
+  XP_PER_CORRECT,
+  questionTimeMs,
+  sanitizeLevels,
+} from "./types";
 import { generateRound } from "./questionGen";
 import { pointsFor } from "./scoring";
 import { randomSeed } from "./rng";
@@ -22,6 +27,25 @@ export type LobbyStatus =
   | "error";
 
 const LEGACY_STATS_KEY = "vamos-stats-v1";
+const LEVELS_KEY = "vamos-levels-v1";
+
+function loadLevels(): Level[] {
+  try {
+    const raw = localStorage.getItem(LEVELS_KEY);
+    if (raw) return sanitizeLevels(JSON.parse(raw));
+  } catch {
+    // ignore corrupt storage
+  }
+  return sanitizeLevels(["medium"]);
+}
+
+function saveLevels(levels: Level[]): void {
+  try {
+    localStorage.setItem(LEVELS_KEY, JSON.stringify(levels));
+  } catch {
+    // storage unavailable — selection is best-effort
+  }
+}
 
 interface PersistentStats {
   totalXp: number;
@@ -72,6 +96,8 @@ interface GameState {
   lobbyStatus: LobbyStatus | null;
   isHost: boolean;
   seed: string;
+  /** Difficulty levels for rounds you start (bot games / duels you host). */
+  selectedLevels: Level[];
   questions: Question[];
   questionIndex: number;
   phase: Phase;
@@ -95,6 +121,8 @@ interface GameState {
 
   boot: (roomFromUrl: string | null) => void;
   setProfile: (name: string, avatar: string) => void;
+  toggleLevel: (level: Level) => void;
+  setLevels: (levels: Level[]) => void;
   goHome: () => void;
   openLobby: () => void;
   startGame: () => Promise<void>;
@@ -200,7 +228,7 @@ export const useGameStore = create<GameState>((set, get) => {
         }
 
         case "matchStart": {
-          const questions = generateRound(event.seed);
+          const questions = generateRound(event.seed, event.levels);
           set((s) => ({
             ...roundInitState(event.seed, questions),
             opponent: { ...s.opponent, score: 0, progress: 0, correctCount: 0, finished: false },
@@ -251,7 +279,7 @@ export const useGameStore = create<GameState>((set, get) => {
       return;
     }
 
-    const transport = new RealtimeTransport(profile);
+    const transport = new RealtimeTransport(profile, s.selectedLevels);
     wireDuelTransport(transport);
     set({
       screen: "lobby",
@@ -300,6 +328,7 @@ export const useGameStore = create<GameState>((set, get) => {
     lobbyStatus: null,
     isHost: false,
     seed: "",
+    selectedLevels: loadLevels(),
     questions: [],
     questionIndex: 0,
     phase: "answering",
@@ -329,6 +358,24 @@ export const useGameStore = create<GameState>((set, get) => {
       } else {
         set({ screen: "profile", pendingRoomId: roomFromUrl });
       }
+    },
+
+    toggleLevel: (level) => {
+      const current = get().selectedLevels;
+      const next = current.includes(level)
+        ? current.filter((l) => l !== level)
+        : [...current, level];
+      // Never allow an empty selection — the last level stays on.
+      if (next.length === 0) return;
+      const ordered = sanitizeLevels(next);
+      saveLevels(ordered);
+      set({ selectedLevels: ordered });
+    },
+
+    setLevels: (levels) => {
+      const ordered = sanitizeLevels(levels);
+      saveLevels(ordered);
+      set({ selectedLevels: ordered });
     },
 
     setProfile: (name, avatar) => {
@@ -371,7 +418,7 @@ export const useGameStore = create<GameState>((set, get) => {
       get().transport?.dispose();
 
       const seed = randomSeed();
-      const questions = generateRound(seed);
+      const questions = generateRound(seed, get().selectedLevels);
       const transport = new BotTransport();
 
       transport.onEvent((event) => {

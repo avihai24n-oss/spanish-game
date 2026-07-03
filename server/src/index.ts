@@ -15,10 +15,14 @@ interface PlayerInfo {
  * seed (both clients generate the identical question round from it) and then
  * simply relays answer/finish events between the two.
  */
+const VALID_LEVELS = ["easy", "medium", "hard", "expert"];
+
 export class QuizRoom extends Server<Env> {
   private players = new Map<string, PlayerInfo>();
   private started = false;
   private rematchVotes = new Set<string>();
+  /** Difficulty selection adopted from the first player (the host). */
+  private levels: string[] | null = null;
 
   onConnect(conn: Connection): void {
     const conns = [...this.getConnections()];
@@ -38,10 +42,18 @@ export class QuizRoom extends Server<Env> {
 
     switch (msg.type) {
       case "hello": {
+        const isFirstPlayer = this.players.size === 0;
         this.players.set(conn.id, {
           name: String(msg.name ?? "שחקן"),
           avatar: String(msg.avatar ?? "🙂"),
         });
+        // The first player to introduce themselves sets the room difficulty.
+        if (isFirstPlayer || this.levels === null) {
+          const requested = Array.isArray(msg.levels)
+            ? msg.levels.filter((l) => VALID_LEVELS.includes(String(l)))
+            : [];
+          this.levels = requested.length > 0 ? requested.map(String) : null;
+        }
         // Introduce both sides to each other
         for (const other of this.getConnections()) {
           if (other.id === conn.id) continue;
@@ -88,6 +100,8 @@ export class QuizRoom extends Server<Env> {
     this.players.delete(conn.id);
     this.rematchVotes.delete(conn.id);
     if ([...this.getConnections()].length < 2) this.started = false;
+    // Empty room forgets its difficulty — the next host sets it fresh.
+    if (this.players.size === 0) this.levels = null;
     this.broadcast(JSON.stringify({ type: "opponentLeft" }));
   }
 
@@ -104,7 +118,14 @@ export class QuizRoom extends Server<Env> {
 
     this.started = true;
     const seed = crypto.randomUUID().replace(/-/g, "").slice(0, 10);
-    this.broadcast(JSON.stringify({ type: "start", seed, t0: Date.now() }));
+    this.broadcast(
+      JSON.stringify({
+        type: "start",
+        seed,
+        levels: this.levels ?? VALID_LEVELS,
+        t0: Date.now(),
+      })
+    );
   }
 
   private relay(from: Connection, msg: Record<string, unknown>): void {

@@ -5,6 +5,8 @@ import type {
   MatchTransport,
 } from "./MatchTransport";
 import type { Profile } from "../game/profile";
+import type { Level } from "../game/types";
+import { sanitizeLevels } from "../game/types";
 
 /**
  * Live 1v1 transport over a Cloudflare Durable Object room (partyserver).
@@ -28,10 +30,12 @@ export class RealtimeTransport implements MatchTransport {
   private socket: PartySocket | null = null;
   private handlers: MatchEventHandler[] = [];
   private profile: Profile;
+  private levels: Level[];
   private disposed = false;
 
-  constructor(profile: Profile) {
+  constructor(profile: Profile, levels: Level[]) {
     this.profile = profile;
+    this.levels = levels;
   }
 
   async createRoom(): Promise<string> {
@@ -54,6 +58,9 @@ export class RealtimeTransport implements MatchTransport {
           type: "hello",
           name: this.profile.name,
           avatar: this.profile.avatar,
+          // The server adopts the FIRST player's selection as the room's
+          // difficulty and echoes it back in `start` to both clients.
+          levels: this.levels,
         })
       );
     });
@@ -136,7 +143,13 @@ export class RealtimeTransport implements MatchTransport {
       case "roomState":
         return { type: "roomState", players: Number(msg.players ?? 1) };
       case "start":
-        return { type: "matchStart", seed: String(msg.seed) };
+        // Older servers don't send levels; sanitizeLevels falls back to ALL
+        // levels — identical on both clients, so rounds still stay in sync.
+        return {
+          type: "matchStart",
+          seed: String(msg.seed),
+          levels: sanitizeLevels(msg.levels),
+        };
       case "answer": {
         const questionIndex = Number(msg.questionIndex ?? 0);
         return {

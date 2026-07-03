@@ -1,1252 +1,6831 @@
 [
- {
-  "id": "s001",
-  "es": "Voy a estar en casa por la tarde",
-  "he": "אני הולך להיות בבית אחר הצהריים",
-  "esBank": [
-   "Voy",
-   "a",
-   "estar",
-   "en",
-   "casa",
-   "por",
-   "la",
-   "tarde"
-  ],
-  "heBank": [
-   "אני",
-   "הולך",
-   "להיות",
-   "בבית",
-   "אחר",
-   "הצהריים"
-  ],
-  "esDistractors": [
-   "comer",
-   "nunca",
-   "mañana"
-  ],
-  "heDistractors": [
-   "מחר",
-   "לאכול",
-   "אף פעם"
-  ]
- },
- {
-  "id": "s002",
-  "es": "Tengo que hacer la compra hoy",
-  "he": "אני חייב לעשות קניות היום",
-  "esBank": [
-   "Tengo",
-   "que",
-   "hacer",
-   "la",
-   "compra",
-   "hoy"
-  ],
-  "heBank": [
-   "אני",
-   "חייב",
-   "לעשות",
-   "קניות",
-   "היום"
-  ],
-  "esDistractors": [
-   "quiero",
-   "fiesta",
-   "ayer"
-  ],
-  "heDistractors": [
-   "רוצה",
-   "מסיבה",
-   "אתמול"
-  ]
- },
- {
-  "id": "s003",
-  "es": "Mi mejor amigo vive en el extranjero",
-  "he": "החבר הכי טוב שלי גר בחוץ לארץ",
-  "esBank": [
-   "Mi",
-   "mejor",
-   "amigo",
-   "vive",
-   "en",
-   "el",
-   "extranjero"
-  ],
-  "heBank": [
-   "החבר",
-   "הכי",
-   "טוב",
-   "שלי",
-   "גר",
-   "בחוץ",
-   "לארץ"
-  ],
-  "esDistractors": [
-   "trabaja",
-   "casa",
-   "nunca"
-  ],
-  "heDistractors": [
-   "עובד",
-   "בבית",
-   "שלה"
-  ]
- },
- {
-  "id": "s004",
-  "es": "De repente empezó a llover",
-  "he": "פתאום התחיל לרדת גשם",
-  "esBank": [
-   "De",
-   "repente",
-   "empezó",
-   "a",
-   "llover"
-  ],
-  "heBank": [
-   "פתאום",
-   "התחיל",
-   "לרדת",
-   "גשם"
-  ],
-  "esDistractors": [
-   "siempre",
-   "terminó",
-   "sol"
-  ],
-  "heDistractors": [
-   "תמיד",
-   "נגמר",
-   "שמש"
-  ]
- },
- {
-  "id": "s005",
-  "es": "Quiero cambiar dinero en el banco",
-  "he": "אני רוצה להחליף כסף בבנק",
-  "esBank": [
-   "Quiero",
-   "cambiar",
-   "dinero",
-   "en",
-   "el",
-   "banco"
-  ],
-  "heBank": [
-   "אני",
-   "רוצה",
-   "להחליף",
-   "כסף",
-   "בבנק"
-  ],
-  "esDistractors": [
-   "comprar",
-   "tienda",
-   "tarjeta"
-  ],
-  "heDistractors": [
-   "לקנות",
-   "בחנות",
-   "כרטיס"
-  ]
- },
- {
-  "id": "s006",
-  "es": "El tren va a salir a las ocho",
-  "he": "הרכבת עומדת לצאת בשעה שמונה",
-  "esBank": [
-   "El",
-   "tren",
-   "va",
-   "a",
-   "salir",
-   "a",
-   "las",
-   "ocho"
-  ],
-  "heBank": [
-   "הרכבת",
-   "עומדת",
-   "לצאת",
-   "בשעה",
-   "שמונה"
-  ],
-  "esDistractors": [
-   "llegar",
-   "nueve",
-   "autobús"
-  ],
-  "heDistractors": [
-   "להגיע",
-   "תשע",
-   "אוטובוס"
-  ]
- },
- {
-  "id": "s007",
-  "es": "No te preocupes todo va a estar bien",
-  "he": "אל תדאג הכל יהיה בסדר",
-  "esBank": [
-   "No",
-   "te",
-   "preocupes",
-   "todo",
-   "va",
-   "a",
-   "estar",
-   "bien"
-  ],
-  "heBank": [
-   "אל",
-   "תדאג",
-   "הכל",
-   "יהיה",
-   "בסדר"
-  ],
-  "esDistractors": [
-   "mal",
-   "nada",
-   "siempre"
-  ],
-  "heDistractors": [
-   "רע",
-   "כלום",
-   "תמיד"
-  ]
- },
- {
-  "id": "s008",
-  "es": "Me despierto temprano casi siempre",
-  "he": "אני מתעורר מוקדם כמעט תמיד",
-  "esBank": [
-   "Me",
-   "despierto",
-   "temprano",
-   "casi",
-   "siempre"
-  ],
-  "heBank": [
-   "אני",
-   "מתעורר",
-   "מוקדם",
-   "כמעט",
-   "תמיד"
-  ],
-  "esDistractors": [
-   "tarde",
-   "nunca",
-   "duermo"
-  ],
-  "heDistractors": [
-   "מאוחר",
-   "ישן",
-   "אף פעם"
-  ]
- },
- {
-  "id": "s009",
-  "es": "Mi suegra prepara una comida deliciosa",
-  "he": "חמותי מכינה ארוחה טעימה",
-  "esBank": [
-   "Mi",
-   "suegra",
-   "prepara",
-   "una",
-   "comida",
-   "deliciosa"
-  ],
-  "heBank": [
-   "חמותי",
-   "מכינה",
-   "ארוחה",
-   "טעימה"
-  ],
-  "esDistractors": [
-   "compra",
-   "amarga",
-   "cena"
-  ],
-  "heDistractors": [
-   "קונה",
-   "מרה",
-   "ארוחת ערב"
-  ]
- },
- {
-  "id": "s010",
-  "es": "Hay que prestar atención en clase",
-  "he": "צריך לשים לב בשיעור",
-  "esBank": [
-   "Hay",
-   "que",
-   "prestar",
-   "atención",
-   "en",
-   "clase"
-  ],
-  "heBank": [
-   "צריך",
-   "לשים",
-   "לב",
-   "בשיעור"
-  ],
-  "esDistractors": [
-   "dormir",
-   "casa",
-   "nunca"
-  ],
-  "heDistractors": [
-   "לישון",
-   "בבית",
-   "מחר"
-  ]
- },
- {
-  "id": "s011",
-  "es": "Vamos a hacer un viaje en verano",
-  "he": "אנחנו הולכים לעשות טיול בקיץ",
-  "esBank": [
-   "Vamos",
-   "a",
-   "hacer",
-   "un",
-   "viaje",
-   "en",
-   "verano"
-  ],
-  "heBank": [
-   "אנחנו",
-   "הולכים",
-   "לעשות",
-   "טיול",
-   "בקיץ"
-  ],
-  "esDistractors": [
-   "invierno",
-   "fiesta",
-   "comprar"
-  ],
-  "heDistractors": [
-   "בחורף",
-   "מסיבה",
-   "לקנות"
-  ]
- },
- {
-  "id": "s012",
-  "es": "Prefiero quedarme en casa cuando llueve",
-  "he": "אני מעדיף להישאר בבית כשיורד גשם",
-  "esBank": [
-   "Prefiero",
-   "quedarme",
-   "en",
-   "casa",
-   "cuando",
-   "llueve"
-  ],
-  "heBank": [
-   "אני",
-   "מעדיף",
-   "להישאר",
-   "בבית",
-   "כשיורד",
-   "גשם"
-  ],
-  "esDistractors": [
-   "salir",
-   "nieva",
-   "siempre"
-  ],
-  "heDistractors": [
-   "לצאת",
-   "שלג",
-   "תמיד"
-  ]
- },
- {
-  "id": "s013",
-  "es": "Por suerte encontramos un cajero automático",
-  "he": "למרבה המזל מצאנו כספומט",
-  "esBank": [
-   "Por",
-   "suerte",
-   "encontramos",
-   "un",
-   "cajero",
-   "automático"
-  ],
-  "heBank": [
-   "למרבה",
-   "המזל",
-   "מצאנו",
-   "כספומט"
-  ],
-  "esDistractors": [
-   "perdimos",
-   "banco",
-   "tarjeta"
-  ],
-  "heDistractors": [
-   "איבדנו",
-   "בנק",
-   "כרטיס"
-  ]
- },
- {
-  "id": "s014",
-  "es": "Mi hermano menor es muy travieso",
-  "he": "אחי הקטן הוא מאוד שובב",
-  "esBank": [
-   "Mi",
-   "hermano",
-   "menor",
-   "es",
-   "muy",
-   "travieso"
-  ],
-  "heBank": [
-   "אחי",
-   "הקטן",
-   "הוא",
-   "מאוד",
-   "שובב"
-  ],
-  "esDistractors": [
-   "mayor",
-   "alegre",
-   "alto"
-  ],
-  "heDistractors": [
-   "הגדול",
-   "עליז",
-   "גבוה"
-  ]
- },
- {
-  "id": "s015",
-  "es": "Tienes que descansar porque estás agotado",
-  "he": "אתה חייב לנוח כי אתה מותש",
-  "esBank": [
-   "Tienes",
-   "que",
-   "descansar",
-   "porque",
-   "estás",
-   "agotado"
-  ],
-  "heBank": [
-   "אתה",
-   "חייב",
-   "לנוח",
-   "כי",
-   "אתה",
-   "מותש"
-  ],
-  "esDistractors": [
-   "trabajar",
-   "feliz",
-   "enfermo"
-  ],
-  "heDistractors": [
-   "לעבוד",
-   "שמח",
-   "חולה"
-  ]
- },
- {
-  "id": "s016",
-  "es": "La boda va a ser en el jardín",
-  "he": "החתונה הולכת להיות בגן",
-  "esBank": [
-   "La",
-   "boda",
-   "va",
-   "a",
-   "ser",
-   "en",
-   "el",
-   "jardín"
-  ],
-  "heBank": [
-   "החתונה",
-   "הולכת",
-   "להיות",
-   "בגן"
-  ],
-  "esDistractors": [
-   "fiesta",
-   "playa",
-   "casa"
-  ],
-  "heDistractors": [
-   "המסיבה",
-   "בחוף",
-   "בבית"
-  ]
- },
- {
-  "id": "s017",
-  "es": "Sin embargo no estoy de acuerdo contigo",
-  "he": "עם זאת אני לא מסכים איתך",
-  "esBank": [
-   "Sin",
-   "embargo",
-   "no",
-   "estoy",
-   "de",
-   "acuerdo",
-   "contigo"
-  ],
-  "heBank": [
-   "עם",
-   "זאת",
-   "אני",
-   "לא",
-   "מסכים",
-   "איתך"
-  ],
-  "esDistractors": [
-   "siempre",
-   "feliz",
-   "ellos"
-  ],
-  "heDistractors": [
-   "תמיד",
-   "שמח",
-   "איתם"
-  ]
- },
- {
-  "id": "s018",
-  "es": "Necesito comprar un cepillo de dientes",
-  "he": "אני צריך לקנות מברשת שיניים",
-  "esBank": [
-   "Necesito",
-   "comprar",
-   "un",
-   "cepillo",
-   "de",
-   "dientes"
-  ],
-  "heBank": [
-   "אני",
-   "צריך",
-   "לקנות",
-   "מברשת",
-   "שיניים"
-  ],
-  "esDistractors": [
-   "vender",
-   "toalla",
-   "jabón"
-  ],
-  "heDistractors": [
-   "למכור",
-   "מגבת",
-   "סבון"
-  ]
- },
- {
-  "id": "s019",
-  "es": "El periodista escribe para un periódico famoso",
-  "he": "העיתונאי כותב לעיתון מפורסם",
-  "esBank": [
-   "El",
-   "periodista",
-   "escribe",
-   "para",
-   "un",
-   "periódico",
-   "famoso"
-  ],
-  "heBank": [
-   "העיתונאי",
-   "כותב",
-   "לעיתון",
-   "מפורסם"
-  ],
-  "esDistractors": [
-   "lee",
-   "libro",
-   "pequeño"
-  ],
-  "heDistractors": [
-   "קורא",
-   "ספר",
-   "קטן"
-  ]
- },
- {
-  "id": "s020",
-  "es": "Pienso que el examen fue muy difícil",
-  "he": "אני חושב שהמבחן היה מאוד קשה",
-  "esBank": [
-   "Pienso",
-   "que",
-   "el",
-   "examen",
-   "fue",
-   "muy",
-   "difícil"
-  ],
-  "heBank": [
-   "אני",
-   "חושב",
-   "שהמבחן",
-   "היה",
-   "מאוד",
-   "קשה"
-  ],
-  "esDistractors": [
-   "fácil",
-   "ayer",
-   "profesor"
-  ],
-  "heDistractors": [
-   "קל",
-   "אתמול",
-   "מורה"
-  ]
- },
- {
-  "id": "s021",
-  "es": "Vengo a la oficina dos veces por semana",
-  "he": "אני בא למשרד פעמיים בשבוע",
-  "esBank": [
-   "Vengo",
-   "a",
-   "la",
-   "oficina",
-   "dos",
-   "veces",
-   "por",
-   "semana"
-  ],
-  "heBank": [
-   "אני",
-   "בא",
-   "למשרד",
-   "פעמיים",
-   "בשבוע"
-  ],
-  "esDistractors": [
-   "voy",
-   "mes",
-   "tres"
-  ],
-  "heDistractors": [
-   "הולך",
-   "בחודש",
-   "שלוש"
-  ]
- },
- {
-  "id": "s022",
-  "es": "Por fin llegaron las buenas noticias",
-  "he": "סוף סוף הגיעו החדשות הטובות",
-  "esBank": [
-   "Por",
-   "fin",
-   "llegaron",
-   "las",
-   "buenas",
-   "noticias"
-  ],
-  "heBank": [
-   "סוף",
-   "סוף",
-   "הגיעו",
-   "החדשות",
-   "הטובות"
-  ],
-  "esDistractors": [
-   "malas",
-   "salieron",
-   "cartas"
-  ],
-  "heDistractors": [
-   "הרעות",
-   "יצאו",
-   "מכתבים"
-  ]
- },
- {
-  "id": "s023",
-  "es": "Quiero pedir un consejo a mi profesor",
-  "he": "אני רוצה לבקש עצה מהמורה שלי",
-  "esBank": [
-   "Quiero",
-   "pedir",
-   "un",
-   "consejo",
-   "a",
-   "mi",
-   "profesor"
-  ],
-  "heBank": [
-   "אני",
-   "רוצה",
-   "לבקש",
-   "עצה",
-   "מהמורה",
-   "שלי"
-  ],
-  "esDistractors": [
-   "dar",
-   "dinero",
-   "padre"
-  ],
-  "heDistractors": [
-   "לתת",
-   "כסף",
-   "מאבא"
-  ]
- },
- {
-  "id": "s024",
-  "es": "Ellos van a celebrar su luna de miel en España",
-  "he": "הם הולכים לחגוג את ירח הדבש שלהם בספרד",
-  "esBank": [
-   "Ellos",
-   "van",
-   "a",
-   "celebrar",
-   "su",
-   "luna",
-   "de",
-   "miel",
-   "en",
-   "España"
-  ],
-  "heBank": [
-   "הם",
-   "הולכים",
-   "לחגוג",
-   "את",
-   "ירח",
-   "הדבש",
-   "שלהם",
-   "בספרד"
-  ],
-  "esDistractors": [
-   "trabajar",
-   "boda",
-   "Francia"
-  ],
-  "heDistractors": [
-   "לעבוד",
-   "החתונה",
-   "בצרפת"
-  ]
- },
- {
-  "id": "s025",
-  "es": "Tengo que repetir el curso otra vez",
-  "he": "אני חייב לחזור על הקורס שוב פעם",
-  "esBank": [
-   "Tengo",
-   "que",
-   "repetir",
-   "el",
-   "curso",
-   "otra",
-   "vez"
-  ],
-  "heBank": [
-   "אני",
-   "חייב",
-   "לחזור",
-   "על",
-   "הקורס",
-   "שוב",
-   "פעם"
-  ],
-  "esDistractors": [
-   "empezar",
-   "examen",
-   "nunca"
-  ],
-  "heDistractors": [
-   "להתחיל",
-   "המבחן",
-   "אף פעם"
-  ]
- },
- {
-  "id": "s026",
-  "es": "Ten cuidado porque el semáforo está en rojo",
-  "he": "היזהר כי הרמזור אדום",
-  "esBank": [
-   "Ten",
-   "cuidado",
-   "porque",
-   "el",
-   "semáforo",
-   "está",
-   "en",
-   "rojo"
-  ],
-  "heBank": [
-   "היזהר",
-   "כי",
-   "הרמזור",
-   "אדום"
-  ],
-  "esDistractors": [
-   "verde",
-   "rápido",
-   "coche"
-  ],
-  "heDistractors": [
-   "ירוק",
-   "מהר",
-   "מכונית"
-  ]
- },
- {
-  "id": "s027",
-  "es": "Mi abuela cuida a su nieto por la mañana",
-  "he": "סבתא שלי מטפלת בנכד שלה בבוקר",
-  "esBank": [
-   "Mi",
-   "abuela",
-   "cuida",
-   "a",
-   "su",
-   "nieto",
-   "por",
-   "la",
-   "mañana"
-  ],
-  "heBank": [
-   "סבתא",
-   "שלי",
-   "מטפלת",
-   "בנכד",
-   "שלה",
-   "בבוקר"
-  ],
-  "esDistractors": [
-   "tarde",
-   "hija",
-   "olvida"
-  ],
-  "heDistractors": [
-   "בערב",
-   "בת",
-   "שוכחת"
-  ]
- },
- {
-  "id": "s028",
-  "es": "Hace sol vamos a la playa",
-  "he": "יש שמש בואו נלך לחוף",
-  "esBank": [
-   "Hace",
-   "sol",
-   "vamos",
-   "a",
-   "la",
-   "playa"
-  ],
-  "heBank": [
-   "יש",
-   "שמש",
-   "בואו",
-   "נלך",
-   "לחוף"
-  ],
-  "esDistractors": [
-   "frío",
-   "casa",
-   "montaña"
-  ],
-  "heDistractors": [
-   "קר",
-   "הביתה",
-   "להר"
-  ]
- },
- {
-  "id": "s029",
-  "es": "El vuelo está retrasado media hora",
-  "he": "הטיסה מתעכבת חצי שעה",
-  "esBank": [
-   "El",
-   "vuelo",
-   "está",
-   "retrasado",
-   "media",
-   "hora"
-  ],
-  "heBank": [
-   "הטיסה",
-   "מתעכבת",
-   "חצי",
-   "שעה"
-  ],
-  "esDistractors": [
-   "tren",
-   "temprano",
-   "avión"
-  ],
-  "heDistractors": [
-   "הרכבת",
-   "מוקדם",
-   "מטוס"
-  ]
- },
- {
-  "id": "s030",
-  "es": "Me gusta navegar por internet todo el día",
-  "he": "אני אוהב לגלוש באינטרנט כל היום",
-  "esBank": [
-   "Me",
-   "gusta",
-   "navegar",
-   "por",
-   "internet",
-   "todo",
-   "el",
-   "día"
-  ],
-  "heBank": [
-   "אני",
-   "אוהב",
-   "לגלוש",
-   "באינטרנט",
-   "כל",
-   "היום"
-  ],
-  "esDistractors": [
-   "dormir",
-   "nunca",
-   "trabajar"
-  ],
-  "heDistractors": [
-   "לישון",
-   "לעבוד",
-   "אף פעם"
-  ]
- },
- {
-  "id": "s031",
-  "es": "Trabajo sin parar desde la mañana",
-  "he": "אני עובד בלי הפסקה מהבוקר",
-  "esBank": [
-   "Trabajo",
-   "sin",
-   "parar",
-   "desde",
-   "la",
-   "mañana"
-  ],
-  "heBank": [
-   "אני",
-   "עובד",
-   "בלי",
-   "הפסקה",
-   "מהבוקר"
-  ],
-  "esDistractors": [
-   "duermo",
-   "noche",
-   "tarde"
-  ],
-  "heDistractors": [
-   "ישן",
-   "מהלילה",
-   "לאט"
-  ]
- },
- {
-  "id": "s032",
-  "es": "Por supuesto puedes venir a mi fiesta",
-  "he": "כמובן שאתה יכול לבוא למסיבה שלי",
-  "esBank": [
-   "Por",
-   "supuesto",
-   "puedes",
-   "venir",
-   "a",
-   "mi",
-   "fiesta"
-  ],
-  "heBank": [
-   "כמובן",
-   "שאתה",
-   "יכול",
-   "לבוא",
-   "למסיבה",
-   "שלי"
-  ],
-  "esDistractors": [
-   "nunca",
-   "salir",
-   "boda"
-  ],
-  "heDistractors": [
-   "אף פעם",
-   "לצאת",
-   "לחתונה"
-  ]
- },
- {
-  "id": "s033",
-  "es": "Ella se siente feliz en su nuevo trabajo",
-  "he": "היא מרגישה מאושרת בעבודה החדשה שלה",
-  "esBank": [
-   "Ella",
-   "se",
-   "siente",
-   "feliz",
-   "en",
-   "su",
-   "nuevo",
-   "trabajo"
-  ],
-  "heBank": [
-   "היא",
-   "מרגישה",
-   "מאושרת",
-   "בעבודה",
-   "החדשה",
-   "שלה"
-  ],
-  "esDistractors": [
-   "triste",
-   "viejo",
-   "casa"
-  ],
-  "heDistractors": [
-   "עצובה",
-   "הישנה",
-   "בבית"
-  ]
- },
- {
-  "id": "s034",
-  "es": "Necesitamos reservar una mesa para esta noche",
-  "he": "אנחנו צריכים להזמין שולחן להערב",
-  "esBank": [
-   "Necesitamos",
-   "reservar",
-   "una",
-   "mesa",
-   "para",
-   "esta",
-   "noche"
-  ],
-  "heBank": [
-   "אנחנו",
-   "צריכים",
-   "להזמין",
-   "שולחן",
-   "להערב"
-  ],
-  "esDistractors": [
-   "comprar",
-   "silla",
-   "mañana"
-  ],
-  "heDistractors": [
-   "לקנות",
-   "כיסא",
-   "למחר"
-  ]
- },
- {
-  "id": "s035",
-  "es": "El taller está cerca de la oficina de correos",
-  "he": "המוסך נמצא קרוב לסניף הדואר",
-  "esBank": [
-   "El",
-   "taller",
-   "está",
-   "cerca",
-   "de",
-   "la",
-   "oficina",
-   "de",
-   "correos"
-  ],
-  "heBank": [
-   "המוסך",
-   "נמצא",
-   "קרוב",
-   "לסניף",
-   "הדואר"
-  ],
-  "esDistractors": [
-   "lejos",
-   "banco",
-   "escuela"
-  ],
-  "heDistractors": [
-   "רחוק",
-   "לבנק",
-   "שם"
-  ]
- },
- {
-  "id": "s036",
-  "es": "Quiero pagar con tarjeta de crédito",
-  "he": "אני רוצה לשלם בכרטיס אשראי",
-  "esBank": [
-   "Quiero",
-   "pagar",
-   "con",
-   "tarjeta",
-   "de",
-   "crédito"
-  ],
-  "heBank": [
-   "אני",
-   "רוצה",
-   "לשלם",
-   "בכרטיס",
-   "אשראי"
-  ],
-  "esDistractors": [
-   "efectivo",
-   "comprar",
-   "banco"
-  ],
-  "heDistractors": [
-   "במזומן",
-   "לקנות",
-   "בנק"
-  ]
- },
- {
-  "id": "s037",
-  "es": "Todo el mundo habla de la película nueva",
-  "he": "כולם מדברים על הסרט החדש",
-  "esBank": [
-   "Todo",
-   "el",
-   "mundo",
-   "habla",
-   "de",
-   "la",
-   "película",
-   "nueva"
-  ],
-  "heBank": [
-   "כולם",
-   "מדברים",
-   "על",
-   "הסרט",
-   "החדש"
-  ],
-  "esDistractors": [
-   "nadie",
-   "libro",
-   "vieja"
-  ],
-  "heDistractors": [
-   "אף אחד",
-   "הספר",
-   "הישן"
-  ]
- },
- {
-  "id": "s038",
-  "es": "Sinceramente no sé la respuesta",
-  "he": "בכנות אני לא יודע את התשובה",
-  "esBank": [
-   "Sinceramente",
-   "no",
-   "sé",
-   "la",
-   "respuesta"
-  ],
-  "heBank": [
-   "בכנות",
-   "אני",
-   "לא",
-   "יודע",
-   "את",
-   "התשובה"
-  ],
-  "esDistractors": [
-   "pregunta",
-   "siempre",
-   "digo"
-  ],
-  "heDistractors": [
-   "השאלה",
-   "תמיד",
-   "אומר"
-  ]
- },
- {
-  "id": "s039",
-  "es": "Vamos a juntarnos en el centro comunitario",
-  "he": "אנחנו הולכים להיפגש במרכז הקהילתי",
-  "esBank": [
-   "Vamos",
-   "a",
-   "juntarnos",
-   "en",
-   "el",
-   "centro",
-   "comunitario"
-  ],
-  "heBank": [
-   "אנחנו",
-   "הולכים",
-   "להיפגש",
-   "במרכז",
-   "הקהילתי"
-  ],
-  "esDistractors": [
-   "estadio",
-   "correr",
-   "mañana"
-  ],
-  "heDistractors": [
-   "באצטדיון",
-   "לרוץ",
-   "מחר"
-  ]
- },
- {
-  "id": "s040",
-  "es": "Después de la cena me gusta ver la televisión",
-  "he": "אחרי ארוחת הערב אני אוהב לראות טלוויזיה",
-  "esBank": [
-   "Después",
-   "de",
-   "la",
-   "cena",
-   "me",
-   "gusta",
-   "ver",
-   "la",
-   "televisión"
-  ],
-  "heBank": [
-   "אחרי",
-   "ארוחת",
-   "הערב",
-   "אני",
-   "אוהב",
-   "לראות",
-   "טלוויזיה"
-  ],
-  "esDistractors": [
-   "antes",
-   "desayuno",
-   "leer"
-  ],
-  "heDistractors": [
-   "לפני",
-   "הבוקר",
-   "לקרוא"
-  ]
- }
+  {
+    "id": "s001",
+    "es": "Voy a estar en casa por la tarde",
+    "he": "אני הולך להיות בבית אחר הצהריים",
+    "esBank": [
+      "Voy",
+      "a",
+      "estar",
+      "en",
+      "casa",
+      "por",
+      "la",
+      "tarde"
+    ],
+    "heBank": [
+      "אני",
+      "הולך",
+      "להיות",
+      "בבית",
+      "אחר",
+      "הצהריים"
+    ],
+    "esDistractors": [
+      "comer",
+      "nunca",
+      "mañana"
+    ],
+    "heDistractors": [
+      "מחר",
+      "לאכול",
+      "אף פעם"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s002",
+    "es": "Tengo que hacer la compra hoy",
+    "he": "אני חייב לעשות קניות היום",
+    "esBank": [
+      "Tengo",
+      "que",
+      "hacer",
+      "la",
+      "compra",
+      "hoy"
+    ],
+    "heBank": [
+      "אני",
+      "חייב",
+      "לעשות",
+      "קניות",
+      "היום"
+    ],
+    "esDistractors": [
+      "quiero",
+      "fiesta",
+      "ayer"
+    ],
+    "heDistractors": [
+      "רוצה",
+      "מסיבה",
+      "אתמול"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s003",
+    "es": "Mi mejor amigo vive en el extranjero",
+    "he": "החבר הכי טוב שלי גר בחוץ לארץ",
+    "esBank": [
+      "Mi",
+      "mejor",
+      "amigo",
+      "vive",
+      "en",
+      "el",
+      "extranjero"
+    ],
+    "heBank": [
+      "החבר",
+      "הכי",
+      "טוב",
+      "שלי",
+      "גר",
+      "בחוץ",
+      "לארץ"
+    ],
+    "esDistractors": [
+      "trabaja",
+      "casa",
+      "nunca"
+    ],
+    "heDistractors": [
+      "עובד",
+      "בבית",
+      "שלה"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s004",
+    "es": "De repente empezó a llover",
+    "he": "פתאום התחיל לרדת גשם",
+    "esBank": [
+      "De",
+      "repente",
+      "empezó",
+      "a",
+      "llover"
+    ],
+    "heBank": [
+      "פתאום",
+      "התחיל",
+      "לרדת",
+      "גשם"
+    ],
+    "esDistractors": [
+      "siempre",
+      "terminó",
+      "sol"
+    ],
+    "heDistractors": [
+      "תמיד",
+      "נגמר",
+      "שמש"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s005",
+    "es": "Quiero cambiar dinero en el banco",
+    "he": "אני רוצה להחליף כסף בבנק",
+    "esBank": [
+      "Quiero",
+      "cambiar",
+      "dinero",
+      "en",
+      "el",
+      "banco"
+    ],
+    "heBank": [
+      "אני",
+      "רוצה",
+      "להחליף",
+      "כסף",
+      "בבנק"
+    ],
+    "esDistractors": [
+      "comprar",
+      "tienda",
+      "tarjeta"
+    ],
+    "heDistractors": [
+      "לקנות",
+      "בחנות",
+      "כרטיס"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s006",
+    "es": "El tren va a salir a las ocho",
+    "he": "הרכבת עומדת לצאת בשעה שמונה",
+    "esBank": [
+      "El",
+      "tren",
+      "va",
+      "a",
+      "salir",
+      "a",
+      "las",
+      "ocho"
+    ],
+    "heBank": [
+      "הרכבת",
+      "עומדת",
+      "לצאת",
+      "בשעה",
+      "שמונה"
+    ],
+    "esDistractors": [
+      "llegar",
+      "nueve",
+      "autobús"
+    ],
+    "heDistractors": [
+      "להגיע",
+      "תשע",
+      "אוטובוס"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s007",
+    "es": "No te preocupes todo va a estar bien",
+    "he": "אל תדאג הכל יהיה בסדר",
+    "esBank": [
+      "No",
+      "te",
+      "preocupes",
+      "todo",
+      "va",
+      "a",
+      "estar",
+      "bien"
+    ],
+    "heBank": [
+      "אל",
+      "תדאג",
+      "הכל",
+      "יהיה",
+      "בסדר"
+    ],
+    "esDistractors": [
+      "mal",
+      "nada",
+      "siempre"
+    ],
+    "heDistractors": [
+      "רע",
+      "כלום",
+      "תמיד"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s008",
+    "es": "Me despierto temprano casi siempre",
+    "he": "אני מתעורר מוקדם כמעט תמיד",
+    "esBank": [
+      "Me",
+      "despierto",
+      "temprano",
+      "casi",
+      "siempre"
+    ],
+    "heBank": [
+      "אני",
+      "מתעורר",
+      "מוקדם",
+      "כמעט",
+      "תמיד"
+    ],
+    "esDistractors": [
+      "tarde",
+      "nunca",
+      "duermo"
+    ],
+    "heDistractors": [
+      "מאוחר",
+      "ישן",
+      "אף פעם"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s009",
+    "es": "Mi suegra prepara una comida deliciosa",
+    "he": "חמותי מכינה ארוחה טעימה",
+    "esBank": [
+      "Mi",
+      "suegra",
+      "prepara",
+      "una",
+      "comida",
+      "deliciosa"
+    ],
+    "heBank": [
+      "חמותי",
+      "מכינה",
+      "ארוחה",
+      "טעימה"
+    ],
+    "esDistractors": [
+      "compra",
+      "amarga",
+      "cena"
+    ],
+    "heDistractors": [
+      "קונה",
+      "מרה",
+      "ארוחת ערב"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s010",
+    "es": "Hay que prestar atención en clase",
+    "he": "צריך לשים לב בשיעור",
+    "esBank": [
+      "Hay",
+      "que",
+      "prestar",
+      "atención",
+      "en",
+      "clase"
+    ],
+    "heBank": [
+      "צריך",
+      "לשים",
+      "לב",
+      "בשיעור"
+    ],
+    "esDistractors": [
+      "dormir",
+      "casa",
+      "nunca"
+    ],
+    "heDistractors": [
+      "לישון",
+      "בבית",
+      "מחר"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s011",
+    "es": "Vamos a hacer un viaje en verano",
+    "he": "אנחנו הולכים לעשות טיול בקיץ",
+    "esBank": [
+      "Vamos",
+      "a",
+      "hacer",
+      "un",
+      "viaje",
+      "en",
+      "verano"
+    ],
+    "heBank": [
+      "אנחנו",
+      "הולכים",
+      "לעשות",
+      "טיול",
+      "בקיץ"
+    ],
+    "esDistractors": [
+      "invierno",
+      "fiesta",
+      "comprar"
+    ],
+    "heDistractors": [
+      "בחורף",
+      "מסיבה",
+      "לקנות"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s012",
+    "es": "Prefiero quedarme en casa cuando llueve",
+    "he": "אני מעדיף להישאר בבית כשיורד גשם",
+    "esBank": [
+      "Prefiero",
+      "quedarme",
+      "en",
+      "casa",
+      "cuando",
+      "llueve"
+    ],
+    "heBank": [
+      "אני",
+      "מעדיף",
+      "להישאר",
+      "בבית",
+      "כשיורד",
+      "גשם"
+    ],
+    "esDistractors": [
+      "salir",
+      "nieva",
+      "siempre"
+    ],
+    "heDistractors": [
+      "לצאת",
+      "שלג",
+      "תמיד"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s013",
+    "es": "Por suerte encontramos un cajero automático",
+    "he": "למרבה המזל מצאנו כספומט",
+    "esBank": [
+      "Por",
+      "suerte",
+      "encontramos",
+      "un",
+      "cajero",
+      "automático"
+    ],
+    "heBank": [
+      "למרבה",
+      "המזל",
+      "מצאנו",
+      "כספומט"
+    ],
+    "esDistractors": [
+      "perdimos",
+      "banco",
+      "tarjeta"
+    ],
+    "heDistractors": [
+      "איבדנו",
+      "בנק",
+      "כרטיס"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s014",
+    "es": "Mi hermano menor es muy travieso",
+    "he": "אחי הקטן הוא מאוד שובב",
+    "esBank": [
+      "Mi",
+      "hermano",
+      "menor",
+      "es",
+      "muy",
+      "travieso"
+    ],
+    "heBank": [
+      "אחי",
+      "הקטן",
+      "הוא",
+      "מאוד",
+      "שובב"
+    ],
+    "esDistractors": [
+      "mayor",
+      "alegre",
+      "alto"
+    ],
+    "heDistractors": [
+      "הגדול",
+      "עליז",
+      "גבוה"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s015",
+    "es": "Tienes que descansar porque estás agotado",
+    "he": "אתה חייב לנוח כי אתה מותש",
+    "esBank": [
+      "Tienes",
+      "que",
+      "descansar",
+      "porque",
+      "estás",
+      "agotado"
+    ],
+    "heBank": [
+      "אתה",
+      "חייב",
+      "לנוח",
+      "כי",
+      "אתה",
+      "מותש"
+    ],
+    "esDistractors": [
+      "trabajar",
+      "feliz",
+      "enfermo"
+    ],
+    "heDistractors": [
+      "לעבוד",
+      "שמח",
+      "חולה"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s016",
+    "es": "La boda va a ser en el jardín",
+    "he": "החתונה הולכת להיות בגן",
+    "esBank": [
+      "La",
+      "boda",
+      "va",
+      "a",
+      "ser",
+      "en",
+      "el",
+      "jardín"
+    ],
+    "heBank": [
+      "החתונה",
+      "הולכת",
+      "להיות",
+      "בגן"
+    ],
+    "esDistractors": [
+      "fiesta",
+      "playa",
+      "casa"
+    ],
+    "heDistractors": [
+      "המסיבה",
+      "בחוף",
+      "בבית"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s017",
+    "es": "Sin embargo no estoy de acuerdo contigo",
+    "he": "עם זאת אני לא מסכים איתך",
+    "esBank": [
+      "Sin",
+      "embargo",
+      "no",
+      "estoy",
+      "de",
+      "acuerdo",
+      "contigo"
+    ],
+    "heBank": [
+      "עם",
+      "זאת",
+      "אני",
+      "לא",
+      "מסכים",
+      "איתך"
+    ],
+    "esDistractors": [
+      "siempre",
+      "feliz",
+      "ellos"
+    ],
+    "heDistractors": [
+      "תמיד",
+      "שמח",
+      "איתם"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s018",
+    "es": "Necesito comprar un cepillo de dientes",
+    "he": "אני צריך לקנות מברשת שיניים",
+    "esBank": [
+      "Necesito",
+      "comprar",
+      "un",
+      "cepillo",
+      "de",
+      "dientes"
+    ],
+    "heBank": [
+      "אני",
+      "צריך",
+      "לקנות",
+      "מברשת",
+      "שיניים"
+    ],
+    "esDistractors": [
+      "vender",
+      "toalla",
+      "jabón"
+    ],
+    "heDistractors": [
+      "למכור",
+      "מגבת",
+      "סבון"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s019",
+    "es": "El periodista escribe para un periódico famoso",
+    "he": "העיתונאי כותב לעיתון מפורסם",
+    "esBank": [
+      "El",
+      "periodista",
+      "escribe",
+      "para",
+      "un",
+      "periódico",
+      "famoso"
+    ],
+    "heBank": [
+      "העיתונאי",
+      "כותב",
+      "לעיתון",
+      "מפורסם"
+    ],
+    "esDistractors": [
+      "lee",
+      "libro",
+      "pequeño"
+    ],
+    "heDistractors": [
+      "קורא",
+      "ספר",
+      "קטן"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s020",
+    "es": "Pienso que el examen fue muy difícil",
+    "he": "אני חושב שהמבחן היה מאוד קשה",
+    "esBank": [
+      "Pienso",
+      "que",
+      "el",
+      "examen",
+      "fue",
+      "muy",
+      "difícil"
+    ],
+    "heBank": [
+      "אני",
+      "חושב",
+      "שהמבחן",
+      "היה",
+      "מאוד",
+      "קשה"
+    ],
+    "esDistractors": [
+      "fácil",
+      "ayer",
+      "profesor"
+    ],
+    "heDistractors": [
+      "קל",
+      "אתמול",
+      "מורה"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s021",
+    "es": "Vengo a la oficina dos veces por semana",
+    "he": "אני בא למשרד פעמיים בשבוע",
+    "esBank": [
+      "Vengo",
+      "a",
+      "la",
+      "oficina",
+      "dos",
+      "veces",
+      "por",
+      "semana"
+    ],
+    "heBank": [
+      "אני",
+      "בא",
+      "למשרד",
+      "פעמיים",
+      "בשבוע"
+    ],
+    "esDistractors": [
+      "voy",
+      "mes",
+      "tres"
+    ],
+    "heDistractors": [
+      "הולך",
+      "בחודש",
+      "שלוש"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s022",
+    "es": "Por fin llegaron las buenas noticias",
+    "he": "סוף סוף הגיעו החדשות הטובות",
+    "esBank": [
+      "Por",
+      "fin",
+      "llegaron",
+      "las",
+      "buenas",
+      "noticias"
+    ],
+    "heBank": [
+      "סוף",
+      "סוף",
+      "הגיעו",
+      "החדשות",
+      "הטובות"
+    ],
+    "esDistractors": [
+      "malas",
+      "salieron",
+      "cartas"
+    ],
+    "heDistractors": [
+      "הרעות",
+      "יצאו",
+      "מכתבים"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s023",
+    "es": "Quiero pedir un consejo a mi profesor",
+    "he": "אני רוצה לבקש עצה מהמורה שלי",
+    "esBank": [
+      "Quiero",
+      "pedir",
+      "un",
+      "consejo",
+      "a",
+      "mi",
+      "profesor"
+    ],
+    "heBank": [
+      "אני",
+      "רוצה",
+      "לבקש",
+      "עצה",
+      "מהמורה",
+      "שלי"
+    ],
+    "esDistractors": [
+      "dar",
+      "dinero",
+      "padre"
+    ],
+    "heDistractors": [
+      "לתת",
+      "כסף",
+      "מאבא"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s024",
+    "es": "Ellos van a celebrar su luna de miel en España",
+    "he": "הם הולכים לחגוג את ירח הדבש שלהם בספרד",
+    "esBank": [
+      "Ellos",
+      "van",
+      "a",
+      "celebrar",
+      "su",
+      "luna",
+      "de",
+      "miel",
+      "en",
+      "España"
+    ],
+    "heBank": [
+      "הם",
+      "הולכים",
+      "לחגוג",
+      "את",
+      "ירח",
+      "הדבש",
+      "שלהם",
+      "בספרד"
+    ],
+    "esDistractors": [
+      "trabajar",
+      "boda",
+      "Francia"
+    ],
+    "heDistractors": [
+      "לעבוד",
+      "החתונה",
+      "בצרפת"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s025",
+    "es": "Tengo que repetir el curso otra vez",
+    "he": "אני חייב לחזור על הקורס שוב פעם",
+    "esBank": [
+      "Tengo",
+      "que",
+      "repetir",
+      "el",
+      "curso",
+      "otra",
+      "vez"
+    ],
+    "heBank": [
+      "אני",
+      "חייב",
+      "לחזור",
+      "על",
+      "הקורס",
+      "שוב",
+      "פעם"
+    ],
+    "esDistractors": [
+      "empezar",
+      "examen",
+      "nunca"
+    ],
+    "heDistractors": [
+      "להתחיל",
+      "המבחן",
+      "אף פעם"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s026",
+    "es": "Ten cuidado porque el semáforo está en rojo",
+    "he": "היזהר כי הרמזור אדום",
+    "esBank": [
+      "Ten",
+      "cuidado",
+      "porque",
+      "el",
+      "semáforo",
+      "está",
+      "en",
+      "rojo"
+    ],
+    "heBank": [
+      "היזהר",
+      "כי",
+      "הרמזור",
+      "אדום"
+    ],
+    "esDistractors": [
+      "verde",
+      "rápido",
+      "coche"
+    ],
+    "heDistractors": [
+      "ירוק",
+      "מהר",
+      "מכונית"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s027",
+    "es": "Mi abuela cuida a su nieto por la mañana",
+    "he": "סבתא שלי מטפלת בנכד שלה בבוקר",
+    "esBank": [
+      "Mi",
+      "abuela",
+      "cuida",
+      "a",
+      "su",
+      "nieto",
+      "por",
+      "la",
+      "mañana"
+    ],
+    "heBank": [
+      "סבתא",
+      "שלי",
+      "מטפלת",
+      "בנכד",
+      "שלה",
+      "בבוקר"
+    ],
+    "esDistractors": [
+      "tarde",
+      "hija",
+      "olvida"
+    ],
+    "heDistractors": [
+      "בערב",
+      "בת",
+      "שוכחת"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s028",
+    "es": "Hace sol vamos a la playa",
+    "he": "יש שמש בואו נלך לחוף",
+    "esBank": [
+      "Hace",
+      "sol",
+      "vamos",
+      "a",
+      "la",
+      "playa"
+    ],
+    "heBank": [
+      "יש",
+      "שמש",
+      "בואו",
+      "נלך",
+      "לחוף"
+    ],
+    "esDistractors": [
+      "frío",
+      "casa",
+      "montaña"
+    ],
+    "heDistractors": [
+      "קר",
+      "הביתה",
+      "להר"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s029",
+    "es": "El vuelo está retrasado media hora",
+    "he": "הטיסה מתעכבת חצי שעה",
+    "esBank": [
+      "El",
+      "vuelo",
+      "está",
+      "retrasado",
+      "media",
+      "hora"
+    ],
+    "heBank": [
+      "הטיסה",
+      "מתעכבת",
+      "חצי",
+      "שעה"
+    ],
+    "esDistractors": [
+      "tren",
+      "temprano",
+      "avión"
+    ],
+    "heDistractors": [
+      "הרכבת",
+      "מוקדם",
+      "מטוס"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s030",
+    "es": "Me gusta navegar por internet todo el día",
+    "he": "אני אוהב לגלוש באינטרנט כל היום",
+    "esBank": [
+      "Me",
+      "gusta",
+      "navegar",
+      "por",
+      "internet",
+      "todo",
+      "el",
+      "día"
+    ],
+    "heBank": [
+      "אני",
+      "אוהב",
+      "לגלוש",
+      "באינטרנט",
+      "כל",
+      "היום"
+    ],
+    "esDistractors": [
+      "dormir",
+      "nunca",
+      "trabajar"
+    ],
+    "heDistractors": [
+      "לישון",
+      "לעבוד",
+      "אף פעם"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s031",
+    "es": "Trabajo sin parar desde la mañana",
+    "he": "אני עובד בלי הפסקה מהבוקר",
+    "esBank": [
+      "Trabajo",
+      "sin",
+      "parar",
+      "desde",
+      "la",
+      "mañana"
+    ],
+    "heBank": [
+      "אני",
+      "עובד",
+      "בלי",
+      "הפסקה",
+      "מהבוקר"
+    ],
+    "esDistractors": [
+      "duermo",
+      "noche",
+      "tarde"
+    ],
+    "heDistractors": [
+      "ישן",
+      "מהלילה",
+      "לאט"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s032",
+    "es": "Por supuesto puedes venir a mi fiesta",
+    "he": "כמובן שאתה יכול לבוא למסיבה שלי",
+    "esBank": [
+      "Por",
+      "supuesto",
+      "puedes",
+      "venir",
+      "a",
+      "mi",
+      "fiesta"
+    ],
+    "heBank": [
+      "כמובן",
+      "שאתה",
+      "יכול",
+      "לבוא",
+      "למסיבה",
+      "שלי"
+    ],
+    "esDistractors": [
+      "nunca",
+      "salir",
+      "boda"
+    ],
+    "heDistractors": [
+      "אף פעם",
+      "לצאת",
+      "לחתונה"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s033",
+    "es": "Ella se siente feliz en su nuevo trabajo",
+    "he": "היא מרגישה מאושרת בעבודה החדשה שלה",
+    "esBank": [
+      "Ella",
+      "se",
+      "siente",
+      "feliz",
+      "en",
+      "su",
+      "nuevo",
+      "trabajo"
+    ],
+    "heBank": [
+      "היא",
+      "מרגישה",
+      "מאושרת",
+      "בעבודה",
+      "החדשה",
+      "שלה"
+    ],
+    "esDistractors": [
+      "triste",
+      "viejo",
+      "casa"
+    ],
+    "heDistractors": [
+      "עצובה",
+      "הישנה",
+      "בבית"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s034",
+    "es": "Necesitamos reservar una mesa para esta noche",
+    "he": "אנחנו צריכים להזמין שולחן להערב",
+    "esBank": [
+      "Necesitamos",
+      "reservar",
+      "una",
+      "mesa",
+      "para",
+      "esta",
+      "noche"
+    ],
+    "heBank": [
+      "אנחנו",
+      "צריכים",
+      "להזמין",
+      "שולחן",
+      "להערב"
+    ],
+    "esDistractors": [
+      "comprar",
+      "silla",
+      "mañana"
+    ],
+    "heDistractors": [
+      "לקנות",
+      "כיסא",
+      "למחר"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s035",
+    "es": "El taller está cerca de la oficina de correos",
+    "he": "המוסך נמצא קרוב לסניף הדואר",
+    "esBank": [
+      "El",
+      "taller",
+      "está",
+      "cerca",
+      "de",
+      "la",
+      "oficina",
+      "de",
+      "correos"
+    ],
+    "heBank": [
+      "המוסך",
+      "נמצא",
+      "קרוב",
+      "לסניף",
+      "הדואר"
+    ],
+    "esDistractors": [
+      "lejos",
+      "banco",
+      "escuela"
+    ],
+    "heDistractors": [
+      "רחוק",
+      "לבנק",
+      "שם"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s036",
+    "es": "Quiero pagar con tarjeta de crédito",
+    "he": "אני רוצה לשלם בכרטיס אשראי",
+    "esBank": [
+      "Quiero",
+      "pagar",
+      "con",
+      "tarjeta",
+      "de",
+      "crédito"
+    ],
+    "heBank": [
+      "אני",
+      "רוצה",
+      "לשלם",
+      "בכרטיס",
+      "אשראי"
+    ],
+    "esDistractors": [
+      "efectivo",
+      "comprar",
+      "banco"
+    ],
+    "heDistractors": [
+      "במזומן",
+      "לקנות",
+      "בנק"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s037",
+    "es": "Todo el mundo habla de la película nueva",
+    "he": "כולם מדברים על הסרט החדש",
+    "esBank": [
+      "Todo",
+      "el",
+      "mundo",
+      "habla",
+      "de",
+      "la",
+      "película",
+      "nueva"
+    ],
+    "heBank": [
+      "כולם",
+      "מדברים",
+      "על",
+      "הסרט",
+      "החדש"
+    ],
+    "esDistractors": [
+      "nadie",
+      "libro",
+      "vieja"
+    ],
+    "heDistractors": [
+      "אף אחד",
+      "הספר",
+      "הישן"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s038",
+    "es": "Sinceramente no sé la respuesta",
+    "he": "בכנות אני לא יודע את התשובה",
+    "esBank": [
+      "Sinceramente",
+      "no",
+      "sé",
+      "la",
+      "respuesta"
+    ],
+    "heBank": [
+      "בכנות",
+      "אני",
+      "לא",
+      "יודע",
+      "את",
+      "התשובה"
+    ],
+    "esDistractors": [
+      "pregunta",
+      "siempre",
+      "digo"
+    ],
+    "heDistractors": [
+      "השאלה",
+      "תמיד",
+      "אומר"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s039",
+    "es": "Vamos a juntarnos en el centro comunitario",
+    "he": "אנחנו הולכים להיפגש במרכז הקהילתי",
+    "esBank": [
+      "Vamos",
+      "a",
+      "juntarnos",
+      "en",
+      "el",
+      "centro",
+      "comunitario"
+    ],
+    "heBank": [
+      "אנחנו",
+      "הולכים",
+      "להיפגש",
+      "במרכז",
+      "הקהילתי"
+    ],
+    "esDistractors": [
+      "estadio",
+      "correr",
+      "mañana"
+    ],
+    "heDistractors": [
+      "באצטדיון",
+      "לרוץ",
+      "מחר"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s040",
+    "es": "Después de la cena me gusta ver la televisión",
+    "he": "אחרי ארוחת הערב אני אוהב לראות טלוויזיה",
+    "esBank": [
+      "Después",
+      "de",
+      "la",
+      "cena",
+      "me",
+      "gusta",
+      "ver",
+      "la",
+      "televisión"
+    ],
+    "heBank": [
+      "אחרי",
+      "ארוחת",
+      "הערב",
+      "אני",
+      "אוהב",
+      "לראות",
+      "טלוויזיה"
+    ],
+    "esDistractors": [
+      "antes",
+      "desayuno",
+      "leer"
+    ],
+    "heDistractors": [
+      "לפני",
+      "הבוקר",
+      "לקרוא"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s041",
+    "es": "Quiero aprender a cocinar comida mexicana",
+    "he": "אני רוצה ללמוד לבשל אוכל מקסיקני",
+    "esBank": [
+      "Quiero",
+      "aprender",
+      "a",
+      "cocinar",
+      "comida",
+      "mexicana"
+    ],
+    "heBank": [
+      "אני",
+      "רוצה",
+      "ללמוד",
+      "לבשל",
+      "אוכל",
+      "מקסיקני"
+    ],
+    "esDistractors": [
+      "aprendo",
+      "cocinamos",
+      "comidas"
+    ],
+    "heDistractors": [
+      "רוצים",
+      "לומד",
+      "מבשל"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s042",
+    "es": "Vamos a alquilar un auto en el aeropuerto",
+    "he": "אנחנו הולכים לשכור רכב בשדה התעופה",
+    "esBank": [
+      "Vamos",
+      "a",
+      "alquilar",
+      "un",
+      "auto",
+      "en",
+      "el",
+      "aeropuerto"
+    ],
+    "heBank": [
+      "אנחנו",
+      "הולכים",
+      "לשכור",
+      "רכב",
+      "בשדה",
+      "התעופה"
+    ],
+    "esDistractors": [
+      "alquilamos",
+      "una",
+      "coches"
+    ],
+    "heDistractors": [
+      "שוכרים",
+      "לרכוב",
+      "טיסה"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s043",
+    "es": "Mi hermana mayor trabaja en un hospital",
+    "he": "אחותי הגדולה עובדת בבית חולים",
+    "esBank": [
+      "Mi",
+      "hermana",
+      "mayor",
+      "trabaja",
+      "en",
+      "un",
+      "hospital"
+    ],
+    "heBank": [
+      "אחותי",
+      "הגדולה",
+      "עובדת",
+      "בבית",
+      "חולים"
+    ],
+    "esDistractors": [
+      "hermano",
+      "trabajo",
+      "hospitales"
+    ],
+    "heDistractors": [
+      "אחי",
+      "עובד",
+      "הגדול"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s044",
+    "es": "El clima está muy frío esta semana",
+    "he": "מזג האוויר קר מאוד השבוע",
+    "esBank": [
+      "El",
+      "clima",
+      "está",
+      "muy",
+      "frío",
+      "esta",
+      "semana"
+    ],
+    "heBank": [
+      "מזג",
+      "האוויר",
+      "קר",
+      "מאוד",
+      "השבוע"
+    ],
+    "esDistractors": [
+      "están",
+      "calor",
+      "semanas"
+    ],
+    "heDistractors": [
+      "חם",
+      "החודש",
+      "גשום"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s045",
+    "es": "Necesito guardar estos documentos en la oficina",
+    "he": "אני צריך לשמור את המסמכים האלה במשרד",
+    "esBank": [
+      "Necesito",
+      "guardar",
+      "estos",
+      "documentos",
+      "en",
+      "la",
+      "oficina"
+    ],
+    "heBank": [
+      "אני",
+      "צריך",
+      "לשמור",
+      "את",
+      "המסמכים",
+      "האלה",
+      "במשרד"
+    ],
+    "esDistractors": [
+      "necesitas",
+      "guardo",
+      "oficinas"
+    ],
+    "heDistractors": [
+      "צריכה",
+      "שומר",
+      "בבנק"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s046",
+    "es": "Ella quiere publicar una foto en la red social",
+    "he": "היא רוצה לפרסם תמונה ברשת החברתית",
+    "esBank": [
+      "Ella",
+      "quiere",
+      "publicar",
+      "una",
+      "foto",
+      "en",
+      "la",
+      "red",
+      "social"
+    ],
+    "heBank": [
+      "היא",
+      "רוצה",
+      "לפרסם",
+      "תמונה",
+      "ברשת",
+      "החברתית"
+    ],
+    "esDistractors": [
+      "quieren",
+      "publico",
+      "redes"
+    ],
+    "heDistractors": [
+      "רוצות",
+      "מפרסם",
+      "בטלוויזיה"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s047",
+    "es": "Tenemos que hacer las maletas esta noche",
+    "he": "אנחנו חייבים לארוז את המזוודות הלילה",
+    "esBank": [
+      "Tenemos",
+      "que",
+      "hacer",
+      "las",
+      "maletas",
+      "esta",
+      "noche"
+    ],
+    "heBank": [
+      "אנחנו",
+      "חייבים",
+      "לארוז",
+      "את",
+      "המזוודות",
+      "הלילה"
+    ],
+    "esDistractors": [
+      "tengo",
+      "hacemos",
+      "maleta"
+    ],
+    "heDistractors": [
+      "חייב",
+      "אורזים",
+      "מחר"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s048",
+    "es": "Mi padre prefiere tomar café por la mañana",
+    "he": "אבא שלי מעדיף לשתות קפה בבוקר",
+    "esBank": [
+      "Mi",
+      "padre",
+      "prefiere",
+      "tomar",
+      "café",
+      "por",
+      "la",
+      "mañana"
+    ],
+    "heBank": [
+      "אבא",
+      "שלי",
+      "מעדיף",
+      "לשתות",
+      "קפה",
+      "בבוקר"
+    ],
+    "esDistractors": [
+      "prefieren",
+      "toma",
+      "cafés"
+    ],
+    "heDistractors": [
+      "מעדיפה",
+      "שותה",
+      "בערב"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s049",
+    "es": "Los niños juegan en el parque después de clase",
+    "he": "הילדים משחקים בפארק אחרי השיעור",
+    "esBank": [
+      "Los",
+      "niños",
+      "juegan",
+      "en",
+      "el",
+      "parque",
+      "después",
+      "de",
+      "clase"
+    ],
+    "heBank": [
+      "הילדים",
+      "משחקים",
+      "בפארק",
+      "אחרי",
+      "השיעור"
+    ],
+    "esDistractors": [
+      "juega",
+      "parques",
+      "antes"
+    ],
+    "heDistractors": [
+      "משחק",
+      "לפני",
+      "בבית"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s050",
+    "es": "Quiero invitar a mis amigos a la fiesta",
+    "he": "אני רוצה להזמין את החברים שלי למסיבה",
+    "esBank": [
+      "Quiero",
+      "invitar",
+      "a",
+      "mis",
+      "amigos",
+      "a",
+      "la",
+      "fiesta"
+    ],
+    "heBank": [
+      "אני",
+      "רוצה",
+      "להזמין",
+      "את",
+      "החברים",
+      "שלי",
+      "למסיבה"
+    ],
+    "esDistractors": [
+      "invito",
+      "amigas",
+      "fiestas"
+    ],
+    "heDistractors": [
+      "רוצים",
+      "מזמין",
+      "לחתונה"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s051",
+    "es": "El técnico va a reparar el refrigerador mañana",
+    "he": "הטכנאי הולך לתקן את המקרר מחר",
+    "esBank": [
+      "El",
+      "técnico",
+      "va",
+      "a",
+      "reparar",
+      "el",
+      "refrigerador",
+      "mañana"
+    ],
+    "heBank": [
+      "הטכנאי",
+      "הולך",
+      "לתקן",
+      "את",
+      "המקרר",
+      "מחר"
+    ],
+    "esDistractors": [
+      "técnicos",
+      "repara",
+      "refrigeradores"
+    ],
+    "heDistractors": [
+      "השרברב",
+      "מתקן",
+      "היום"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s052",
+    "es": "Me gusta montar en bicicleta los domingos",
+    "he": "אני אוהב לרכוב על אופניים בימי ראשון",
+    "esBank": [
+      "Me",
+      "gusta",
+      "montar",
+      "en",
+      "bicicleta",
+      "los",
+      "domingos"
+    ],
+    "heBank": [
+      "אני",
+      "אוהב",
+      "לרכוב",
+      "על",
+      "אופניים",
+      "בימי",
+      "ראשון"
+    ],
+    "esDistractors": [
+      "gustan",
+      "bicicletas",
+      "sábados"
+    ],
+    "heDistractors": [
+      "אוהבת",
+      "לנהוג",
+      "שלישי"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s053",
+    "es": "Necesitamos comprar frutas frescas en el mercado",
+    "he": "אנחנו צריכים לקנות פירות טריים בשוק",
+    "esBank": [
+      "Necesitamos",
+      "comprar",
+      "frutas",
+      "frescas",
+      "en",
+      "el",
+      "mercado"
+    ],
+    "heBank": [
+      "אנחנו",
+      "צריכים",
+      "לקנות",
+      "פירות",
+      "טריים",
+      "בשוק"
+    ],
+    "esDistractors": [
+      "necesito",
+      "compramos",
+      "fresca"
+    ],
+    "heDistractors": [
+      "צריך",
+      "קונים",
+      "קפואים"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s054",
+    "es": "Mi esposa trabaja desde casa dos veces por semana",
+    "he": "אשתי עובדת מהבית פעמיים בשבוע",
+    "esBank": [
+      "Mi",
+      "esposa",
+      "trabaja",
+      "desde",
+      "casa",
+      "dos",
+      "veces",
+      "por",
+      "semana"
+    ],
+    "heBank": [
+      "אשתי",
+      "עובדת",
+      "מהבית",
+      "פעמיים",
+      "בשבוע"
+    ],
+    "esDistractors": [
+      "trabajan",
+      "oficina",
+      "vez"
+    ],
+    "heDistractors": [
+      "עובד",
+      "מהמשרד",
+      "בחודש"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s055",
+    "es": "El camarero sirve la comida con una sonrisa",
+    "he": "המלצר מגיש את האוכל עם חיוך",
+    "esBank": [
+      "El",
+      "camarero",
+      "sirve",
+      "la",
+      "comida",
+      "con",
+      "una",
+      "sonrisa"
+    ],
+    "heBank": [
+      "המלצר",
+      "מגיש",
+      "את",
+      "האוכל",
+      "עם",
+      "חיוך"
+    ],
+    "esDistractors": [
+      "sirven",
+      "camareros",
+      "bebida"
+    ],
+    "heDistractors": [
+      "המלצרית",
+      "מגישה",
+      "השתייה"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s056",
+    "es": "Estoy seguro de que vamos a ganar el partido",
+    "he": "אני בטוח שאנחנו הולכים לנצח במשחק",
+    "esBank": [
+      "Estoy",
+      "seguro",
+      "de",
+      "que",
+      "vamos",
+      "a",
+      "ganar",
+      "el",
+      "partido"
+    ],
+    "heBank": [
+      "אני",
+      "בטוח",
+      "שאנחנו",
+      "הולכים",
+      "לנצח",
+      "במשחק"
+    ],
+    "esDistractors": [
+      "estás",
+      "ganamos",
+      "partidos"
+    ],
+    "heDistractors": [
+      "בטוחה",
+      "מנצחים",
+      "בתחרות"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s057",
+    "es": "Quiero cambiar de tema porque es aburrido",
+    "he": "אני רוצה להחליף נושא כי הוא משעמם",
+    "esBank": [
+      "Quiero",
+      "cambiar",
+      "de",
+      "tema",
+      "porque",
+      "es",
+      "aburrido"
+    ],
+    "heBank": [
+      "אני",
+      "רוצה",
+      "להחליף",
+      "נושא",
+      "כי",
+      "הוא",
+      "משעמם"
+    ],
+    "esDistractors": [
+      "cambio",
+      "temas",
+      "divertido"
+    ],
+    "heDistractors": [
+      "מחליף",
+      "נושאים",
+      "מעניין"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s058",
+    "es": "Hay mucho tráfico en el centro de la ciudad",
+    "he": "יש הרבה תנועה במרכז העיר",
+    "esBank": [
+      "Hay",
+      "mucho",
+      "tráfico",
+      "en",
+      "el",
+      "centro",
+      "de",
+      "la",
+      "ciudad"
+    ],
+    "heBank": [
+      "יש",
+      "הרבה",
+      "תנועה",
+      "במרכז",
+      "העיר"
+    ],
+    "esDistractors": [
+      "muchas",
+      "calle",
+      "ciudades"
+    ],
+    "heDistractors": [
+      "מעט",
+      "רעש",
+      "הכפר"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s059",
+    "es": "Mi abuelo cuenta una historia antes de dormir",
+    "he": "סבא שלי מספר סיפור לפני השינה",
+    "esBank": [
+      "Mi",
+      "abuelo",
+      "cuenta",
+      "una",
+      "historia",
+      "antes",
+      "de",
+      "dormir"
+    ],
+    "heBank": [
+      "סבא",
+      "שלי",
+      "מספר",
+      "סיפור",
+      "לפני",
+      "השינה"
+    ],
+    "esDistractors": [
+      "cuentan",
+      "historias",
+      "después"
+    ],
+    "heDistractors": [
+      "סבתא",
+      "מספרת",
+      "אחרי"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s060",
+    "es": "Vamos a ver una película de terror esta noche",
+    "he": "אנחנו הולכים לראות סרט אימה הלילה",
+    "esBank": [
+      "Vamos",
+      "a",
+      "ver",
+      "una",
+      "película",
+      "de",
+      "terror",
+      "esta",
+      "noche"
+    ],
+    "heBank": [
+      "אנחנו",
+      "הולכים",
+      "לראות",
+      "סרט",
+      "אימה",
+      "הלילה"
+    ],
+    "esDistractors": [
+      "vemos",
+      "películas",
+      "acción"
+    ],
+    "heDistractors": [
+      "הולכות",
+      "רואים",
+      "קומדיה"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s061",
+    "es": "Tengo dolor de estómago desde ayer",
+    "he": "יש לי כאב בטן מאתמול",
+    "esBank": [
+      "Tengo",
+      "dolor",
+      "de",
+      "estómago",
+      "desde",
+      "ayer"
+    ],
+    "heBank": [
+      "יש",
+      "לי",
+      "כאב",
+      "בטן",
+      "מאתמול"
+    ],
+    "esDistractors": [
+      "tienes",
+      "cabeza",
+      "dolores"
+    ],
+    "heDistractors": [
+      "לך",
+      "ראש",
+      "מהבוקר"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s062",
+    "es": "Ella se levanta temprano para hacer ejercicio",
+    "he": "היא קמה מוקדם כדי להתעמל",
+    "esBank": [
+      "Ella",
+      "se",
+      "levanta",
+      "temprano",
+      "para",
+      "hacer",
+      "ejercicio"
+    ],
+    "heBank": [
+      "היא",
+      "קמה",
+      "מוקדם",
+      "כדי",
+      "להתעמל"
+    ],
+    "esDistractors": [
+      "levantan",
+      "tarde",
+      "ejercicios"
+    ],
+    "heDistractors": [
+      "קם",
+      "מאוחר",
+      "לרוץ"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s063",
+    "es": "Necesito cargar el teléfono antes de salir",
+    "he": "אני צריך לטעון את הטלפון לפני היציאה",
+    "esBank": [
+      "Necesito",
+      "cargar",
+      "el",
+      "teléfono",
+      "antes",
+      "de",
+      "salir"
+    ],
+    "heBank": [
+      "אני",
+      "צריך",
+      "לטעון",
+      "את",
+      "הטלפון",
+      "לפני",
+      "היציאה"
+    ],
+    "esDistractors": [
+      "cargo",
+      "teléfonos",
+      "después"
+    ],
+    "heDistractors": [
+      "צריכה",
+      "טוען",
+      "אחרי"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s064",
+    "es": "El concurso de baile empieza a las nueve",
+    "he": "תחרות הריקודים מתחילה בשעה תשע",
+    "esBank": [
+      "El",
+      "concurso",
+      "de",
+      "baile",
+      "empieza",
+      "a",
+      "las",
+      "nueve"
+    ],
+    "heBank": [
+      "תחרות",
+      "הריקודים",
+      "מתחילה",
+      "בשעה",
+      "תשע"
+    ],
+    "esDistractors": [
+      "empiezan",
+      "concursos",
+      "canto"
+    ],
+    "heDistractors": [
+      "מתחיל",
+      "שמונה",
+      "המופע"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s065",
+    "es": "Mis padres van a viajar al norte del país",
+    "he": "ההורים שלי הולכים לנסוע לצפון הארץ",
+    "esBank": [
+      "Mis",
+      "padres",
+      "van",
+      "a",
+      "viajar",
+      "al",
+      "norte",
+      "del",
+      "país"
+    ],
+    "heBank": [
+      "ההורים",
+      "שלי",
+      "הולכים",
+      "לנסוע",
+      "לצפון",
+      "הארץ"
+    ],
+    "esDistractors": [
+      "va",
+      "sur",
+      "países"
+    ],
+    "heDistractors": [
+      "הולך",
+      "לדרום",
+      "העיר"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s066",
+    "es": "Quiero probar el pastel de chocolate",
+    "he": "אני רוצה לטעום את עוגת השוקולד",
+    "esBank": [
+      "Quiero",
+      "probar",
+      "el",
+      "pastel",
+      "de",
+      "chocolate"
+    ],
+    "heBank": [
+      "אני",
+      "רוצה",
+      "לטעום",
+      "את",
+      "עוגת",
+      "השוקולד"
+    ],
+    "esDistractors": [
+      "pruebo",
+      "pasteles",
+      "vainilla"
+    ],
+    "heDistractors": [
+      "רוצות",
+      "טועם",
+      "הגבינה"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s067",
+    "es": "Hace mucho calor vamos a la piscina",
+    "he": "חם מאוד בואו נלך לבריכה",
+    "esBank": [
+      "Hace",
+      "mucho",
+      "calor",
+      "vamos",
+      "a",
+      "la",
+      "piscina"
+    ],
+    "heBank": [
+      "חם",
+      "מאוד",
+      "בואו",
+      "נלך",
+      "לבריכה"
+    ],
+    "esDistractors": [
+      "hacen",
+      "frío",
+      "piscinas"
+    ],
+    "heDistractors": [
+      "קר",
+      "הולכים",
+      "לים"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s068",
+    "es": "El autobús pasa por mi casa cada media hora",
+    "he": "האוטובוס עובר ליד הבית שלי כל חצי שעה",
+    "esBank": [
+      "El",
+      "autobús",
+      "pasa",
+      "por",
+      "mi",
+      "casa",
+      "cada",
+      "media",
+      "hora"
+    ],
+    "heBank": [
+      "האוטובוס",
+      "עובר",
+      "ליד",
+      "הבית",
+      "שלי",
+      "כל",
+      "חצי",
+      "שעה"
+    ],
+    "esDistractors": [
+      "pasan",
+      "autobuses",
+      "cuarto"
+    ],
+    "heDistractors": [
+      "הרכבת",
+      "עוברת",
+      "רבע"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s069",
+    "es": "Mi jefe quiere ver el informe hoy",
+    "he": "הבוס שלי רוצה לראות את הדוח היום",
+    "esBank": [
+      "Mi",
+      "jefe",
+      "quiere",
+      "ver",
+      "el",
+      "informe",
+      "hoy"
+    ],
+    "heBank": [
+      "הבוס",
+      "שלי",
+      "רוצה",
+      "לראות",
+      "את",
+      "הדוח",
+      "היום"
+    ],
+    "esDistractors": [
+      "jefes",
+      "quieren",
+      "informes"
+    ],
+    "heDistractors": [
+      "הבוסית",
+      "רוצים",
+      "מחר"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s070",
+    "es": "Vamos a plantar flores en el jardín mañana",
+    "he": "אנחנו הולכים לשתול פרחים בגינה מחר",
+    "esBank": [
+      "Vamos",
+      "a",
+      "plantar",
+      "flores",
+      "en",
+      "el",
+      "jardín",
+      "mañana"
+    ],
+    "heBank": [
+      "אנחנו",
+      "הולכים",
+      "לשתול",
+      "פרחים",
+      "בגינה",
+      "מחר"
+    ],
+    "esDistractors": [
+      "plantamos",
+      "flor",
+      "jardines"
+    ],
+    "heDistractors": [
+      "שותלים",
+      "פרח",
+      "עצים"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s071",
+    "es": "No puedo encontrar mis lentes de sol",
+    "he": "אני לא מוצא את משקפי השמש שלי",
+    "esBank": [
+      "No",
+      "puedo",
+      "encontrar",
+      "mis",
+      "lentes",
+      "de",
+      "sol"
+    ],
+    "heBank": [
+      "אני",
+      "לא",
+      "מוצא",
+      "את",
+      "משקפי",
+      "השמש",
+      "שלי"
+    ],
+    "esDistractors": [
+      "puedes",
+      "encuentro",
+      "zapatos"
+    ],
+    "heDistractors": [
+      "מוצאת",
+      "יכולה",
+      "המפתחות"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s072",
+    "es": "Ellos van a mudarse a un vecindario nuevo",
+    "he": "הם הולכים לעבור לשכונה חדשה",
+    "esBank": [
+      "Ellos",
+      "van",
+      "a",
+      "mudarse",
+      "a",
+      "un",
+      "vecindario",
+      "nuevo"
+    ],
+    "heBank": [
+      "הם",
+      "הולכים",
+      "לעבור",
+      "לשכונה",
+      "חדשה"
+    ],
+    "esDistractors": [
+      "va",
+      "vecindarios",
+      "vieja"
+    ],
+    "heDistractors": [
+      "הולכות",
+      "עוברים",
+      "ישנה"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s073",
+    "es": "Prefiero pagar en efectivo en la carnicería",
+    "he": "אני מעדיף לשלם במזומן באטליז",
+    "esBank": [
+      "Prefiero",
+      "pagar",
+      "en",
+      "efectivo",
+      "en",
+      "la",
+      "carnicería"
+    ],
+    "heBank": [
+      "אני",
+      "מעדיף",
+      "לשלם",
+      "במזומן",
+      "באטליז"
+    ],
+    "esDistractors": [
+      "prefieres",
+      "pago",
+      "carnicerías"
+    ],
+    "heDistractors": [
+      "מעדיפה",
+      "משלם",
+      "באשראי"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s074",
+    "es": "El espectáculo de música en vivo fue maravilloso",
+    "he": "מופע המוזיקה החיה היה נפלא",
+    "esBank": [
+      "El",
+      "espectáculo",
+      "de",
+      "música",
+      "en",
+      "vivo",
+      "fue",
+      "maravilloso"
+    ],
+    "heBank": [
+      "מופע",
+      "המוזיקה",
+      "החיה",
+      "היה",
+      "נפלא"
+    ],
+    "esDistractors": [
+      "espectáculos",
+      "fueron",
+      "aburrido"
+    ],
+    "heDistractors": [
+      "המופעים",
+      "היתה",
+      "משעמם"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s075",
+    "es": "Tienes que doblar a la derecha en el semáforo",
+    "he": "אתה חייב לפנות ימינה ברמזור",
+    "esBank": [
+      "Tienes",
+      "que",
+      "doblar",
+      "a",
+      "la",
+      "derecha",
+      "en",
+      "el",
+      "semáforo"
+    ],
+    "heBank": [
+      "אתה",
+      "חייב",
+      "לפנות",
+      "ימינה",
+      "ברמזור"
+    ],
+    "esDistractors": [
+      "tengo",
+      "izquierda",
+      "doblo"
+    ],
+    "heDistractors": [
+      "את",
+      "שמאלה",
+      "פונה"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s076",
+    "es": "Mi hija aprende a tocar el piano",
+    "he": "הבת שלי לומדת לנגן בפסנתר",
+    "esBank": [
+      "Mi",
+      "hija",
+      "aprende",
+      "a",
+      "tocar",
+      "el",
+      "piano"
+    ],
+    "heBank": [
+      "הבת",
+      "שלי",
+      "לומדת",
+      "לנגן",
+      "בפסנתר"
+    ],
+    "esDistractors": [
+      "hijas",
+      "aprenden",
+      "guitarra"
+    ],
+    "heDistractors": [
+      "הבן",
+      "לומד",
+      "בגיטרה"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s077",
+    "es": "Estoy muy cansado después del entrenamiento",
+    "he": "אני מאוד עייף אחרי האימון",
+    "esBank": [
+      "Estoy",
+      "muy",
+      "cansado",
+      "después",
+      "del",
+      "entrenamiento"
+    ],
+    "heBank": [
+      "אני",
+      "מאוד",
+      "עייף",
+      "אחרי",
+      "האימון"
+    ],
+    "esDistractors": [
+      "estamos",
+      "cansada",
+      "antes"
+    ],
+    "heDistractors": [
+      "עייפה",
+      "אנחנו",
+      "לפני"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s078",
+    "es": "Queremos reservar dos habitaciones para el fin de semana",
+    "he": "אנחנו רוצים להזמין שני חדרים לסוף השבוע",
+    "esBank": [
+      "Queremos",
+      "reservar",
+      "dos",
+      "habitaciones",
+      "para",
+      "el",
+      "fin",
+      "de",
+      "semana"
+    ],
+    "heBank": [
+      "אנחנו",
+      "רוצים",
+      "להזמין",
+      "שני",
+      "חדרים",
+      "לסוף",
+      "השבוע"
+    ],
+    "esDistractors": [
+      "quiero",
+      "habitación",
+      "tres"
+    ],
+    "heDistractors": [
+      "רוצה",
+      "חדר",
+      "שלושה"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s079",
+    "es": "Por lo menos tenemos tiempo para descansar",
+    "he": "לפחות יש לנו זמן לנוח",
+    "esBank": [
+      "Por",
+      "lo",
+      "menos",
+      "tenemos",
+      "tiempo",
+      "para",
+      "descansar"
+    ],
+    "heBank": [
+      "לפחות",
+      "יש",
+      "לנו",
+      "זמן",
+      "לנוח"
+    ],
+    "esDistractors": [
+      "tengo",
+      "tiempos",
+      "trabajar"
+    ],
+    "heDistractors": [
+      "לי",
+      "כסף",
+      "לעבוד"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "s080",
+    "es": "Resulta que el propietario quiere vender la casa",
+    "he": "מסתבר שהבעלים רוצה למכור את הבית",
+    "esBank": [
+      "Resulta",
+      "que",
+      "el",
+      "propietario",
+      "quiere",
+      "vender",
+      "la",
+      "casa"
+    ],
+    "heBank": [
+      "מסתבר",
+      "שהבעלים",
+      "רוצה",
+      "למכור",
+      "את",
+      "הבית"
+    ],
+    "esDistractors": [
+      "resultan",
+      "quieren",
+      "comprar"
+    ],
+    "heDistractors": [
+      "רוצים",
+      "לקנות",
+      "הדירה"
+    ],
+    "level": "medium"
+  },
+  {
+    "id": "sh001",
+    "es": "A pesar de la crisis, la empresa logró aumentar sus ganancias.",
+    "he": "למרות המשבר, החברה הצליחה להגדיל את הרווחים שלה.",
+    "esBank": [
+      "A",
+      "pesar",
+      "de",
+      "la",
+      "crisis,",
+      "la",
+      "empresa",
+      "logró",
+      "aumentar",
+      "sus",
+      "ganancias."
+    ],
+    "heBank": [
+      "למרות",
+      "המשבר,",
+      "החברה",
+      "הצליחה",
+      "להגדיל",
+      "את",
+      "הרווחים",
+      "שלה."
+    ],
+    "esDistractors": [
+      "perdió",
+      "reducir",
+      "empleados"
+    ],
+    "heDistractors": [
+      "נכשלה",
+      "להקטין",
+      "ההפסדים"
+    ],
+    "level": "hard"
+  },
+  {
+    "id": "sh002",
+    "es": "Aunque estaba cansado, siguió trabajando hasta terminar el informe.",
+    "he": "למרות שהיה עייף, הוא המשיך לעבוד עד שסיים את הדוח.",
+    "esBank": [
+      "Aunque",
+      "estaba",
+      "cansado,",
+      "siguió",
+      "trabajando",
+      "hasta",
+      "terminar",
+      "el",
+      "informe."
+    ],
+    "heBank": [
+      "למרות",
+      "שהיה",
+      "עייף,",
+      "הוא",
+      "המשיך",
+      "לעבוד",
+      "עד",
+      "שסיים",
+      "את",
+      "הדוח."
+    ],
+    "esDistractors": [
+      "dormido",
+      "empezó",
+      "viaje"
+    ],
+    "heDistractors": [
+      "רעב",
+      "הפסיק",
+      "הטיול"
+    ],
+    "level": "hard"
+  },
+  {
+    "id": "sh003",
+    "es": "El gobierno prometió reducir la contaminación en las grandes ciudades.",
+    "he": "הממשלה הבטיחה להפחית את הזיהום בערים הגדולות.",
+    "esBank": [
+      "El",
+      "gobierno",
+      "prometió",
+      "reducir",
+      "la",
+      "contaminación",
+      "en",
+      "las",
+      "grandes",
+      "ciudades."
+    ],
+    "heBank": [
+      "הממשלה",
+      "הבטיחה",
+      "להפחית",
+      "את",
+      "הזיהום",
+      "בערים",
+      "הגדולות."
+    ],
+    "esDistractors": [
+      "aumentar",
+      "negó",
+      "pueblos"
+    ],
+    "heDistractors": [
+      "להגדיל",
+      "סירבה",
+      "בכפרים"
+    ],
+    "level": "hard"
+  },
+  {
+    "id": "sh004",
+    "es": "Si hubiera estudiado más, habría conseguido un trabajo mejor.",
+    "he": "אם הוא היה לומד יותר, הוא היה משיג עבודה טובה יותר.",
+    "esBank": [
+      "Si",
+      "hubiera",
+      "estudiado",
+      "más,",
+      "habría",
+      "conseguido",
+      "un",
+      "trabajo",
+      "mejor."
+    ],
+    "heBank": [
+      "אם",
+      "הוא",
+      "היה",
+      "לומד",
+      "יותר,",
+      "הוא",
+      "היה",
+      "משיג",
+      "עבודה",
+      "טובה",
+      "יותר."
+    ],
+    "esDistractors": [
+      "peor",
+      "dormido",
+      "dinero"
+    ],
+    "heDistractors": [
+      "פחות",
+      "גרועה",
+      "כסף"
+    ],
+    "level": "hard"
+  },
+  {
+    "id": "sh005",
+    "es": "Es imprescindible que los ciudadanos participen en las elecciones.",
+    "he": "הכרחי שהאזרחים ישתתפו בבחירות.",
+    "esBank": [
+      "Es",
+      "imprescindible",
+      "que",
+      "los",
+      "ciudadanos",
+      "participen",
+      "en",
+      "las",
+      "elecciones."
+    ],
+    "heBank": [
+      "הכרחי",
+      "שהאזרחים",
+      "ישתתפו",
+      "בבחירות."
+    ],
+    "esDistractors": [
+      "turistas",
+      "imposible",
+      "fiesta"
+    ],
+    "heDistractors": [
+      "אסור",
+      "התיירים",
+      "במסיבה"
+    ],
+    "level": "hard"
+  },
+  {
+    "id": "sh006",
+    "es": "Ella fingió estar contenta, aunque estaba muy decepcionada.",
+    "he": "היא העמידה פנים שהיא מרוצה, למרות שהייתה מאוד מאוכזבת.",
+    "esBank": [
+      "Ella",
+      "fingió",
+      "estar",
+      "contenta,",
+      "aunque",
+      "estaba",
+      "muy",
+      "decepcionada."
+    ],
+    "heBank": [
+      "היא",
+      "העמידה",
+      "פנים",
+      "שהיא",
+      "מרוצה,",
+      "למרות",
+      "שהייתה",
+      "מאוד",
+      "מאוכזבת."
+    ],
+    "esDistractors": [
+      "triste",
+      "orgullosa",
+      "lloró"
+    ],
+    "heDistractors": [
+      "עצובה",
+      "גאה",
+      "בכתה"
+    ],
+    "level": "hard"
+  },
+  {
+    "id": "sh007",
+    "es": "Deberíamos aprovechar esta oportunidad antes de que sea tarde.",
+    "he": "כדאי שננצל את ההזדמנות הזאת לפני שיהיה מאוחר מדי.",
+    "esBank": [
+      "Deberíamos",
+      "aprovechar",
+      "esta",
+      "oportunidad",
+      "antes",
+      "de",
+      "que",
+      "sea",
+      "tarde."
+    ],
+    "heBank": [
+      "כדאי",
+      "שננצל",
+      "את",
+      "ההזדמנות",
+      "הזאת",
+      "לפני",
+      "שיהיה",
+      "מאוחר",
+      "מדי."
+    ],
+    "esDistractors": [
+      "perder",
+      "mañana",
+      "problema"
+    ],
+    "heDistractors": [
+      "לפספס",
+      "הבעיה",
+      "מחר"
+    ],
+    "level": "hard"
+  },
+  {
+    "id": "sh008",
+    "es": "El desempleo aumentó porque muchas empresas despidieron a sus trabajadores.",
+    "he": "האבטלה עלתה כי חברות רבות פיטרו את העובדים שלהן.",
+    "esBank": [
+      "El",
+      "desempleo",
+      "aumentó",
+      "porque",
+      "muchas",
+      "empresas",
+      "despidieron",
+      "a",
+      "sus",
+      "trabajadores."
+    ],
+    "heBank": [
+      "האבטלה",
+      "עלתה",
+      "כי",
+      "חברות",
+      "רבות",
+      "פיטרו",
+      "את",
+      "העובדים",
+      "שלהן."
+    ],
+    "esDistractors": [
+      "disminuyó",
+      "contrataron",
+      "clientes"
+    ],
+    "heDistractors": [
+      "ירדה",
+      "העסיקו",
+      "הלקוחות"
+    ],
+    "level": "hard"
+  },
+  {
+    "id": "sh009",
+    "es": "Sospecho que él no dijo la verdad durante la reunión.",
+    "he": "אני חושד שהוא לא אמר את האמת במהלך הישיבה.",
+    "esBank": [
+      "Sospecho",
+      "que",
+      "él",
+      "no",
+      "dijo",
+      "la",
+      "verdad",
+      "durante",
+      "la",
+      "reunión."
+    ],
+    "heBank": [
+      "אני",
+      "חושד",
+      "שהוא",
+      "לא",
+      "אמר",
+      "את",
+      "האמת",
+      "במהלך",
+      "הישיבה."
+    ],
+    "esDistractors": [
+      "mintió",
+      "fiesta",
+      "siempre"
+    ],
+    "heDistractors": [
+      "בטוח",
+      "שיקר",
+      "המסיבה"
+    ],
+    "level": "hard"
+  },
+  {
+    "id": "sh010",
+    "es": "A largo plazo, esta inversión traerá grandes beneficios al país.",
+    "he": "בטווח הארוך, ההשקעה הזאת תביא רווחים גדולים למדינה.",
+    "esBank": [
+      "A",
+      "largo",
+      "plazo,",
+      "esta",
+      "inversión",
+      "traerá",
+      "grandes",
+      "beneficios",
+      "al",
+      "país."
+    ],
+    "heBank": [
+      "בטווח",
+      "הארוך,",
+      "ההשקעה",
+      "הזאת",
+      "תביא",
+      "רווחים",
+      "גדולים",
+      "למדינה."
+    ],
+    "esDistractors": [
+      "pérdidas",
+      "corto",
+      "ciudad"
+    ],
+    "heDistractors": [
+      "הקצר",
+      "הפסדים",
+      "לעיר"
+    ],
+    "level": "hard"
+  },
+  {
+    "id": "sh011",
+    "es": "Me arrepiento de no haber aceptado aquella oferta de trabajo.",
+    "he": "אני מתחרט שלא קיבלתי את הצעת העבודה ההיא.",
+    "esBank": [
+      "Me",
+      "arrepiento",
+      "de",
+      "no",
+      "haber",
+      "aceptado",
+      "aquella",
+      "oferta",
+      "de",
+      "trabajo."
+    ],
+    "heBank": [
+      "אני",
+      "מתחרט",
+      "שלא",
+      "קיבלתי",
+      "את",
+      "הצעת",
+      "העבודה",
+      "ההיא."
+    ],
+    "esDistractors": [
+      "alegro",
+      "rechazado",
+      "viaje"
+    ],
+    "heDistractors": [
+      "שמח",
+      "דחיתי",
+      "הנסיעה"
+    ],
+    "level": "hard"
+  },
+  {
+    "id": "sh012",
+    "es": "El jefe exigió que todos entregaran el proyecto antes del viernes.",
+    "he": "הבוס דרש שכולם יגישו את הפרויקט לפני יום שישי.",
+    "esBank": [
+      "El",
+      "jefe",
+      "exigió",
+      "que",
+      "todos",
+      "entregaran",
+      "el",
+      "proyecto",
+      "antes",
+      "del",
+      "viernes."
+    ],
+    "heBank": [
+      "הבוס",
+      "דרש",
+      "שכולם",
+      "יגישו",
+      "את",
+      "הפרויקט",
+      "לפני",
+      "יום",
+      "שישי."
+    ],
+    "esDistractors": [
+      "sugirió",
+      "después",
+      "informe"
+    ],
+    "heDistractors": [
+      "ביקש",
+      "אחרי",
+      "הדוח"
+    ],
+    "level": "hard"
+  },
+  {
+    "id": "sh013",
+    "es": "Aunque llueva mañana, el evento se celebrará como estaba planeado.",
+    "he": "גם אם ירד גשם מחר, האירוע יתקיים כמתוכנן.",
+    "esBank": [
+      "Aunque",
+      "llueva",
+      "mañana,",
+      "el",
+      "evento",
+      "se",
+      "celebrará",
+      "como",
+      "estaba",
+      "planeado."
+    ],
+    "heBank": [
+      "גם",
+      "אם",
+      "ירד",
+      "גשם",
+      "מחר,",
+      "האירוע",
+      "יתקיים",
+      "כמתוכנן."
+    ],
+    "esDistractors": [
+      "cancelará",
+      "ayer",
+      "nieve"
+    ],
+    "heDistractors": [
+      "יבוטל",
+      "אתמול",
+      "שלג"
+    ],
+    "level": "hard"
+  },
+  {
+    "id": "sh014",
+    "es": "Los científicos advirtieron sobre los peligros del calentamiento global.",
+    "he": "המדענים הזהירו מפני הסכנות של ההתחממות הגלובלית.",
+    "esBank": [
+      "Los",
+      "científicos",
+      "advirtieron",
+      "sobre",
+      "los",
+      "peligros",
+      "del",
+      "calentamiento",
+      "global."
+    ],
+    "heBank": [
+      "המדענים",
+      "הזהירו",
+      "מפני",
+      "הסכנות",
+      "של",
+      "ההתחממות",
+      "הגלובלית."
+    ],
+    "esDistractors": [
+      "beneficios",
+      "negaron",
+      "políticos"
+    ],
+    "heDistractors": [
+      "היתרונות",
+      "הכחישו",
+      "הפוליטיקאים"
+    ],
+    "level": "hard"
+  },
+  {
+    "id": "sh015",
+    "es": "No pude convencer a mi hermano de que cambiara de opinión.",
+    "he": "לא הצלחתי לשכנע את אחי לשנות את דעתו.",
+    "esBank": [
+      "No",
+      "pude",
+      "convencer",
+      "a",
+      "mi",
+      "hermano",
+      "de",
+      "que",
+      "cambiara",
+      "de",
+      "opinión."
+    ],
+    "heBank": [
+      "לא",
+      "הצלחתי",
+      "לשכנע",
+      "את",
+      "אחי",
+      "לשנות",
+      "את",
+      "דעתו."
+    ],
+    "esDistractors": [
+      "quise",
+      "padre",
+      "trabajo"
+    ],
+    "heDistractors": [
+      "רציתי",
+      "אבי",
+      "עבודתו"
+    ],
+    "level": "hard"
+  },
+  {
+    "id": "sh016",
+    "es": "Ella superó todos los obstáculos gracias a su enorme esfuerzo.",
+    "he": "היא התגברה על כל המכשולים הודות למאמץ העצום שלה.",
+    "esBank": [
+      "Ella",
+      "superó",
+      "todos",
+      "los",
+      "obstáculos",
+      "gracias",
+      "a",
+      "su",
+      "enorme",
+      "esfuerzo."
+    ],
+    "heBank": [
+      "היא",
+      "התגברה",
+      "על",
+      "כל",
+      "המכשולים",
+      "הודות",
+      "למאמץ",
+      "העצום",
+      "שלה."
+    ],
+    "esDistractors": [
+      "evitó",
+      "talento",
+      "fracasó"
+    ],
+    "heDistractors": [
+      "נכנעה",
+      "הכישרון",
+      "למזל"
+    ],
+    "level": "hard"
+  },
+  {
+    "id": "sh017",
+    "es": "En cuanto llegue a casa, te llamaré para contarte todo.",
+    "he": "ברגע שאגיע הביתה, אתקשר אליך לספר לך הכול.",
+    "esBank": [
+      "En",
+      "cuanto",
+      "llegue",
+      "a",
+      "casa,",
+      "te",
+      "llamaré",
+      "para",
+      "contarte",
+      "todo."
+    ],
+    "heBank": [
+      "ברגע",
+      "שאגיע",
+      "הביתה,",
+      "אתקשר",
+      "אליך",
+      "לספר",
+      "לך",
+      "הכול."
+    ],
+    "esDistractors": [
+      "salga",
+      "escribiré",
+      "nada"
+    ],
+    "heDistractors": [
+      "שאצא",
+      "אכתוב",
+      "כלום"
+    ],
+    "level": "hard"
+  },
+  {
+    "id": "sh018",
+    "es": "El éxito depende del esfuerzo y de la actitud correcta.",
+    "he": "ההצלחה תלויה במאמץ ובגישה הנכונה.",
+    "esBank": [
+      "El",
+      "éxito",
+      "depende",
+      "del",
+      "esfuerzo",
+      "y",
+      "de",
+      "la",
+      "actitud",
+      "correcta."
+    ],
+    "heBank": [
+      "ההצלחה",
+      "תלויה",
+      "במאמץ",
+      "ובגישה",
+      "הנכונה."
+    ],
+    "esDistractors": [
+      "fracaso",
+      "dinero",
+      "suerte"
+    ],
+    "heDistractors": [
+      "הכישלון",
+      "בכסף",
+      "במזל"
+    ],
+    "level": "hard"
+  },
+  {
+    "id": "sh019",
+    "es": "Muchos jóvenes se quejan de que los salarios son demasiado bajos.",
+    "he": "צעירים רבים מתלוננים על כך שהמשכורות נמוכות מדי.",
+    "esBank": [
+      "Muchos",
+      "jóvenes",
+      "se",
+      "quejan",
+      "de",
+      "que",
+      "los",
+      "salarios",
+      "son",
+      "demasiado",
+      "bajos."
+    ],
+    "heBank": [
+      "צעירים",
+      "רבים",
+      "מתלוננים",
+      "על",
+      "כך",
+      "שהמשכורות",
+      "נמוכות",
+      "מדי."
+    ],
+    "esDistractors": [
+      "altos",
+      "alegran",
+      "precios"
+    ],
+    "heDistractors": [
+      "גבוהות",
+      "שמחים",
+      "המחירים"
+    ],
+    "level": "hard"
+  },
+  {
+    "id": "sh020",
+    "es": "Si tuviera más dinero, invertiría en empresas de tecnología.",
+    "he": "אם היה לי יותר כסף, הייתי משקיע בחברות טכנולוגיה.",
+    "esBank": [
+      "Si",
+      "tuviera",
+      "más",
+      "dinero,",
+      "invertiría",
+      "en",
+      "empresas",
+      "de",
+      "tecnología."
+    ],
+    "heBank": [
+      "אם",
+      "היה",
+      "לי",
+      "יותר",
+      "כסף,",
+      "הייתי",
+      "משקיע",
+      "בחברות",
+      "טכנולוגיה."
+    ],
+    "esDistractors": [
+      "tiempo",
+      "gastaría",
+      "comida"
+    ],
+    "heDistractors": [
+      "זמן",
+      "מבזבז",
+      "אוכל"
+    ],
+    "level": "hard"
+  },
+  {
+    "id": "sh021",
+    "es": "Debemos proteger el medio ambiente para las próximas generaciones.",
+    "he": "אנחנו חייבים להגן על הסביבה למען הדורות הבאים.",
+    "esBank": [
+      "Debemos",
+      "proteger",
+      "el",
+      "medio",
+      "ambiente",
+      "para",
+      "las",
+      "próximas",
+      "generaciones."
+    ],
+    "heBank": [
+      "אנחנו",
+      "חייבים",
+      "להגן",
+      "על",
+      "הסביבה",
+      "למען",
+      "הדורות",
+      "הבאים."
+    ],
+    "esDistractors": [
+      "destruir",
+      "pasadas",
+      "contaminar"
+    ],
+    "heDistractors": [
+      "להרוס",
+      "הקודמים",
+      "לזהם"
+    ],
+    "level": "hard"
+  },
+  {
+    "id": "sh022",
+    "es": "Nadie se atrevió a decirle la verdad al director.",
+    "he": "אף אחד לא העז להגיד למנהל את האמת.",
+    "esBank": [
+      "Nadie",
+      "se",
+      "atrevió",
+      "a",
+      "decirle",
+      "la",
+      "verdad",
+      "al",
+      "director."
+    ],
+    "heBank": [
+      "אף",
+      "אחד",
+      "לא",
+      "העז",
+      "להגיד",
+      "למנהל",
+      "את",
+      "האמת."
+    ],
+    "esDistractors": [
+      "mentira",
+      "quiso",
+      "profesor"
+    ],
+    "heDistractors": [
+      "השקר",
+      "רצה",
+      "למורה"
+    ],
+    "level": "hard"
+  },
+  {
+    "id": "sh023",
+    "es": "La empresa decidió contratar a más empleados el próximo año.",
+    "he": "החברה החליטה להעסיק עוד עובדים בשנה הבאה.",
+    "esBank": [
+      "La",
+      "empresa",
+      "decidió",
+      "contratar",
+      "a",
+      "más",
+      "empleados",
+      "el",
+      "próximo",
+      "año."
+    ],
+    "heBank": [
+      "החברה",
+      "החליטה",
+      "להעסיק",
+      "עוד",
+      "עובדים",
+      "בשנה",
+      "הבאה."
+    ],
+    "esDistractors": [
+      "despedir",
+      "menos",
+      "mes"
+    ],
+    "heDistractors": [
+      "לפטר",
+      "פחות",
+      "בחודש"
+    ],
+    "level": "hard"
+  },
+  {
+    "id": "sh024",
+    "es": "Después de veinte años, mi padre decidió jubilarse por fin.",
+    "he": "אחרי עשרים שנה, אבא שלי החליט סוף סוף לצאת לפנסיה.",
+    "esBank": [
+      "Después",
+      "de",
+      "veinte",
+      "años,",
+      "mi",
+      "padre",
+      "decidió",
+      "jubilarse",
+      "por",
+      "fin."
+    ],
+    "heBank": [
+      "אחרי",
+      "עשרים",
+      "שנה,",
+      "אבא",
+      "שלי",
+      "החליט",
+      "סוף",
+      "סוף",
+      "לצאת",
+      "לפנסיה."
+    ],
+    "esDistractors": [
+      "madre",
+      "diez",
+      "renunciar"
+    ],
+    "heDistractors": [
+      "אמא",
+      "עשר",
+      "להתפטר"
+    ],
+    "level": "hard"
+  },
+  {
+    "id": "sh025",
+    "es": "Aunque el proyecto fracasó, aprendimos mucho de nuestros errores.",
+    "he": "למרות שהפרויקט נכשל, למדנו הרבה מהטעויות שלנו.",
+    "esBank": [
+      "Aunque",
+      "el",
+      "proyecto",
+      "fracasó,",
+      "aprendimos",
+      "mucho",
+      "de",
+      "nuestros",
+      "errores."
+    ],
+    "heBank": [
+      "למרות",
+      "שהפרויקט",
+      "נכשל,",
+      "למדנו",
+      "הרבה",
+      "מהטעויות",
+      "שלנו."
+    ],
+    "esDistractors": [
+      "triunfó",
+      "poco",
+      "éxitos"
+    ],
+    "heDistractors": [
+      "הצליח",
+      "מעט",
+      "מההצלחות"
+    ],
+    "level": "hard"
+  },
+  {
+    "id": "sh026",
+    "es": "Es probable que el gobierno apruebe la nueva ley pronto.",
+    "he": "סביר שהממשלה תאשר את החוק החדש בקרוב.",
+    "esBank": [
+      "Es",
+      "probable",
+      "que",
+      "el",
+      "gobierno",
+      "apruebe",
+      "la",
+      "nueva",
+      "ley",
+      "pronto."
+    ],
+    "heBank": [
+      "סביר",
+      "שהממשלה",
+      "תאשר",
+      "את",
+      "החוק",
+      "החדש",
+      "בקרוב."
+    ],
+    "esDistractors": [
+      "rechace",
+      "imposible",
+      "vieja"
+    ],
+    "heDistractors": [
+      "תדחה",
+      "הישן",
+      "מחר"
+    ],
+    "level": "hard"
+  },
+  {
+    "id": "sh027",
+    "es": "Ella renunció a su trabajo porque no se sentía valorada.",
+    "he": "היא התפטרה מהעבודה שלה כי היא לא הרגישה מוערכת.",
+    "esBank": [
+      "Ella",
+      "renunció",
+      "a",
+      "su",
+      "trabajo",
+      "porque",
+      "no",
+      "se",
+      "sentía",
+      "valorada."
+    ],
+    "heBank": [
+      "היא",
+      "התפטרה",
+      "מהעבודה",
+      "שלה",
+      "כי",
+      "היא",
+      "לא",
+      "הרגישה",
+      "מוערכת."
+    ],
+    "esDistractors": [
+      "siguió",
+      "feliz",
+      "jefe"
+    ],
+    "heDistractors": [
+      "המשיכה",
+      "מאושרת",
+      "הבוס"
+    ],
+    "level": "hard"
+  },
+  {
+    "id": "sh028",
+    "es": "Cada vez más personas trabajan desde casa en la actualidad.",
+    "he": "יותר ויותר אנשים עובדים מהבית כיום.",
+    "esBank": [
+      "Cada",
+      "vez",
+      "más",
+      "personas",
+      "trabajan",
+      "desde",
+      "casa",
+      "en",
+      "la",
+      "actualidad."
+    ],
+    "heBank": [
+      "יותר",
+      "ויותר",
+      "אנשים",
+      "עובדים",
+      "מהבית",
+      "כיום."
+    ],
+    "esDistractors": [
+      "menos",
+      "oficina",
+      "estudian"
+    ],
+    "heDistractors": [
+      "פחות",
+      "מהמשרד",
+      "לומדים"
+    ],
+    "level": "hard"
+  },
+  {
+    "id": "sh029",
+    "es": "Te prometo que averiguaré qué sucedió durante la reunión.",
+    "he": "אני מבטיח לך שאברר מה קרה במהלך הישיבה.",
+    "esBank": [
+      "Te",
+      "prometo",
+      "que",
+      "averiguaré",
+      "qué",
+      "sucedió",
+      "durante",
+      "la",
+      "reunión."
+    ],
+    "heBank": [
+      "אני",
+      "מבטיח",
+      "לך",
+      "שאברר",
+      "מה",
+      "קרה",
+      "במהלך",
+      "הישיבה."
+    ],
+    "esDistractors": [
+      "olvidaré",
+      "fiesta",
+      "nadie"
+    ],
+    "heDistractors": [
+      "אשכח",
+      "המסיבה",
+      "מתי"
+    ],
+    "level": "hard"
+  },
+  {
+    "id": "sh030",
+    "es": "No merece la pena discutir por cosas tan pequeñas.",
+    "he": "לא שווה להתווכח על דברים כל כך קטנים.",
+    "esBank": [
+      "No",
+      "merece",
+      "la",
+      "pena",
+      "discutir",
+      "por",
+      "cosas",
+      "tan",
+      "pequeñas."
+    ],
+    "heBank": [
+      "לא",
+      "שווה",
+      "להתווכח",
+      "על",
+      "דברים",
+      "כל",
+      "כך",
+      "קטנים."
+    ],
+    "esDistractors": [
+      "grandes",
+      "importantes",
+      "llorar"
+    ],
+    "heDistractors": [
+      "גדולים",
+      "חשובים",
+      "לבכות"
+    ],
+    "level": "hard"
+  },
+  {
+    "id": "sh031",
+    "es": "El comportamiento de los niños mejoró gracias al nuevo profesor.",
+    "he": "ההתנהגות של הילדים השתפרה הודות למורה החדש.",
+    "esBank": [
+      "El",
+      "comportamiento",
+      "de",
+      "los",
+      "niños",
+      "mejoró",
+      "gracias",
+      "al",
+      "nuevo",
+      "profesor."
+    ],
+    "heBank": [
+      "ההתנהגות",
+      "של",
+      "הילדים",
+      "השתפרה",
+      "הודות",
+      "למורה",
+      "החדש."
+    ],
+    "esDistractors": [
+      "empeoró",
+      "padres",
+      "viejo"
+    ],
+    "heDistractors": [
+      "החמירה",
+      "ההורים",
+      "הישן"
+    ],
+    "level": "hard"
+  },
+  {
+    "id": "sh032",
+    "es": "Estoy muy orgulloso de todo lo que has logrado este año.",
+    "he": "אני מאוד גאה בכל מה שהשגת השנה.",
+    "esBank": [
+      "Estoy",
+      "muy",
+      "orgulloso",
+      "de",
+      "todo",
+      "lo",
+      "que",
+      "has",
+      "logrado",
+      "este",
+      "año."
+    ],
+    "heBank": [
+      "אני",
+      "מאוד",
+      "גאה",
+      "בכל",
+      "מה",
+      "שהשגת",
+      "השנה."
+    ],
+    "esDistractors": [
+      "avergonzado",
+      "mes",
+      "poco"
+    ],
+    "heDistractors": [
+      "מאוכזב",
+      "החודש",
+      "מעט"
+    ],
+    "level": "hard"
+  },
+  {
+    "id": "sh033",
+    "es": "A menos que cambiemos nuestros hábitos, la situación seguirá empeorando.",
+    "he": "אלא אם כן נשנה את ההרגלים שלנו, המצב ימשיך להחמיר.",
+    "esBank": [
+      "A",
+      "menos",
+      "que",
+      "cambiemos",
+      "nuestros",
+      "hábitos,",
+      "la",
+      "situación",
+      "seguirá",
+      "empeorando."
+    ],
+    "heBank": [
+      "אלא",
+      "אם",
+      "כן",
+      "נשנה",
+      "את",
+      "ההרגלים",
+      "שלנו,",
+      "המצב",
+      "ימשיך",
+      "להחמיר."
+    ],
+    "esDistractors": [
+      "mejorando",
+      "mantengamos",
+      "clima"
+    ],
+    "heDistractors": [
+      "להשתפר",
+      "נשמור",
+      "האקלים"
+    ],
+    "level": "hard"
+  },
+  {
+    "id": "sh034",
+    "es": "Desde mi punto de vista, esta decisión fue un error.",
+    "he": "מנקודת המבט שלי, ההחלטה הזאת הייתה טעות.",
+    "esBank": [
+      "Desde",
+      "mi",
+      "punto",
+      "de",
+      "vista,",
+      "esta",
+      "decisión",
+      "fue",
+      "un",
+      "error."
+    ],
+    "heBank": [
+      "מנקודת",
+      "המבט",
+      "שלי,",
+      "ההחלטה",
+      "הזאת",
+      "הייתה",
+      "טעות."
+    ],
+    "esDistractors": [
+      "acierto",
+      "tu",
+      "pregunta"
+    ],
+    "heDistractors": [
+      "שלך",
+      "הצלחה",
+      "השאלה"
+    ],
+    "level": "hard"
+  },
+  {
+    "id": "sh035",
+    "es": "El país carece de recursos suficientes para enfrentar la crisis.",
+    "he": "למדינה חסרים משאבים מספיקים כדי להתמודד עם המשבר.",
+    "esBank": [
+      "El",
+      "país",
+      "carece",
+      "de",
+      "recursos",
+      "suficientes",
+      "para",
+      "enfrentar",
+      "la",
+      "crisis."
+    ],
+    "heBank": [
+      "למדינה",
+      "חסרים",
+      "משאבים",
+      "מספיקים",
+      "כדי",
+      "להתמודד",
+      "עם",
+      "המשבר."
+    ],
+    "esDistractors": [
+      "dispone",
+      "dinero",
+      "evitar"
+    ],
+    "heDistractors": [
+      "יש",
+      "כסף",
+      "להימנע"
+    ],
+    "level": "hard"
+  },
+  {
+    "id": "sh036",
+    "es": "Negó haber robado el dinero, pero nadie le creyó.",
+    "he": "הוא הכחיש שגנב את הכסף, אבל אף אחד לא האמין לו.",
+    "esBank": [
+      "Negó",
+      "haber",
+      "robado",
+      "el",
+      "dinero,",
+      "pero",
+      "nadie",
+      "le",
+      "creyó."
+    ],
+    "heBank": [
+      "הוא",
+      "הכחיש",
+      "שגנב",
+      "את",
+      "הכסף,",
+      "אבל",
+      "אף",
+      "אחד",
+      "לא",
+      "האמין",
+      "לו."
+    ],
+    "esDistractors": [
+      "confesó",
+      "coche",
+      "todos"
+    ],
+    "heDistractors": [
+      "הודה",
+      "הרכב",
+      "כולם"
+    ],
+    "level": "hard"
+  },
+  {
+    "id": "sh037",
+    "es": "Mientras tanto, la policía seguía buscando pruebas del delito.",
+    "he": "בינתיים, המשטרה המשיכה לחפש ראיות לפשע.",
+    "esBank": [
+      "Mientras",
+      "tanto,",
+      "la",
+      "policía",
+      "seguía",
+      "buscando",
+      "pruebas",
+      "del",
+      "delito."
+    ],
+    "heBank": [
+      "בינתיים,",
+      "המשטרה",
+      "המשיכה",
+      "לחפש",
+      "ראיות",
+      "לפשע."
+    ],
+    "esDistractors": [
+      "encontró",
+      "testigos",
+      "dejó"
+    ],
+    "heDistractors": [
+      "מצאה",
+      "עדים",
+      "הפסיקה"
+    ],
+    "level": "hard"
+  },
+  {
+    "id": "sh038",
+    "es": "Si sigues esforzándote así, alcanzarás todos tus objetivos pronto.",
+    "he": "אם תמשיך להתאמץ ככה, תשיג את כל המטרות שלך בקרוב.",
+    "esBank": [
+      "Si",
+      "sigues",
+      "esforzándote",
+      "así,",
+      "alcanzarás",
+      "todos",
+      "tus",
+      "objetivos",
+      "pronto."
+    ],
+    "heBank": [
+      "אם",
+      "תמשיך",
+      "להתאמץ",
+      "ככה,",
+      "תשיג",
+      "את",
+      "כל",
+      "המטרות",
+      "שלך",
+      "בקרוב."
+    ],
+    "esDistractors": [
+      "dejas",
+      "nunca",
+      "sueños"
+    ],
+    "heDistractors": [
+      "תפסיק",
+      "לעולם",
+      "החלומות"
+    ],
+    "level": "hard"
+  },
+  {
+    "id": "sh039",
+    "es": "La ventaja principal de este plan es su bajo costo.",
+    "he": "היתרון העיקרי של התוכנית הזאת הוא העלות הנמוכה שלה.",
+    "esBank": [
+      "La",
+      "ventaja",
+      "principal",
+      "de",
+      "este",
+      "plan",
+      "es",
+      "su",
+      "bajo",
+      "costo."
+    ],
+    "heBank": [
+      "היתרון",
+      "העיקרי",
+      "של",
+      "התוכנית",
+      "הזאת",
+      "הוא",
+      "העלות",
+      "הנמוכה",
+      "שלה."
+    ],
+    "esDistractors": [
+      "desventaja",
+      "alto",
+      "riesgo"
+    ],
+    "heDistractors": [
+      "החיסרון",
+      "הגבוהה",
+      "הסיכון"
+    ],
+    "level": "hard"
+  },
+  {
+    "id": "sh040",
+    "es": "Estaba tan avergonzado que no quiso hablar con nadie.",
+    "he": "הוא היה כל כך נבוך שהוא לא רצה לדבר עם אף אחד.",
+    "esBank": [
+      "Estaba",
+      "tan",
+      "avergonzado",
+      "que",
+      "no",
+      "quiso",
+      "hablar",
+      "con",
+      "nadie."
+    ],
+    "heBank": [
+      "הוא",
+      "היה",
+      "כל",
+      "כך",
+      "נבוך",
+      "שהוא",
+      "לא",
+      "רצה",
+      "לדבר",
+      "עם",
+      "אף",
+      "אחד."
+    ],
+    "esDistractors": [
+      "orgulloso",
+      "pudo",
+      "todos"
+    ],
+    "heDistractors": [
+      "גאה",
+      "יכול",
+      "כולם"
+    ],
+    "level": "hard"
+  },
+  {
+    "id": "sx001",
+    "es": "Si hubiera sabido la verdad, no habría firmado el contrato.",
+    "he": "אם הייתי יודע את האמת, לא הייתי חותם על החוזה.",
+    "esBank": [
+      "Si",
+      "hubiera",
+      "sabido",
+      "la",
+      "verdad,",
+      "no",
+      "habría",
+      "firmado",
+      "el",
+      "contrato."
+    ],
+    "heBank": [
+      "אם",
+      "הייתי",
+      "יודע",
+      "את",
+      "האמת,",
+      "לא",
+      "הייתי",
+      "חותם",
+      "על",
+      "החוזה."
+    ],
+    "esDistractors": [
+      "sabría",
+      "firmaba",
+      "aunque"
+    ],
+    "heDistractors": [
+      "הייתה",
+      "יודעת",
+      "חוזה"
+    ],
+    "level": "expert"
+  },
+  {
+    "id": "sx002",
+    "es": "Es imprescindible que el gobierno aborde la crisis cuanto antes.",
+    "he": "הכרחי שהממשלה תטפל במשבר בהקדם האפשרי.",
+    "esBank": [
+      "Es",
+      "imprescindible",
+      "que",
+      "el",
+      "gobierno",
+      "aborde",
+      "la",
+      "crisis",
+      "cuanto",
+      "antes."
+    ],
+    "heBank": [
+      "הכרחי",
+      "שהממשלה",
+      "תטפל",
+      "במשבר",
+      "בהקדם",
+      "האפשרי."
+    ],
+    "esDistractors": [
+      "aborda",
+      "una",
+      "pronto"
+    ],
+    "heDistractors": [
+      "מטפלת",
+      "הממשלות",
+      "דחוף"
+    ],
+    "level": "expert"
+  },
+  {
+    "id": "sx003",
+    "es": "A menos que llueva, la ceremonia se celebrará al aire libre.",
+    "he": "אלא אם כן ירד גשם, הטקס ייערך תחת כיפת השמיים.",
+    "esBank": [
+      "A",
+      "menos",
+      "que",
+      "llueva,",
+      "la",
+      "ceremonia",
+      "se",
+      "celebrará",
+      "al",
+      "aire",
+      "libre."
+    ],
+    "heBank": [
+      "אלא",
+      "אם",
+      "כן",
+      "ירד",
+      "גשם,",
+      "הטקס",
+      "ייערך",
+      "תחת",
+      "כיפת",
+      "השמיים."
+    ],
+    "esDistractors": [
+      "llueve",
+      "celebraría",
+      "fiesta"
+    ],
+    "heDistractors": [
+      "יורד",
+      "החתונה",
+      "בתוך"
+    ],
+    "level": "expert"
+  },
+  {
+    "id": "sx004",
+    "es": "No creo que hayan tomado en cuenta todos los riesgos.",
+    "he": "אני לא חושב שהם לקחו בחשבון את כל הסיכונים.",
+    "esBank": [
+      "No",
+      "creo",
+      "que",
+      "hayan",
+      "tomado",
+      "en",
+      "cuenta",
+      "todos",
+      "los",
+      "riesgos."
+    ],
+    "heBank": [
+      "אני",
+      "לא",
+      "חושב",
+      "שהם",
+      "לקחו",
+      "בחשבון",
+      "את",
+      "כל",
+      "הסיכונים."
+    ],
+    "esDistractors": [
+      "habían",
+      "tomando",
+      "cuentas"
+    ],
+    "heDistractors": [
+      "חושבת",
+      "לקחה",
+      "הסיכון"
+    ],
+    "level": "expert"
+  },
+  {
+    "id": "sx005",
+    "es": "Aunque me lo pidiera de rodillas, no cambiaría de opinión.",
+    "he": "גם אם הוא היה מתחנן על ברכיו, לא הייתי משנה את דעתי.",
+    "esBank": [
+      "Aunque",
+      "me",
+      "lo",
+      "pidiera",
+      "de",
+      "rodillas,",
+      "no",
+      "cambiaría",
+      "de",
+      "opinión."
+    ],
+    "heBank": [
+      "גם",
+      "אם",
+      "הוא",
+      "היה",
+      "מתחנן",
+      "על",
+      "ברכיו,",
+      "לא",
+      "הייתי",
+      "משנה",
+      "את",
+      "דעתי."
+    ],
+    "esDistractors": [
+      "pediría",
+      "cambiara",
+      "rodilla"
+    ],
+    "heDistractors": [
+      "מתחננת",
+      "ברכיה",
+      "דעתה"
+    ],
+    "level": "expert"
+  },
+  {
+    "id": "sx006",
+    "es": "La nueva ley fue aprobada a pesar de las protestas masivas.",
+    "he": "החוק החדש אושר למרות ההפגנות ההמוניות.",
+    "esBank": [
+      "La",
+      "nueva",
+      "ley",
+      "fue",
+      "aprobada",
+      "a",
+      "pesar",
+      "de",
+      "las",
+      "protestas",
+      "masivas."
+    ],
+    "heBank": [
+      "החוק",
+      "החדש",
+      "אושר",
+      "למרות",
+      "ההפגנות",
+      "ההמוניות."
+    ],
+    "esDistractors": [
+      "aprobado",
+      "nuevo",
+      "los"
+    ],
+    "heDistractors": [
+      "אושרה",
+      "החדשה",
+      "ההפגנה"
+    ],
+    "level": "expert"
+  },
+  {
+    "id": "sx007",
+    "es": "Se dice que la empresa habría ocultado información a los inversores.",
+    "he": "אומרים שהחברה כנראה הסתירה מידע מהמשקיעים.",
+    "esBank": [
+      "Se",
+      "dice",
+      "que",
+      "la",
+      "empresa",
+      "habría",
+      "ocultado",
+      "información",
+      "a",
+      "los",
+      "inversores."
+    ],
+    "heBank": [
+      "אומרים",
+      "שהחברה",
+      "כנראה",
+      "הסתירה",
+      "מידע",
+      "מהמשקיעים."
+    ],
+    "esDistractors": [
+      "dicen",
+      "ocultaba",
+      "las"
+    ],
+    "heDistractors": [
+      "אומרת",
+      "הסתיר",
+      "מהמשקיע"
+    ],
+    "level": "expert"
+  },
+  {
+    "id": "sx008",
+    "es": "Con tal de que llegues a tiempo, te perdono el retraso.",
+    "he": "בתנאי שתגיע בזמן, אני סולח לך על האיחור.",
+    "esBank": [
+      "Con",
+      "tal",
+      "de",
+      "que",
+      "llegues",
+      "a",
+      "tiempo,",
+      "te",
+      "perdono",
+      "el",
+      "retraso."
+    ],
+    "heBank": [
+      "בתנאי",
+      "שתגיע",
+      "בזמן,",
+      "אני",
+      "סולח",
+      "לך",
+      "על",
+      "האיחור."
+    ],
+    "esDistractors": [
+      "llegas",
+      "perdona",
+      "atraso"
+    ],
+    "heDistractors": [
+      "תגיעי",
+      "סולחת",
+      "איחור"
+    ],
+    "level": "expert"
+  },
+  {
+    "id": "sx009",
+    "es": "Me habría encantado asistir, pero surgió un imprevisto de última hora.",
+    "he": "הייתי שמח מאוד להגיע, אבל צץ משהו לא צפוי ברגע האחרון.",
+    "esBank": [
+      "Me",
+      "habría",
+      "encantado",
+      "asistir,",
+      "pero",
+      "surgió",
+      "un",
+      "imprevisto",
+      "de",
+      "última",
+      "hora."
+    ],
+    "heBank": [
+      "הייתי",
+      "שמח",
+      "מאוד",
+      "להגיע,",
+      "אבל",
+      "צץ",
+      "משהו",
+      "לא",
+      "צפוי",
+      "ברגע",
+      "האחרון."
+    ],
+    "esDistractors": [
+      "habrían",
+      "encantada",
+      "surgía"
+    ],
+    "heDistractors": [
+      "שמחה",
+      "צצה",
+      "האחרונה"
+    ],
+    "level": "expert"
+  },
+  {
+    "id": "sx010",
+    "es": "El portavoz desmintió los rumores sin dar más detalles al respecto.",
+    "he": "הדובר הכחיש את השמועות בלי למסור פרטים נוספים בנושא.",
+    "esBank": [
+      "El",
+      "portavoz",
+      "desmintió",
+      "los",
+      "rumores",
+      "sin",
+      "dar",
+      "más",
+      "detalles",
+      "al",
+      "respecto."
+    ],
+    "heBank": [
+      "הדובר",
+      "הכחיש",
+      "את",
+      "השמועות",
+      "בלי",
+      "למסור",
+      "פרטים",
+      "נוספים",
+      "בנושא."
+    ],
+    "esDistractors": [
+      "desmintieron",
+      "rumor",
+      "la"
+    ],
+    "heDistractors": [
+      "הכחישה",
+      "השמועה",
+      "נוסף"
+    ],
+    "level": "expert"
+  },
+  {
+    "id": "sx011",
+    "es": "Por más que lo intento, no consigo entender su verdadera intención.",
+    "he": "כמה שאני מנסה, אני לא מצליח להבין את הכוונה האמיתית שלו.",
+    "esBank": [
+      "Por",
+      "más",
+      "que",
+      "lo",
+      "intento,",
+      "no",
+      "consigo",
+      "entender",
+      "su",
+      "verdadera",
+      "intención."
+    ],
+    "heBank": [
+      "כמה",
+      "שאני",
+      "מנסה,",
+      "אני",
+      "לא",
+      "מצליח",
+      "להבין",
+      "את",
+      "הכוונה",
+      "האמיתית",
+      "שלו."
+    ],
+    "esDistractors": [
+      "intentaba",
+      "consigues",
+      "verdadero"
+    ],
+    "heDistractors": [
+      "מנסים",
+      "מצליחה",
+      "האמיתי"
+    ],
+    "level": "expert"
+  },
+  {
+    "id": "sx012",
+    "es": "Dudo que el proyecto se lleve a cabo antes del verano.",
+    "he": "אני בספק שהפרויקט יבוצע לפני הקיץ.",
+    "esBank": [
+      "Dudo",
+      "que",
+      "el",
+      "proyecto",
+      "se",
+      "lleve",
+      "a",
+      "cabo",
+      "antes",
+      "del",
+      "verano."
+    ],
+    "heBank": [
+      "אני",
+      "בספק",
+      "שהפרויקט",
+      "יבוצע",
+      "לפני",
+      "הקיץ."
+    ],
+    "esDistractors": [
+      "lleva",
+      "proyectos",
+      "después"
+    ],
+    "heDistractors": [
+      "בוצע",
+      "הפרויקטים",
+      "החורף"
+    ],
+    "level": "expert"
+  },
+  {
+    "id": "sx013",
+    "es": "Nos tomaron el pelo con esa oferta que parecía tan tentadora.",
+    "he": "עבדו עלינו עם ההצעה הזאת שנראתה כל כך מפתה.",
+    "esBank": [
+      "Nos",
+      "tomaron",
+      "el",
+      "pelo",
+      "con",
+      "esa",
+      "oferta",
+      "que",
+      "parecía",
+      "tan",
+      "tentadora."
+    ],
+    "heBank": [
+      "עבדו",
+      "עלינו",
+      "עם",
+      "ההצעה",
+      "הזאת",
+      "שנראתה",
+      "כל",
+      "כך",
+      "מפתה."
+    ],
+    "esDistractors": [
+      "tomamos",
+      "pelos",
+      "parecían"
+    ],
+    "heDistractors": [
+      "עבדנו",
+      "נראה",
+      "מפתות"
+    ],
+    "level": "expert"
+  },
+  {
+    "id": "sx014",
+    "es": "Cuando llegamos al teatro, la función ya había comenzado hacía rato.",
+    "he": "כשהגענו לתיאטרון, ההצגה כבר התחילה מזמן.",
+    "esBank": [
+      "Cuando",
+      "llegamos",
+      "al",
+      "teatro,",
+      "la",
+      "función",
+      "ya",
+      "había",
+      "comenzado",
+      "hacía",
+      "rato."
+    ],
+    "heBank": [
+      "כשהגענו",
+      "לתיאטרון,",
+      "ההצגה",
+      "כבר",
+      "התחילה",
+      "מזמן."
+    ],
+    "esDistractors": [
+      "llegábamos",
+      "habían",
+      "comenzada"
+    ],
+    "heDistractors": [
+      "כשהגעתי",
+      "התחיל",
+      "ההצגות"
+    ],
+    "level": "expert"
+  },
+  {
+    "id": "sx015",
+    "es": "Es fundamental que se respeten los derechos de todos los ciudadanos.",
+    "he": "חיוני שיכבדו את הזכויות של כל האזרחים.",
+    "esBank": [
+      "Es",
+      "fundamental",
+      "que",
+      "se",
+      "respeten",
+      "los",
+      "derechos",
+      "de",
+      "todos",
+      "los",
+      "ciudadanos."
+    ],
+    "heBank": [
+      "חיוני",
+      "שיכבדו",
+      "את",
+      "הזכויות",
+      "של",
+      "כל",
+      "האזרחים."
+    ],
+    "esDistractors": [
+      "respetan",
+      "derecho",
+      "toda"
+    ],
+    "heDistractors": [
+      "מכבדים",
+      "הזכות",
+      "האזרח"
+    ],
+    "level": "expert"
+  },
+  {
+    "id": "sx016",
+    "es": "Si no hubieras metido la pata, ahora tendríamos el contrato firmado.",
+    "he": "אם לא היית מפשל, עכשיו היה לנו חוזה חתום.",
+    "esBank": [
+      "Si",
+      "no",
+      "hubieras",
+      "metido",
+      "la",
+      "pata,",
+      "ahora",
+      "tendríamos",
+      "el",
+      "contrato",
+      "firmado."
+    ],
+    "heBank": [
+      "אם",
+      "לא",
+      "היית",
+      "מפשל,",
+      "עכשיו",
+      "היה",
+      "לנו",
+      "חוזה",
+      "חתום."
+    ],
+    "esDistractors": [
+      "hubiera",
+      "metida",
+      "tendrías"
+    ],
+    "heDistractors": [
+      "הייתי",
+      "מפשלת",
+      "חתומה"
+    ],
+    "level": "expert"
+  },
+  {
+    "id": "sx017",
+    "es": "El gobierno insta a los ciudadanos a acatar las nuevas medidas.",
+    "he": "הממשלה קוראת לאזרחים לציית לצעדים החדשים.",
+    "esBank": [
+      "El",
+      "gobierno",
+      "insta",
+      "a",
+      "los",
+      "ciudadanos",
+      "a",
+      "acatar",
+      "las",
+      "nuevas",
+      "medidas."
+    ],
+    "heBank": [
+      "הממשלה",
+      "קוראת",
+      "לאזרחים",
+      "לציית",
+      "לצעדים",
+      "החדשים."
+    ],
+    "esDistractors": [
+      "instan",
+      "ciudadano",
+      "nuevos"
+    ],
+    "heDistractors": [
+      "קורא",
+      "לאזרח",
+      "החדשות"
+    ],
+    "level": "expert"
+  },
+  {
+    "id": "sx018",
+    "es": "Estoy hasta las narices de que siempre me echen la culpa.",
+    "he": "נמאס לי עד מעל הראש שתמיד מאשימים אותי.",
+    "esBank": [
+      "Estoy",
+      "hasta",
+      "las",
+      "narices",
+      "de",
+      "que",
+      "siempre",
+      "me",
+      "echen",
+      "la",
+      "culpa."
+    ],
+    "heBank": [
+      "נמאס",
+      "לי",
+      "עד",
+      "מעל",
+      "הראש",
+      "שתמיד",
+      "מאשימים",
+      "אותי."
+    ],
+    "esDistractors": [
+      "echan",
+      "nariz",
+      "estás"
+    ],
+    "heDistractors": [
+      "נמאסה",
+      "מאשים",
+      "אותך"
+    ],
+    "level": "expert"
+  },
+  {
+    "id": "sx019",
+    "es": "Se rumorea que el ministro habría recibido sobornos durante años.",
+    "he": "מתהלכות שמועות שהשר קיבל כנראה שוחד במשך שנים.",
+    "esBank": [
+      "Se",
+      "rumorea",
+      "que",
+      "el",
+      "ministro",
+      "habría",
+      "recibido",
+      "sobornos",
+      "durante",
+      "años."
+    ],
+    "heBank": [
+      "מתהלכות",
+      "שמועות",
+      "שהשר",
+      "קיבל",
+      "כנראה",
+      "שוחד",
+      "במשך",
+      "שנים."
+    ],
+    "esDistractors": [
+      "rumorean",
+      "recibida",
+      "ministra"
+    ],
+    "heDistractors": [
+      "מתהלכת",
+      "השרה",
+      "קיבלה"
+    ],
+    "level": "expert"
+  },
+  {
+    "id": "sx020",
+    "es": "No pegué ojo en toda la noche pensando en la entrevista.",
+    "he": "לא עצמתי עין כל הלילה ממחשבות על הריאיון.",
+    "esBank": [
+      "No",
+      "pegué",
+      "ojo",
+      "en",
+      "toda",
+      "la",
+      "noche",
+      "pensando",
+      "en",
+      "la",
+      "entrevista."
+    ],
+    "heBank": [
+      "לא",
+      "עצמתי",
+      "עין",
+      "כל",
+      "הלילה",
+      "ממחשבות",
+      "על",
+      "הריאיון."
+    ],
+    "esDistractors": [
+      "pegó",
+      "ojos",
+      "pensado"
+    ],
+    "heDistractors": [
+      "עצמה",
+      "עיניים",
+      "הריאיונות"
+    ],
+    "level": "expert"
+  },
+  {
+    "id": "sx021",
+    "es": "La sequía ha desencadenado una crisis alimentaria en toda la región.",
+    "he": "הבצורת חוללה משבר מזון בכל האזור.",
+    "esBank": [
+      "La",
+      "sequía",
+      "ha",
+      "desencadenado",
+      "una",
+      "crisis",
+      "alimentaria",
+      "en",
+      "toda",
+      "la",
+      "región."
+    ],
+    "heBank": [
+      "הבצורת",
+      "חוללה",
+      "משבר",
+      "מזון",
+      "בכל",
+      "האזור."
+    ],
+    "esDistractors": [
+      "han",
+      "desencadenada",
+      "regiones"
+    ],
+    "heDistractors": [
+      "חולל",
+      "משברים",
+      "האזורים"
+    ],
+    "level": "expert"
+  },
+  {
+    "id": "sx022",
+    "es": "Habríamos llegado antes si no hubiera habido tanto tráfico en la autopista.",
+    "he": "היינו מגיעים קודם אם לא היו כל כך הרבה פקקים בכביש המהיר.",
+    "esBank": [
+      "Habríamos",
+      "llegado",
+      "antes",
+      "si",
+      "no",
+      "hubiera",
+      "habido",
+      "tanto",
+      "tráfico",
+      "en",
+      "la",
+      "autopista."
+    ],
+    "heBank": [
+      "היינו",
+      "מגיעים",
+      "קודם",
+      "אם",
+      "לא",
+      "היו",
+      "כל",
+      "כך",
+      "הרבה",
+      "פקקים",
+      "בכביש",
+      "המהיר."
+    ],
+    "esDistractors": [
+      "habría",
+      "llegados",
+      "tanta"
+    ],
+    "heDistractors": [
+      "הייתי",
+      "מגיעות",
+      "פקק"
+    ],
+    "level": "expert"
+  },
+  {
+    "id": "sx023",
+    "es": "Cabe destacar que los resultados superaron todas las expectativas del mercado.",
+    "he": "ראוי לציין שהתוצאות עלו על כל ציפיות השוק.",
+    "esBank": [
+      "Cabe",
+      "destacar",
+      "que",
+      "los",
+      "resultados",
+      "superaron",
+      "todas",
+      "las",
+      "expectativas",
+      "del",
+      "mercado."
+    ],
+    "heBank": [
+      "ראוי",
+      "לציין",
+      "שהתוצאות",
+      "עלו",
+      "על",
+      "כל",
+      "ציפיות",
+      "השוק."
+    ],
+    "esDistractors": [
+      "destacan",
+      "superarán",
+      "resultado"
+    ],
+    "heDistractors": [
+      "עלתה",
+      "התוצאה",
+      "הציפיות"
+    ],
+    "level": "expert"
+  },
+  {
+    "id": "sx024",
+    "es": "Por mucho que insistas, no pienso hacer la vista gorda.",
+    "he": "כמה שלא תתעקש, אני לא מתכוון להעלים עין.",
+    "esBank": [
+      "Por",
+      "mucho",
+      "que",
+      "insistas,",
+      "no",
+      "pienso",
+      "hacer",
+      "la",
+      "vista",
+      "gorda."
+    ],
+    "heBank": [
+      "כמה",
+      "שלא",
+      "תתעקש,",
+      "אני",
+      "לא",
+      "מתכוון",
+      "להעלים",
+      "עין."
+    ],
+    "esDistractors": [
+      "insistes",
+      "piensas",
+      "gordo"
+    ],
+    "heDistractors": [
+      "תתעקשי",
+      "מתכוונת",
+      "עיניים"
+    ],
+    "level": "expert"
+  },
+  {
+    "id": "sx025",
+    "es": "Es una lástima que hayan postergado la cumbre hasta el otoño.",
+    "he": "חבל שהם דחו את הפסגה עד הסתיו.",
+    "esBank": [
+      "Es",
+      "una",
+      "lástima",
+      "que",
+      "hayan",
+      "postergado",
+      "la",
+      "cumbre",
+      "hasta",
+      "el",
+      "otoño."
+    ],
+    "heBank": [
+      "חבל",
+      "שהם",
+      "דחו",
+      "את",
+      "הפסגה",
+      "עד",
+      "הסתיו."
+    ],
+    "esDistractors": [
+      "han",
+      "postergada",
+      "invierno"
+    ],
+    "heDistractors": [
+      "דחתה",
+      "הפסגות",
+      "החורף"
+    ],
+    "level": "expert"
+  },
+  {
+    "id": "sx026",
+    "es": "El sindicato amenaza con declarar una huelga si no hay acuerdo.",
+    "he": "האיגוד מאיים להכריז על שביתה אם לא יהיה הסכם.",
+    "esBank": [
+      "El",
+      "sindicato",
+      "amenaza",
+      "con",
+      "declarar",
+      "una",
+      "huelga",
+      "si",
+      "no",
+      "hay",
+      "acuerdo."
+    ],
+    "heBank": [
+      "האיגוד",
+      "מאיים",
+      "להכריז",
+      "על",
+      "שביתה",
+      "אם",
+      "לא",
+      "יהיה",
+      "הסכם."
+    ],
+    "esDistractors": [
+      "amenazan",
+      "huelgas",
+      "habrá"
+    ],
+    "heDistractors": [
+      "מאיימת",
+      "שביתות",
+      "הסכמים"
+    ],
+    "level": "expert"
+  },
+  {
+    "id": "sx027",
+    "es": "Sea como sea, tendremos que sopesar los pros y los contras.",
+    "he": "כך או כך, נצטרך לשקול את היתרונות והחסרונות.",
+    "esBank": [
+      "Sea",
+      "como",
+      "sea,",
+      "tendremos",
+      "que",
+      "sopesar",
+      "los",
+      "pros",
+      "y",
+      "los",
+      "contras."
+    ],
+    "heBank": [
+      "כך",
+      "או",
+      "כך,",
+      "נצטרך",
+      "לשקול",
+      "את",
+      "היתרונות",
+      "והחסרונות."
+    ],
+    "esDistractors": [
+      "es",
+      "tendrán",
+      "contra"
+    ],
+    "heDistractors": [
+      "תצטרכו",
+      "היתרון",
+      "והחיסרון"
+    ],
+    "level": "expert"
+  },
+  {
+    "id": "sx028",
+    "es": "Se necesita mucha experiencia para desempeñar un cargo de tanta responsabilidad.",
+    "he": "נדרש הרבה ניסיון כדי למלא תפקיד עם כל כך הרבה אחריות.",
+    "esBank": [
+      "Se",
+      "necesita",
+      "mucha",
+      "experiencia",
+      "para",
+      "desempeñar",
+      "un",
+      "cargo",
+      "de",
+      "tanta",
+      "responsabilidad."
+    ],
+    "heBank": [
+      "נדרש",
+      "הרבה",
+      "ניסיון",
+      "כדי",
+      "למלא",
+      "תפקיד",
+      "עם",
+      "כל",
+      "כך",
+      "הרבה",
+      "אחריות."
+    ],
+    "esDistractors": [
+      "necesitan",
+      "mucho",
+      "cargos"
+    ],
+    "heDistractors": [
+      "נדרשת",
+      "תפקידים",
+      "אחריותו"
+    ],
+    "level": "expert"
+  },
+  {
+    "id": "sx029",
+    "es": "En cuanto se publique el informe, convocaremos una rueda de prensa.",
+    "he": "ברגע שהדוח יתפרסם, נכנס מסיבת עיתונאים.",
+    "esBank": [
+      "En",
+      "cuanto",
+      "se",
+      "publique",
+      "el",
+      "informe,",
+      "convocaremos",
+      "una",
+      "rueda",
+      "de",
+      "prensa."
+    ],
+    "heBank": [
+      "ברגע",
+      "שהדוח",
+      "יתפרסם,",
+      "נכנס",
+      "מסיבת",
+      "עיתונאים."
+    ],
+    "esDistractors": [
+      "publica",
+      "convocarán",
+      "informes"
+    ],
+    "heDistractors": [
+      "התפרסם",
+      "תכנסו",
+      "עיתונאי"
+    ],
+    "level": "expert"
+  },
+  {
+    "id": "sx030",
+    "es": "Aunque el plan parezca descabellado, merece la pena analizarlo con calma.",
+    "he": "גם אם התוכנית נראית מופרכת, שווה לנתח אותה בנחת.",
+    "esBank": [
+      "Aunque",
+      "el",
+      "plan",
+      "parezca",
+      "descabellado,",
+      "merece",
+      "la",
+      "pena",
+      "analizarlo",
+      "con",
+      "calma."
+    ],
+    "heBank": [
+      "גם",
+      "אם",
+      "התוכנית",
+      "נראית",
+      "מופרכת,",
+      "שווה",
+      "לנתח",
+      "אותה",
+      "בנחת."
+    ],
+    "esDistractors": [
+      "parecerá",
+      "descabellada",
+      "analizarla"
+    ],
+    "heDistractors": [
+      "נראות",
+      "מופרך",
+      "אותו"
+    ],
+    "level": "expert"
+  },
+  {
+    "id": "sx031",
+    "es": "De haber sabido lo del atasco, habríamos salido mucho más temprano.",
+    "he": "אם היינו יודעים על הפקק, היינו יוצאים הרבה יותר מוקדם.",
+    "esBank": [
+      "De",
+      "haber",
+      "sabido",
+      "lo",
+      "del",
+      "atasco,",
+      "habríamos",
+      "salido",
+      "mucho",
+      "más",
+      "temprano."
+    ],
+    "heBank": [
+      "אם",
+      "היינו",
+      "יודעים",
+      "על",
+      "הפקק,",
+      "היינו",
+      "יוצאים",
+      "הרבה",
+      "יותר",
+      "מוקדם."
+    ],
+    "esDistractors": [
+      "sabiendo",
+      "habrían",
+      "salidos"
+    ],
+    "heDistractors": [
+      "הייתם",
+      "יודעת",
+      "יוצאות"
+    ],
+    "level": "expert"
+  },
+  {
+    "id": "sx032",
+    "es": "Se ha comprobado que el estrés crónico socava la salud mental.",
+    "he": "הוכח שסטרס כרוני חותר תחת הבריאות הנפשית.",
+    "esBank": [
+      "Se",
+      "ha",
+      "comprobado",
+      "que",
+      "el",
+      "estrés",
+      "crónico",
+      "socava",
+      "la",
+      "salud",
+      "mental."
+    ],
+    "heBank": [
+      "הוכח",
+      "שסטרס",
+      "כרוני",
+      "חותר",
+      "תחת",
+      "הבריאות",
+      "הנפשית."
+    ],
+    "esDistractors": [
+      "han",
+      "comprobada",
+      "socavan"
+    ],
+    "heDistractors": [
+      "הוכחה",
+      "חותרת",
+      "הנפשי"
+    ],
+    "level": "expert"
+  },
+  {
+    "id": "sx033",
+    "es": "Ojalá hubiéramos tomado cartas en el asunto mucho antes.",
+    "he": "הלוואי שהיינו לוקחים את העניינים לידיים הרבה קודם.",
+    "esBank": [
+      "Ojalá",
+      "hubiéramos",
+      "tomado",
+      "cartas",
+      "en",
+      "el",
+      "asunto",
+      "mucho",
+      "antes."
+    ],
+    "heBank": [
+      "הלוואי",
+      "שהיינו",
+      "לוקחים",
+      "את",
+      "העניינים",
+      "לידיים",
+      "הרבה",
+      "קודם."
+    ],
+    "esDistractors": [
+      "hubieran",
+      "carta",
+      "asuntos"
+    ],
+    "heDistractors": [
+      "שהייתם",
+      "לוקחות",
+      "העניין"
+    ],
+    "level": "expert"
+  },
+  {
+    "id": "sx034",
+    "es": "No es que me oponga al cambio, sino que exijo garantías.",
+    "he": "זה לא שאני מתנגד לשינוי, אלא שאני דורש ערבויות.",
+    "esBank": [
+      "No",
+      "es",
+      "que",
+      "me",
+      "oponga",
+      "al",
+      "cambio,",
+      "sino",
+      "que",
+      "exijo",
+      "garantías."
+    ],
+    "heBank": [
+      "זה",
+      "לא",
+      "שאני",
+      "מתנגד",
+      "לשינוי,",
+      "אלא",
+      "שאני",
+      "דורש",
+      "ערבויות."
+    ],
+    "esDistractors": [
+      "opongo",
+      "pero",
+      "garantía"
+    ],
+    "heDistractors": [
+      "מתנגדת",
+      "דורשת",
+      "ערבות"
+    ],
+    "level": "expert"
+  },
+  {
+    "id": "sx035",
+    "es": "La empresa logró recaudar fondos pese a la incertidumbre económica actual.",
+    "he": "החברה הצליחה לגייס כספים למרות אי הוודאות הכלכלית הנוכחית.",
+    "esBank": [
+      "La",
+      "empresa",
+      "logró",
+      "recaudar",
+      "fondos",
+      "pese",
+      "a",
+      "la",
+      "incertidumbre",
+      "económica",
+      "actual."
+    ],
+    "heBank": [
+      "החברה",
+      "הצליחה",
+      "לגייס",
+      "כספים",
+      "למרות",
+      "אי",
+      "הוודאות",
+      "הכלכלית",
+      "הנוכחית."
+    ],
+    "esDistractors": [
+      "lograron",
+      "fondo",
+      "económico"
+    ],
+    "heDistractors": [
+      "הצליח",
+      "כסף",
+      "הנוכחי"
+    ],
+    "level": "expert"
+  },
+  {
+    "id": "sx036",
+    "es": "Cueste lo que cueste, hay que subsanar los errores del pasado.",
+    "he": "יעלה כמה שיעלה, חייבים לתקן את טעויות העבר.",
+    "esBank": [
+      "Cueste",
+      "lo",
+      "que",
+      "cueste,",
+      "hay",
+      "que",
+      "subsanar",
+      "los",
+      "errores",
+      "del",
+      "pasado."
+    ],
+    "heBank": [
+      "יעלה",
+      "כמה",
+      "שיעלה,",
+      "חייבים",
+      "לתקן",
+      "את",
+      "טעויות",
+      "העבר."
+    ],
+    "esDistractors": [
+      "cuesta",
+      "error",
+      "futuro"
+    ],
+    "heDistractors": [
+      "עולה",
+      "הטעויות",
+      "העתיד"
+    ],
+    "level": "expert"
+  },
+  {
+    "id": "sx037",
+    "es": "El testigo se negó a declarar por temor a las represalias.",
+    "he": "העד סירב להעיד מחשש לפעולות נקמה.",
+    "esBank": [
+      "El",
+      "testigo",
+      "se",
+      "negó",
+      "a",
+      "declarar",
+      "por",
+      "temor",
+      "a",
+      "las",
+      "represalias."
+    ],
+    "heBank": [
+      "העד",
+      "סירב",
+      "להעיד",
+      "מחשש",
+      "לפעולות",
+      "נקמה."
+    ],
+    "esDistractors": [
+      "negaron",
+      "testigos",
+      "declara"
+    ],
+    "heDistractors": [
+      "העדה",
+      "סירבה",
+      "לפעולה"
+    ],
+    "level": "expert"
+  },
+  {
+    "id": "sx038",
+    "es": "Quién habría imaginado que aquel modesto proyecto llegaría tan lejos.",
+    "he": "מי היה מעלה בדעתו שהפרויקט הצנוע ההוא יגיע כל כך רחוק.",
+    "esBank": [
+      "Quién",
+      "habría",
+      "imaginado",
+      "que",
+      "aquel",
+      "modesto",
+      "proyecto",
+      "llegaría",
+      "tan",
+      "lejos."
+    ],
+    "heBank": [
+      "מי",
+      "היה",
+      "מעלה",
+      "בדעתו",
+      "שהפרויקט",
+      "הצנוע",
+      "ההוא",
+      "יגיע",
+      "כל",
+      "כך",
+      "רחוק."
+    ],
+    "esDistractors": [
+      "habrían",
+      "imaginada",
+      "llegara"
+    ],
+    "heDistractors": [
+      "הייתה",
+      "בדעתה",
+      "תגיע"
+    ],
+    "level": "expert"
+  },
+  {
+    "id": "sx039",
+    "es": "Antes de que se me olvide, mañana se firma el convenio.",
+    "he": "לפני שאני שוכח, מחר חותמים על ההסכם.",
+    "esBank": [
+      "Antes",
+      "de",
+      "que",
+      "se",
+      "me",
+      "olvide,",
+      "mañana",
+      "se",
+      "firma",
+      "el",
+      "convenio."
+    ],
+    "heBank": [
+      "לפני",
+      "שאני",
+      "שוכח,",
+      "מחר",
+      "חותמים",
+      "על",
+      "ההסכם."
+    ],
+    "esDistractors": [
+      "olvida",
+      "firme",
+      "ayer"
+    ],
+    "heDistractors": [
+      "שוכחת",
+      "חותמות",
+      "אתמול"
+    ],
+    "level": "expert"
+  },
+  {
+    "id": "sx040",
+    "es": "Las medidas se aplicarán de forma paulatina a lo largo del año.",
+    "he": "הצעדים ייושמו באופן הדרגתי לאורך השנה.",
+    "esBank": [
+      "Las",
+      "medidas",
+      "se",
+      "aplicarán",
+      "de",
+      "forma",
+      "paulatina",
+      "a",
+      "lo",
+      "largo",
+      "del",
+      "año."
+    ],
+    "heBank": [
+      "הצעדים",
+      "ייושמו",
+      "באופן",
+      "הדרגתי",
+      "לאורך",
+      "השנה."
+    ],
+    "esDistractors": [
+      "aplicará",
+      "medida",
+      "corto"
+    ],
+    "heDistractors": [
+      "ייושם",
+      "הצעד",
+      "החודש"
+    ],
+    "level": "expert"
+  },
+  {
+    "id": "se001",
+    "es": "Yo como pan y queso.",
+    "he": "אני אוכל לחם וגבינה.",
+    "esBank": [
+      "Yo",
+      "como",
+      "pan",
+      "y",
+      "queso."
+    ],
+    "heBank": [
+      "אני",
+      "אוכל",
+      "לחם",
+      "וגבינה."
+    ],
+    "esDistractors": [
+      "bebo",
+      "leche",
+      "ella"
+    ],
+    "heDistractors": [
+      "שותה",
+      "חלב",
+      "היא"
+    ],
+    "level": "easy"
+  },
+  {
+    "id": "se002",
+    "es": "El gato es negro.",
+    "he": "החתול שחור.",
+    "esBank": [
+      "El",
+      "gato",
+      "es",
+      "negro."
+    ],
+    "heBank": [
+      "החתול",
+      "שחור."
+    ],
+    "esDistractors": [
+      "perro",
+      "blanco",
+      "son"
+    ],
+    "heDistractors": [
+      "הכלב",
+      "לבן",
+      "היא"
+    ],
+    "level": "easy"
+  },
+  {
+    "id": "se003",
+    "es": "Mi madre habla mucho.",
+    "he": "אמא שלי מדברת הרבה.",
+    "esBank": [
+      "Mi",
+      "madre",
+      "habla",
+      "mucho."
+    ],
+    "heBank": [
+      "אמא",
+      "שלי",
+      "מדברת",
+      "הרבה."
+    ],
+    "esDistractors": [
+      "padre",
+      "come",
+      "poco"
+    ],
+    "heDistractors": [
+      "אבא",
+      "אוכלת",
+      "מעט"
+    ],
+    "level": "easy"
+  },
+  {
+    "id": "se004",
+    "es": "Yo tengo dos hermanos.",
+    "he": "יש לי שני אחים.",
+    "esBank": [
+      "Yo",
+      "tengo",
+      "dos",
+      "hermanos."
+    ],
+    "heBank": [
+      "יש",
+      "לי",
+      "שני",
+      "אחים."
+    ],
+    "esDistractors": [
+      "tres",
+      "hermanas",
+      "tiene"
+    ],
+    "heDistractors": [
+      "שלושה",
+      "אחיות",
+      "לה"
+    ],
+    "level": "easy"
+  },
+  {
+    "id": "se005",
+    "es": "La casa es grande.",
+    "he": "הבית גדול.",
+    "esBank": [
+      "La",
+      "casa",
+      "es",
+      "grande."
+    ],
+    "heBank": [
+      "הבית",
+      "גדול."
+    ],
+    "esDistractors": [
+      "pequeña",
+      "el",
+      "mesa"
+    ],
+    "heDistractors": [
+      "קטן",
+      "השולחן",
+      "הם"
+    ],
+    "level": "easy"
+  },
+  {
+    "id": "se006",
+    "es": "Yo bebo agua fría.",
+    "he": "אני שותה מים קרים.",
+    "esBank": [
+      "Yo",
+      "bebo",
+      "agua",
+      "fría."
+    ],
+    "heBank": [
+      "אני",
+      "שותה",
+      "מים",
+      "קרים."
+    ],
+    "esDistractors": [
+      "como",
+      "caliente",
+      "leche"
+    ],
+    "heDistractors": [
+      "אוכל",
+      "חמים",
+      "חלב"
+    ],
+    "level": "easy"
+  },
+  {
+    "id": "se007",
+    "es": "¿Dónde está mi libro?",
+    "he": "איפה הספר שלי?",
+    "esBank": [
+      "¿Dónde",
+      "está",
+      "mi",
+      "libro?"
+    ],
+    "heBank": [
+      "איפה",
+      "הספר",
+      "שלי?"
+    ],
+    "esDistractors": [
+      "cuándo",
+      "tu",
+      "gato"
+    ],
+    "heDistractors": [
+      "מתי",
+      "שלך",
+      "החתול"
+    ],
+    "level": "easy"
+  },
+  {
+    "id": "se008",
+    "es": "El café está caliente.",
+    "he": "הקפה חם.",
+    "esBank": [
+      "El",
+      "café",
+      "está",
+      "caliente."
+    ],
+    "heBank": [
+      "הקפה",
+      "חם."
+    ],
+    "esDistractors": [
+      "té",
+      "frío",
+      "es"
+    ],
+    "heDistractors": [
+      "התה",
+      "קר",
+      "היא"
+    ],
+    "level": "easy"
+  },
+  {
+    "id": "se009",
+    "es": "Mi hermana tiene un perro.",
+    "he": "לאחות שלי יש כלב.",
+    "esBank": [
+      "Mi",
+      "hermana",
+      "tiene",
+      "un",
+      "perro."
+    ],
+    "heBank": [
+      "לאחות",
+      "שלי",
+      "יש",
+      "כלב."
+    ],
+    "esDistractors": [
+      "hermano",
+      "gato",
+      "dos"
+    ],
+    "heDistractors": [
+      "לאח",
+      "חתול",
+      "שני"
+    ],
+    "level": "easy"
+  },
+  {
+    "id": "se010",
+    "es": "Hoy es lunes y trabajo.",
+    "he": "היום יום שני ואני עובד.",
+    "esBank": [
+      "Hoy",
+      "es",
+      "lunes",
+      "y",
+      "trabajo."
+    ],
+    "heBank": [
+      "היום",
+      "יום",
+      "שני",
+      "ואני",
+      "עובד."
+    ],
+    "esDistractors": [
+      "martes",
+      "ayer",
+      "come"
+    ],
+    "heDistractors": [
+      "שלישי",
+      "אתמול",
+      "אוכל"
+    ],
+    "level": "easy"
+  },
+  {
+    "id": "se011",
+    "es": "Quiero comer una manzana.",
+    "he": "אני רוצה לאכול תפוח.",
+    "esBank": [
+      "Quiero",
+      "comer",
+      "una",
+      "manzana."
+    ],
+    "heBank": [
+      "אני",
+      "רוצה",
+      "לאכול",
+      "תפוח."
+    ],
+    "esDistractors": [
+      "beber",
+      "naranja",
+      "quieres"
+    ],
+    "heDistractors": [
+      "לשתות",
+      "תפוז",
+      "רוצים"
+    ],
+    "level": "easy"
+  },
+  {
+    "id": "se012",
+    "es": "La leche está fría.",
+    "he": "החלב קר.",
+    "esBank": [
+      "La",
+      "leche",
+      "está",
+      "fría."
+    ],
+    "heBank": [
+      "החלב",
+      "קר."
+    ],
+    "esDistractors": [
+      "caliente",
+      "agua",
+      "es"
+    ],
+    "heDistractors": [
+      "חם",
+      "המים",
+      "היא"
+    ],
+    "level": "easy"
+  },
+  {
+    "id": "se013",
+    "es": "Mi padre trabaja mucho.",
+    "he": "אבא שלי עובד הרבה.",
+    "esBank": [
+      "Mi",
+      "padre",
+      "trabaja",
+      "mucho."
+    ],
+    "heBank": [
+      "אבא",
+      "שלי",
+      "עובד",
+      "הרבה."
+    ],
+    "esDistractors": [
+      "madre",
+      "duerme",
+      "poco"
+    ],
+    "heDistractors": [
+      "אמא",
+      "ישן",
+      "מעט"
+    ],
+    "level": "easy"
+  },
+  {
+    "id": "se014",
+    "es": "El niño lee un libro.",
+    "he": "הילד קורא ספר.",
+    "esBank": [
+      "El",
+      "niño",
+      "lee",
+      "un",
+      "libro."
+    ],
+    "heBank": [
+      "הילד",
+      "קורא",
+      "ספר."
+    ],
+    "esDistractors": [
+      "escribe",
+      "la",
+      "perro"
+    ],
+    "heDistractors": [
+      "כותב",
+      "הילדה",
+      "עיתון"
+    ],
+    "level": "easy"
+  },
+  {
+    "id": "se015",
+    "es": "¿Cómo está tu abuela?",
+    "he": "מה שלום סבתא שלך?",
+    "esBank": [
+      "¿Cómo",
+      "está",
+      "tu",
+      "abuela?"
+    ],
+    "heBank": [
+      "מה",
+      "שלום",
+      "סבתא",
+      "שלך?"
+    ],
+    "esDistractors": [
+      "dónde",
+      "mi",
+      "abuelo"
+    ],
+    "heDistractors": [
+      "איפה",
+      "סבא",
+      "שלי"
+    ],
+    "level": "easy"
+  },
+  {
+    "id": "se016",
+    "es": "Vivo en una casa pequeña.",
+    "he": "אני גר בבית קטן.",
+    "esBank": [
+      "Vivo",
+      "en",
+      "una",
+      "casa",
+      "pequeña."
+    ],
+    "heBank": [
+      "אני",
+      "גר",
+      "בבית",
+      "קטן."
+    ],
+    "esDistractors": [
+      "grande",
+      "trabajo",
+      "el"
+    ],
+    "heDistractors": [
+      "גדול",
+      "עובד",
+      "היא"
+    ],
+    "level": "easy"
+  },
+  {
+    "id": "se017",
+    "es": "El caballo come manzanas.",
+    "he": "הסוס אוכל תפוחים.",
+    "esBank": [
+      "El",
+      "caballo",
+      "come",
+      "manzanas."
+    ],
+    "heBank": [
+      "הסוס",
+      "אוכל",
+      "תפוחים."
+    ],
+    "esDistractors": [
+      "gato",
+      "bebe",
+      "pan"
+    ],
+    "heDistractors": [
+      "החתול",
+      "שותה",
+      "לחם"
+    ],
+    "level": "easy"
+  },
+  {
+    "id": "se018",
+    "es": "Quiero un café, por favor.",
+    "he": "אני רוצה קפה, בבקשה.",
+    "esBank": [
+      "Quiero",
+      "un",
+      "café,",
+      "por",
+      "favor."
+    ],
+    "heBank": [
+      "אני",
+      "רוצה",
+      "קפה,",
+      "בבקשה."
+    ],
+    "esDistractors": [
+      "té",
+      "gracias",
+      "gato"
+    ],
+    "heDistractors": [
+      "תה",
+      "תודה",
+      "רוצים"
+    ],
+    "level": "easy"
+  },
+  {
+    "id": "se019",
+    "es": "Mi abuelo duerme mucho.",
+    "he": "סבא שלי ישן הרבה.",
+    "esBank": [
+      "Mi",
+      "abuelo",
+      "duerme",
+      "mucho."
+    ],
+    "heBank": [
+      "סבא",
+      "שלי",
+      "ישן",
+      "הרבה."
+    ],
+    "esDistractors": [
+      "abuela",
+      "trabaja",
+      "poco"
+    ],
+    "heDistractors": [
+      "סבתא",
+      "עובד",
+      "מעט"
+    ],
+    "level": "easy"
+  },
+  {
+    "id": "se020",
+    "es": "La puerta es blanca.",
+    "he": "הדלת לבנה.",
+    "esBank": [
+      "La",
+      "puerta",
+      "es",
+      "blanca."
+    ],
+    "heBank": [
+      "הדלת",
+      "לבנה."
+    ],
+    "esDistractors": [
+      "ventana",
+      "negra",
+      "son"
+    ],
+    "heDistractors": [
+      "החלון",
+      "שחורה",
+      "הוא"
+    ],
+    "level": "easy"
+  },
+  {
+    "id": "se021",
+    "es": "Escribo mi nombre aquí.",
+    "he": "אני כותב את השם שלי כאן.",
+    "esBank": [
+      "Escribo",
+      "mi",
+      "nombre",
+      "aquí."
+    ],
+    "heBank": [
+      "אני",
+      "כותב",
+      "את",
+      "השם",
+      "שלי",
+      "כאן."
+    ],
+    "esDistractors": [
+      "leo",
+      "tu",
+      "libro"
+    ],
+    "heDistractors": [
+      "קורא",
+      "שלך",
+      "הספר"
+    ],
+    "level": "easy"
+  },
+  {
+    "id": "se022",
+    "es": "El agua está muy fría.",
+    "he": "המים קרים מאוד.",
+    "esBank": [
+      "El",
+      "agua",
+      "está",
+      "muy",
+      "fría."
+    ],
+    "heBank": [
+      "המים",
+      "קרים",
+      "מאוד."
+    ],
+    "esDistractors": [
+      "caliente",
+      "leche",
+      "es"
+    ],
+    "heDistractors": [
+      "חמים",
+      "החלב",
+      "קצת"
+    ],
+    "level": "easy"
+  },
+  {
+    "id": "se023",
+    "es": "Mi hija tiene cinco años.",
+    "he": "הבת שלי בת חמש.",
+    "esBank": [
+      "Mi",
+      "hija",
+      "tiene",
+      "cinco",
+      "años."
+    ],
+    "heBank": [
+      "הבת",
+      "שלי",
+      "בת",
+      "חמש."
+    ],
+    "esDistractors": [
+      "hijo",
+      "seis",
+      "tengo"
+    ],
+    "heDistractors": [
+      "הבן",
+      "שש",
+      "בן"
+    ],
+    "level": "easy"
+  },
+  {
+    "id": "se024",
+    "es": "¿Qué quieres comer hoy?",
+    "he": "מה אתה רוצה לאכול היום?",
+    "esBank": [
+      "¿Qué",
+      "quieres",
+      "comer",
+      "hoy?"
+    ],
+    "heBank": [
+      "מה",
+      "אתה",
+      "רוצה",
+      "לאכול",
+      "היום?"
+    ],
+    "esDistractors": [
+      "beber",
+      "cuándo",
+      "quiero"
+    ],
+    "heDistractors": [
+      "לשתות",
+      "מתי",
+      "מחר"
+    ],
+    "level": "easy"
+  },
+  {
+    "id": "se025",
+    "es": "El pescado está muy bueno.",
+    "he": "הדג טעים מאוד.",
+    "esBank": [
+      "El",
+      "pescado",
+      "está",
+      "muy",
+      "bueno."
+    ],
+    "heBank": [
+      "הדג",
+      "טעים",
+      "מאוד."
+    ],
+    "esDistractors": [
+      "pollo",
+      "malo",
+      "es"
+    ],
+    "heDistractors": [
+      "העוף",
+      "רע",
+      "קצת"
+    ],
+    "level": "easy"
+  },
+  {
+    "id": "se026",
+    "es": "Voy a casa de mi abuela.",
+    "he": "אני הולך לבית של סבתא שלי.",
+    "esBank": [
+      "Voy",
+      "a",
+      "casa",
+      "de",
+      "mi",
+      "abuela."
+    ],
+    "heBank": [
+      "אני",
+      "הולך",
+      "לבית",
+      "של",
+      "סבתא",
+      "שלי."
+    ],
+    "esDistractors": [
+      "vas",
+      "escuela",
+      "tu"
+    ],
+    "heDistractors": [
+      "באים",
+      "סבא",
+      "שלך"
+    ],
+    "level": "easy"
+  },
+  {
+    "id": "se027",
+    "es": "La vaca bebe agua.",
+    "he": "הפרה שותה מים.",
+    "esBank": [
+      "La",
+      "vaca",
+      "bebe",
+      "agua."
+    ],
+    "heBank": [
+      "הפרה",
+      "שותה",
+      "מים."
+    ],
+    "esDistractors": [
+      "caballo",
+      "come",
+      "leche"
+    ],
+    "heDistractors": [
+      "הסוס",
+      "אוכלת",
+      "חלב"
+    ],
+    "level": "easy"
+  },
+  {
+    "id": "se028",
+    "es": "Mi casa es nueva.",
+    "he": "הבית שלי חדש.",
+    "esBank": [
+      "Mi",
+      "casa",
+      "es",
+      "nueva."
+    ],
+    "heBank": [
+      "הבית",
+      "שלי",
+      "חדש."
+    ],
+    "esDistractors": [
+      "vieja",
+      "tu",
+      "perro"
+    ],
+    "heDistractors": [
+      "ישן",
+      "שלך",
+      "הכלב"
+    ],
+    "level": "easy"
+  },
+  {
+    "id": "se029",
+    "es": "El pájaro es amarillo.",
+    "he": "הציפור צהובה.",
+    "esBank": [
+      "El",
+      "pájaro",
+      "es",
+      "amarillo."
+    ],
+    "heBank": [
+      "הציפור",
+      "צהובה."
+    ],
+    "esDistractors": [
+      "gato",
+      "azul",
+      "está"
+    ],
+    "heDistractors": [
+      "החתול",
+      "כחולה",
+      "הם"
+    ],
+    "level": "easy"
+  },
+  {
+    "id": "se030",
+    "es": "Como huevos por la mañana.",
+    "he": "אני אוכל ביצים בבוקר.",
+    "esBank": [
+      "Como",
+      "huevos",
+      "por",
+      "la",
+      "mañana."
+    ],
+    "heBank": [
+      "אני",
+      "אוכל",
+      "ביצים",
+      "בבוקר."
+    ],
+    "esDistractors": [
+      "bebo",
+      "noche",
+      "pan"
+    ],
+    "heDistractors": [
+      "שותה",
+      "בערב",
+      "לחם"
+    ],
+    "level": "easy"
+  },
+  {
+    "id": "se031",
+    "es": "¿Quién quiere té caliente?",
+    "he": "מי רוצה תה חם?",
+    "esBank": [
+      "¿Quién",
+      "quiere",
+      "té",
+      "caliente?"
+    ],
+    "heBank": [
+      "מי",
+      "רוצה",
+      "תה",
+      "חם?"
+    ],
+    "esDistractors": [
+      "qué",
+      "café",
+      "frío"
+    ],
+    "heDistractors": [
+      "מה",
+      "קפה",
+      "קר"
+    ],
+    "level": "easy"
+  },
+  {
+    "id": "se032",
+    "es": "Me duele la cabeza.",
+    "he": "כואב לי הראש.",
+    "esBank": [
+      "Me",
+      "duele",
+      "la",
+      "cabeza."
+    ],
+    "heBank": [
+      "כואב",
+      "לי",
+      "הראש."
+    ],
+    "esDistractors": [
+      "mano",
+      "el",
+      "mucho"
+    ],
+    "heDistractors": [
+      "היד",
+      "לך",
+      "הבטן"
+    ],
+    "level": "easy"
+  },
+  {
+    "id": "se033",
+    "es": "La mesa es vieja.",
+    "he": "השולחן ישן.",
+    "esBank": [
+      "La",
+      "mesa",
+      "es",
+      "vieja."
+    ],
+    "heBank": [
+      "השולחן",
+      "ישן."
+    ],
+    "esDistractors": [
+      "silla",
+      "nueva",
+      "son"
+    ],
+    "heDistractors": [
+      "הכיסא",
+      "חדש",
+      "היא"
+    ],
+    "level": "easy"
+  },
+  {
+    "id": "se034",
+    "es": "Compro pan y leche.",
+    "he": "אני קונה לחם וחלב.",
+    "esBank": [
+      "Compro",
+      "pan",
+      "y",
+      "leche."
+    ],
+    "heBank": [
+      "אני",
+      "קונה",
+      "לחם",
+      "וחלב."
+    ],
+    "esDistractors": [
+      "quiero",
+      "queso",
+      "bebo"
+    ],
+    "heDistractors": [
+      "רוצה",
+      "גבינה",
+      "שותה"
+    ],
+    "level": "easy"
+  },
+  {
+    "id": "se035",
+    "es": "El gato duerme en la cama.",
+    "he": "החתול ישן על המיטה.",
+    "esBank": [
+      "El",
+      "gato",
+      "duerme",
+      "en",
+      "la",
+      "cama."
+    ],
+    "heBank": [
+      "החתול",
+      "ישן",
+      "על",
+      "המיטה."
+    ],
+    "esDistractors": [
+      "perro",
+      "come",
+      "mesa"
+    ],
+    "heDistractors": [
+      "הכלב",
+      "אוכל",
+      "השולחן"
+    ],
+    "level": "easy"
+  },
+  {
+    "id": "se036",
+    "es": "Leo un libro nuevo.",
+    "he": "אני קורא ספר חדש.",
+    "esBank": [
+      "Leo",
+      "un",
+      "libro",
+      "nuevo."
+    ],
+    "heBank": [
+      "אני",
+      "קורא",
+      "ספר",
+      "חדש."
+    ],
+    "esDistractors": [
+      "escribo",
+      "viejo",
+      "dos"
+    ],
+    "heDistractors": [
+      "כותב",
+      "ישן",
+      "שני"
+    ],
+    "level": "easy"
+  },
+  {
+    "id": "se037",
+    "es": "¿Cuándo vas a casa?",
+    "he": "מתי אתה הולך הביתה?",
+    "esBank": [
+      "¿Cuándo",
+      "vas",
+      "a",
+      "casa?"
+    ],
+    "heBank": [
+      "מתי",
+      "אתה",
+      "הולך",
+      "הביתה?"
+    ],
+    "esDistractors": [
+      "dónde",
+      "voy",
+      "la"
+    ],
+    "heDistractors": [
+      "איפה",
+      "אני",
+      "לעבודה"
+    ],
+    "level": "easy"
+  },
+  {
+    "id": "se038",
+    "es": "Hablo con mi padre.",
+    "he": "אני מדבר עם אבא שלי.",
+    "esBank": [
+      "Hablo",
+      "con",
+      "mi",
+      "padre."
+    ],
+    "heBank": [
+      "אני",
+      "מדבר",
+      "עם",
+      "אבא",
+      "שלי."
+    ],
+    "esDistractors": [
+      "madre",
+      "hablas",
+      "tu"
+    ],
+    "heDistractors": [
+      "אמא",
+      "שלך",
+      "הם"
+    ],
+    "level": "easy"
+  },
+  {
+    "id": "se039",
+    "es": "El lunes trabajo mucho.",
+    "he": "ביום שני אני עובד הרבה.",
+    "esBank": [
+      "El",
+      "lunes",
+      "trabajo",
+      "mucho."
+    ],
+    "heBank": [
+      "ביום",
+      "שני",
+      "אני",
+      "עובד",
+      "הרבה."
+    ],
+    "esDistractors": [
+      "martes",
+      "como",
+      "poco"
+    ],
+    "heDistractors": [
+      "שלישי",
+      "אוכל",
+      "מעט"
+    ],
+    "level": "easy"
+  },
+  {
+    "id": "se040",
+    "es": "Gracias por la comida.",
+    "he": "תודה על האוכל.",
+    "esBank": [
+      "Gracias",
+      "por",
+      "la",
+      "comida."
+    ],
+    "heBank": [
+      "תודה",
+      "על",
+      "האוכל."
+    ],
+    "esDistractors": [
+      "favor",
+      "el",
+      "agua"
+    ],
+    "heDistractors": [
+      "בבקשה",
+      "המים",
+      "סליחה"
+    ],
+    "level": "easy"
+  }
 ]

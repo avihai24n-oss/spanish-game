@@ -6,6 +6,8 @@
  * (WebSocket / Firebase / Supabase Realtime) without touching game logic.
  */
 
+import type { Level } from "../game/types";
+
 export type MatchEvent =
   /** Sent by the local player when a round begins (seed syncs the questions). */
   | {
@@ -42,8 +44,12 @@ export type MatchEvent =
   | { type: "opponentJoined"; name: string; avatar: string }
   /** Received on join: how many players (including you) are in the room. */
   | { type: "roomState"; players: number }
-  /** Received: both players are in — the round starts with this shared seed. */
-  | { type: "matchStart"; seed: string }
+  /**
+   * Received: both players are in — the round starts with this shared seed.
+   * `levels` is the host's difficulty selection; both clients must generate
+   * the round from the same seed + levels to stay in sync.
+   */
+  | { type: "matchStart"; seed: string; levels: Level[] }
   /** Received: the opponent wants a rematch. */
   | { type: "opponentWantsRematch" }
   /** Received: the opponent disconnected. */

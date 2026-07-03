@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useGameStore } from "../game/store";
+import { LEVEL_LABELS } from "../game/types";
 import DuoButton from "./ui/DuoButton";
 
 function roomLink(roomId: string): string {
@@ -17,6 +18,8 @@ export default function LobbyScreen() {
   const opponent = useGameStore((s) => s.opponent);
   const player = useGameStore((s) => s.player);
   const retryLobby = useGameStore((s) => s.retryLobby);
+  const isHost = useGameStore((s) => s.isHost);
+  const selectedLevels = useGameStore((s) => s.selectedLevels);
   const [copied, setCopied] = useState(false);
 
   const link = roomId ? roomLink(roomId) : "";
@@ -75,6 +78,19 @@ export default function LobbyScreen() {
               <p className="mt-4 font-bold text-duo-gray">
                 שלחו את הקישור — ברגע שהחבר נכנס, המרוץ מתחיל:
               </p>
+              {isHost && (
+                <div className="mt-3 flex flex-wrap items-center justify-center gap-1.5">
+                  <span className="text-xs font-black text-duo-gray">רמה:</span>
+                  {selectedLevels.map((level) => (
+                    <span
+                      key={level}
+                      className="rounded-full border border-duo-green/40 bg-duo-green/10 px-2.5 py-0.5 text-xs font-black text-duo-greenShadow"
+                    >
+                      {LEVEL_LABELS[level]}
+                    </span>
+                  ))}
+                </div>
+              )}
               <div
                 className="mt-4 flex items-center gap-2 rounded-2xl border border-duo-border bg-white/70 px-3 py-2.5 shadow-inner"
                 dir="ltr"

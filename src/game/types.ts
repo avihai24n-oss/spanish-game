@@ -1,11 +1,30 @@
 // ---------- Data shapes (match the external dataset schema) ----------
 
+export type Level = "easy" | "medium" | "hard" | "expert";
+
+export const ALL_LEVELS: Level[] = ["easy", "medium", "hard", "expert"];
+
+export const LEVEL_LABELS: Record<Level, string> = {
+  easy: "קל",
+  medium: "בינוני",
+  hard: "קשה",
+  expert: "מנוסים",
+};
+
+export function sanitizeLevels(input: unknown): Level[] {
+  const valid = Array.isArray(input)
+    ? ALL_LEVELS.filter((l) => input.includes(l))
+    : [];
+  return valid.length > 0 ? valid : [...ALL_LEVELS];
+}
+
 export interface WordEntry {
   id: string;
   es: string;
   he: string;
   en: string;
   type: string;
+  level: Level;
   hardToQuiz?: boolean;
 }
 
@@ -17,6 +36,7 @@ export interface SentenceEntry {
   heBank: string[];
   esDistractors: string[];
   heDistractors: string[];
+  level: Level;
 }
 
 /** Optional map: word id -> ids of good distractors */

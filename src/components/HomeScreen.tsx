@@ -1,8 +1,16 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { useGameStore } from "../game/store";
+import { ALL_LEVELS, LEVEL_LABELS, type Level } from "../game/types";
 import DuoButton from "./ui/DuoButton";
 import { useSound } from "../hooks/useSound";
+
+const LEVEL_ICONS: Record<Level, string> = {
+  easy: "🌱",
+  medium: "⭐",
+  hard: "🔥",
+  expert: "👑",
+};
 
 const stagger = {
   hidden: { opacity: 0, y: 20 },
@@ -64,8 +72,18 @@ export default function HomeScreen() {
             ספרדית בעברית. מהר. נקי. משחקי.
           </p>
 
-          <div className="mt-10 grid w-full max-w-[21rem] gap-3 px-1 sm:max-w-md">
-            <motion.div variants={stagger} custom={1} initial="hidden" animate="show">
+          <motion.div
+            variants={stagger}
+            custom={1}
+            initial="hidden"
+            animate="show"
+            className="mt-8 w-full max-w-[21rem] px-1 sm:max-w-md"
+          >
+            <LevelPicker />
+          </motion.div>
+
+          <div className="mt-4 grid w-full max-w-[21rem] gap-3 px-1 sm:max-w-md">
+            <motion.div variants={stagger} custom={2} initial="hidden" animate="show">
               <DuoButton
                 variant="green"
                 size="xl"
@@ -84,7 +102,7 @@ export default function HomeScreen() {
 
             <motion.div
               variants={stagger}
-              custom={2}
+              custom={3}
               initial="hidden"
               animate="show"
               className="relative"
@@ -113,6 +131,66 @@ export default function HomeScreen() {
         <ProfileDrawer open={menuOpen} onClose={() => setMenuOpen(false)} />
       </div>
     </main>
+  );
+}
+
+function LevelPicker() {
+  const selectedLevels = useGameStore((s) => s.selectedLevels);
+  const toggleLevel = useGameStore((s) => s.toggleLevel);
+  const setLevels = useGameStore((s) => s.setLevels);
+  const { play } = useSound();
+
+  const allSelected = selectedLevels.length === ALL_LEVELS.length;
+
+  return (
+    <div className="rounded-2xl border border-duo-border bg-white/70 p-3 shadow-card">
+      <div className="flex items-center justify-between">
+        <p className="text-xs font-black uppercase tracking-[0.14em] text-duo-gray">
+          רמת קושי
+        </p>
+        <button
+          type="button"
+          onClick={() => {
+            play("click");
+            setLevels([...ALL_LEVELS]);
+          }}
+          className={`rounded-full px-2.5 py-0.5 text-xs font-black transition-colors ${
+            allSelected
+              ? "bg-duo-purple text-white"
+              : "bg-duo-border/60 text-duo-gray"
+          }`}
+        >
+          הכל
+        </button>
+      </div>
+      <div className="mt-2 grid grid-cols-4 gap-2">
+        {ALL_LEVELS.map((level) => {
+          const active = selectedLevels.includes(level);
+          return (
+            <button
+              key={level}
+              type="button"
+              aria-pressed={active}
+              onClick={() => {
+                play("click");
+                toggleLevel(level);
+              }}
+              className={`flex flex-col items-center gap-0.5 rounded-xl border-2 px-1 py-2 text-xs font-black transition-all ${
+                active
+                  ? "border-duo-green bg-duo-green/10 text-duo-greenShadow"
+                  : "border-duo-border bg-white/60 text-duo-gray opacity-70"
+              }`}
+            >
+              <span className="text-lg leading-none">{LEVEL_ICONS[level]}</span>
+              {LEVEL_LABELS[level]}
+            </button>
+          );
+        })}
+      </div>
+      <p className="mt-2 text-center text-[11px] font-bold text-duo-gray">
+        אפשר לשלב כמה רמות — השאלות יגיעו מכולן
+      </p>
+    </div>
   );
 }
 
