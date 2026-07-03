@@ -62,12 +62,34 @@ export default function GameScreen() {
     return () => clearTimeout(t);
   }, [phase, lastCorrect, combo, nextQuestion, play]);
 
+  useEffect(() => {
+    if (question || questions.length === 0) return;
+    const t = setTimeout(nextQuestion, 0);
+    return () => clearTimeout(t);
+  }, [question, questions.length, nextQuestion]);
+
   const handleAnswer = (correct: boolean) => {
     const elapsed = performance.now() - startRef.current;
     submitAnswer(correct, Math.min(elapsed, timeLimit));
   };
 
-  if (!question) return null;
+  if (!question) {
+    return (
+      <main className="screen-shell flex items-center justify-center">
+        <section className="panel w-full max-w-md rounded-[2rem] p-7 text-center">
+          <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-duo-greenLight text-4xl">
+            🏁
+          </div>
+          <h1 className="mt-4 text-3xl font-black text-duo-ink">
+            מסיימים סיבוב...
+          </h1>
+          <p className="mt-2 text-sm font-bold text-duo-gray">
+            מחשבים את התוצאה ומעבירים למסך הסיום.
+          </p>
+        </section>
+      </main>
+    );
+  }
 
   return (
     <main className="screen-shell pb-36">

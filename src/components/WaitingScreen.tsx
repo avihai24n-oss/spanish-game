@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { useGameStore } from "../game/store";
 import { ROUND_SIZE } from "../game/types";
@@ -8,12 +9,20 @@ export default function WaitingScreen() {
   const player = useGameStore((s) => s.player);
   const opponent = useGameStore((s) => s.opponent);
   const goHome = useGameStore((s) => s.goHome);
+  const finishRound = useGameStore((s) => s.finishRound);
 
   const remaining = Math.max(0, ROUND_SIZE - opponent.progress);
+  const opponentDone = opponent.finished || opponent.progress >= ROUND_SIZE;
   const opponentAccuracy =
     opponent.progress > 0
       ? Math.round((opponent.correctCount / opponent.progress) * 100)
       : 0;
+
+  useEffect(() => {
+    if (!player.finished || !opponentDone) return;
+    const t = setTimeout(finishRound, 0);
+    return () => clearTimeout(t);
+  }, [finishRound, opponentDone, player.finished]);
 
   return (
     <main className="screen-shell flex items-center justify-center">
@@ -75,7 +84,7 @@ export default function WaitingScreen() {
           transition={{ duration: 1.4, repeat: Infinity, ease: "easeInOut" }}
         >
           <span className="h-2.5 w-2.5 rounded-full bg-duo-purple" />
-          היריב עדיין משחק...
+          {opponentDone ? "עוברים למסך התוצאות..." : "היריב עדיין משחק..."}
         </motion.div>
 
         <div className="mx-auto mt-7 max-w-sm">

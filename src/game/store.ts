@@ -222,15 +222,15 @@ export const useGameStore = create<GameState>((set, get) => ({
     const player: PlayerState = { ...s.player, finished: true };
     const totalQuestions = s.questions.length || ROUND_SIZE;
     const opponentDone = s.opponent.finished || s.opponent.progress >= totalQuestions;
+    set({
+      screen: opponentDone ? "results" : "waiting",
+      player,
+    });
+
     s.transport?.send({
       type: "playerFinished",
       totalScore: player.score,
       correctCount: player.correctCount,
-    });
-
-    set({
-      screen: opponentDone ? "results" : "waiting",
-      player,
     });
 
     get().finishRound();
