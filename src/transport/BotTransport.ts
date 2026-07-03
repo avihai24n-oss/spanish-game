@@ -4,10 +4,14 @@ import type {
   MatchTransport,
 } from "./MatchTransport";
 import { pointsFor } from "../game/scoring";
+import { MCQ_TIME_MS, SENTENCE_TIME_MS } from "../game/types";
 
 const BOT_ACCURACY = 0.75;
-const BOT_MIN_DELAY_MS = 2600;
-const BOT_MAX_DELAY_MS = 8200;
+/** Per-question think-time ranges, matching each kind's clock. */
+const BOT_DELAY_RANGES = {
+  mcq: { min: 2600, max: 8200 },
+  sentence: { min: 8000, max: 20000 },
+} as const;
 
 /**
  * Simulated opponent: answers the same round with a randomized, realistic
@@ -28,7 +32,7 @@ export class BotTransport implements MatchTransport {
 
   send(event: MatchEvent): void {
     if (event.type === "roundStart") {
-      this.startBotRun(event.questionCount);
+      this.startBotRun(event.questionKinds);
     }
     // playerAnswer / playerFinished would be relayed to a real opponent;
     // the bot doesn't react to them.
@@ -48,24 +52,25 @@ export class BotTransport implements MatchTransport {
     this.handlers.forEach((h) => h(event));
   }
 
-  private startBotRun(questionCount: number): void {
+  private startBotRun(questionKinds: Array<"mcq" | "sentence">): void {
     let elapsed = 0;
     let totalScore = 0;
     let correctCount = 0;
 
-    for (let i = 0; i < questionCount; i++) {
-      const thinkMs =
-        BOT_MIN_DELAY_MS +
-        Math.random() * (BOT_MAX_DELAY_MS - BOT_MIN_DELAY_MS);
+    for (let i = 0; i < questionKinds.length; i++) {
+      const kind = questionKinds[i];
+      const range = BOT_DELAY_RANGES[kind];
+      const thinkMs = range.min + Math.random() * (range.max - range.min);
+      const timeLimit = kind === "sentence" ? SENTENCE_TIME_MS : MCQ_TIME_MS;
       const correct = Math.random() < BOT_ACCURACY;
-      const points = pointsFor(correct, thinkMs);
+      const points = pointsFor(correct, thinkMs, timeLimit);
       elapsed += thinkMs;
       totalScore += points;
       if (correct) correctCount++;
 
       const snapshotScore = totalScore;
       const snapshotCorrect = correctCount;
-      const isLast = i === questionCount - 1;
+      const isLast = i === questionKinds.length - 1;
 
       this.timers.push(
         setTimeout(() => {

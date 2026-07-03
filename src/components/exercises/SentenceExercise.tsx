@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import type { SentenceQuestion } from "../../game/types";
 import { checkSentenceAnswer } from "../../game/questionGen";
 import DuoButton from "../ui/DuoButton";
@@ -70,22 +70,19 @@ export default function SentenceExercise({
         dir={targetDir}
         className="flex min-h-[64px] flex-wrap content-start items-start gap-2 border-b-2 border-t-2 border-duo-border py-3"
       >
-        <AnimatePresence>
-          {placed.map((chip) => (
-            <motion.button
-              key={chip.key}
-              layoutId={chip.key}
-              onClick={() => unplace(chip)}
-              initial={{ opacity: 0, scale: 0.7 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.7 }}
-              className={`rounded-xl border-2 border-b-4 border-duo-border bg-white px-3.5 py-2 text-lg font-bold transition-colors hover:bg-duo-bg ${targetFont}`}
-              dir={targetDir}
-            >
-              {chip.text}
-            </motion.button>
-          ))}
-        </AnimatePresence>
+        {placed.map((chip) => (
+          <motion.button
+            key={chip.key}
+            layoutId={`${question.id}:${chip.key}`}
+            onClick={() => unplace(chip)}
+            initial={{ opacity: 0, scale: 0.7 }}
+            animate={{ opacity: 1, scale: 1 }}
+            className={`rounded-xl border-2 border-b-4 border-duo-border bg-white px-3.5 py-2 text-lg font-bold transition-colors hover:bg-duo-bg ${targetFont}`}
+            dir={targetDir}
+          >
+            {chip.text}
+          </motion.button>
+        ))}
         {placed.length === 0 && (
           <span className="py-2 text-sm font-bold text-duo-gray">
             הקישו על המילים כדי לבנות את המשפט...
@@ -108,7 +105,7 @@ export default function SentenceExercise({
           ) : (
             <motion.button
               key={chip.key}
-              layoutId={chip.key}
+              layoutId={`${question.id}:${chip.key}`}
               onClick={() => place(chip)}
               whileHover={revealed ? undefined : { y: -2 }}
               whileTap={revealed ? undefined : { scale: 0.95 }}

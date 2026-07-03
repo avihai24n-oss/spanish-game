@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useGameStore } from "../game/store";
-import { QUESTION_TIME_MS, ROUND_SIZE } from "../game/types";
+import { MCQ_TIME_MS, ROUND_SIZE, questionTimeMs } from "../game/types";
 import ProgressBar from "./ui/ProgressBar";
 import CountdownRing from "./ui/CountdownRing";
 import RaceTrack from "./RaceTrack";
@@ -27,30 +27,32 @@ export default function GameScreen() {
   const { play } = useSound();
 
   const question = questions[questionIndex];
-  const [remainingMs, setRemainingMs] = useState(QUESTION_TIME_MS);
+  // Sentence questions get a longer clock than MCQ
+  const timeLimit = question ? questionTimeMs(question) : MCQ_TIME_MS;
+  const [remainingMs, setRemainingMs] = useState(timeLimit);
   const startRef = useRef(performance.now());
 
   // Per-question countdown (rAF for a smooth ring)
   useEffect(() => {
     if (phase !== "answering") return;
     startRef.current = performance.now();
-    setRemainingMs(QUESTION_TIME_MS);
+    setRemainingMs(timeLimit);
     let raf = 0;
     let done = false;
     const tick = () => {
       const elapsed = performance.now() - startRef.current;
-      const rem = Math.max(0, QUESTION_TIME_MS - elapsed);
+      const rem = Math.max(0, timeLimit - elapsed);
       setRemainingMs(rem);
       if (rem <= 0 && !done) {
         done = true;
-        submitAnswer(false, QUESTION_TIME_MS); // timeout = wrong
+        submitAnswer(false, timeLimit); // timeout = wrong
         return;
       }
       raf = requestAnimationFrame(tick);
     };
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
-  }, [phase, questionIndex, submitAnswer]);
+  }, [phase, questionIndex, timeLimit, submitAnswer]);
 
   // Feedback: sound + auto-advance (it's a race — no waiting around)
   useEffect(() => {
@@ -62,7 +64,7 @@ export default function GameScreen() {
 
   const handleAnswer = (correct: boolean) => {
     const elapsed = performance.now() - startRef.current;
-    submitAnswer(correct, Math.min(elapsed, QUESTION_TIME_MS));
+    submitAnswer(correct, Math.min(elapsed, timeLimit));
   };
 
   if (!question) return null;
@@ -95,7 +97,7 @@ export default function GameScreen() {
       {/* Timer + combo + score row */}
       <div className="mt-4 flex items-center justify-between">
         <CountdownRing
-          fraction={phase === "answering" ? remainingMs / QUESTION_TIME_MS : 0}
+          fraction={phase === "answering" ? remainingMs / timeLimit : 0}
           seconds={Math.ceil(remainingMs / 1000)}
         />
         <AnimatePresence>
@@ -120,33 +122,31 @@ export default function GameScreen() {
         </div>
       </div>
 
-      {/* Question */}
+      {/* Question — keyed remount (no exit animation: an interrupted exit
+          could stall AnimatePresence and leave the question area blank) */}
       <div className="mt-6 flex-1">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={question.id}
-            initial={{ opacity: 0, x: -24 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 24 }}
-            transition={{ duration: 0.2 }}
-          >
-            {question.kind === "mcq" ? (
-              <McqExercise
-                key={question.id}
-                question={question}
-                revealed={phase === "feedback"}
-                onAnswer={handleAnswer}
-              />
-            ) : (
-              <SentenceExercise
-                key={question.id}
-                question={question}
-                revealed={phase === "feedback"}
-                onAnswer={handleAnswer}
-              />
-            )}
-          </motion.div>
-        </AnimatePresence>
+        <motion.div
+          key={question.id}
+          initial={{ opacity: 0, x: -24 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.2 }}
+        >
+          {question.kind === "mcq" ? (
+            <McqExercise
+              key={question.id}
+              question={question}
+              revealed={phase === "feedback"}
+              onAnswer={handleAnswer}
+            />
+          ) : (
+            <SentenceExercise
+              key={question.id}
+              question={question}
+              revealed={phase === "feedback"}
+              onAnswer={handleAnswer}
+            />
+          )}
+        </motion.div>
       </div>
 
       {/* Feedback banner */}

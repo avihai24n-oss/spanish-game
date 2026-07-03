@@ -8,7 +8,13 @@
 
 export type MatchEvent =
   /** Sent by the local player when a round begins (seed syncs the questions). */
-  | { type: "roundStart"; seed: string; questionCount: number }
+  | {
+      type: "roundStart";
+      seed: string;
+      questionCount: number;
+      /** Question kinds in round order — lets an opponent (or bot) pace itself. */
+      questionKinds: Array<"mcq" | "sentence">;
+    }
   /** Sent by the local player after answering a question. */
   | {
       type: "playerAnswer";

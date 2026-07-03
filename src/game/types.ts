@@ -58,10 +58,16 @@ export type Question = McqQuestion | SentenceQuestion;
 // ---------- Round / match ----------
 
 export const ROUND_SIZE = 10;
-export const QUESTION_TIME_MS = 10_000;
+export const MCQ_TIME_MS = 10_000;
+export const SENTENCE_TIME_MS = 25_000;
 export const BASE_POINTS = 100;
 export const MAX_TIME_BONUS = 50;
 export const XP_PER_CORRECT = 10;
+
+/** Sentence building takes real thinking time — it gets a longer clock. */
+export function questionTimeMs(question: Pick<Question, "kind">): number {
+  return question.kind === "sentence" ? SENTENCE_TIME_MS : MCQ_TIME_MS;
+}
 
 export interface AnswerRecord {
   questionIndex: number;

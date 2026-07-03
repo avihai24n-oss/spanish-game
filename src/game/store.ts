@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import type { AnswerRecord, PlayerState, Question } from "./types";
-import { ROUND_SIZE, XP_PER_CORRECT } from "./types";
+import { ROUND_SIZE, XP_PER_CORRECT, questionTimeMs } from "./types";
 import { generateRound } from "./questionGen";
 import { pointsFor } from "./scoring";
 import { randomSeed } from "./rng";
@@ -145,14 +145,23 @@ export const useGameStore = create<GameState>((set, get) => ({
       transport,
     });
 
-    transport.send({ type: "roundStart", seed, questionCount: questions.length });
+    transport.send({
+      type: "roundStart",
+      seed,
+      questionCount: questions.length,
+      questionKinds: questions.map((q) => q.kind),
+    });
   },
 
   submitAnswer: (correct, timeMs) => {
     const s = get();
     if (s.phase !== "answering") return;
 
-    const points = pointsFor(correct, timeMs);
+    const points = pointsFor(
+      correct,
+      timeMs,
+      questionTimeMs(s.questions[s.questionIndex])
+    );
     const combo = correct ? s.combo + 1 : 0;
     const record: AnswerRecord = {
       questionIndex: s.questionIndex,
