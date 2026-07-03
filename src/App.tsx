@@ -17,6 +17,18 @@ export default function App() {
     }
   }, [showDemoScreen]);
 
+  useEffect(() => {
+    const resetScroll = () => {
+      window.scrollTo(0, 0);
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+    };
+
+    resetScroll();
+    const frame = requestAnimationFrame(resetScroll);
+    return () => cancelAnimationFrame(frame);
+  }, [screen]);
+
   return (
     <div className="min-h-full">
       {screen === "home" && <HomeScreen />}
