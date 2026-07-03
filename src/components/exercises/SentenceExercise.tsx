@@ -113,7 +113,6 @@ export default function SentenceExercise({
   const [placed, setPlaced] = useState<Chip[]>([]);
   const [listening, setListening] = useState(false);
   const [speechStatus, setSpeechStatus] = useState<SpeechStatus>("idle");
-  const [lastHeard, setLastHeard] = useState("");
   const recognitionRef = useRef<SpeechRecognitionLike | null>(null);
   const manualStopRef = useRef(false);
   const placedRef = useRef<Chip[]>([]);
@@ -197,7 +196,6 @@ export default function SentenceExercise({
       for (let altIndex = 0; altIndex < result.length; altIndex += 1) {
         const alternative = result[altIndex];
         const confidence = speechConfidence(alternative, result);
-        setLastHeard(alternative.transcript.trim());
 
         if (confidence < MIN_SPEECH_CONFIDENCE) {
           heardLowConfidence = true;
@@ -277,13 +275,13 @@ export default function SentenceExercise({
   };
 
   return (
-    <section className="panel rounded-[1.7rem] p-5 sm:p-7">
+    <section className="panel rounded-[1.4rem] p-4 sm:rounded-[1.7rem] sm:p-7">
       <div>
         <p className="text-sm font-black uppercase tracking-[0.14em] text-duo-purple">
           {toSpanish ? "תרגמו את המשפט לספרדית" : "תרגמו את המשפט לעברית"}
         </p>
         <h2
-          className={`mt-3 text-3xl font-black leading-snug text-duo-ink ${
+          className={`mt-2 text-2xl font-black leading-snug text-duo-ink sm:mt-3 sm:text-3xl ${
             toSpanish ? "" : "es-text"
           }`}
           dir={toSpanish ? "rtl" : "ltr"}
@@ -295,7 +293,7 @@ export default function SentenceExercise({
       {/* Answer line */}
       <div
         dir={targetDir}
-        className="mt-5 flex min-h-[76px] flex-wrap content-start items-start gap-2 rounded-2xl border border-dashed border-duo-borderStrong bg-white/60 p-3"
+        className="mt-4 flex min-h-[60px] flex-wrap content-start items-start gap-2 rounded-2xl border border-dashed border-duo-borderStrong bg-white/60 p-2.5 sm:mt-5 sm:min-h-[76px] sm:p-3"
       >
         {placed.map((chip) => (
           <motion.button
@@ -304,7 +302,7 @@ export default function SentenceExercise({
             onClick={() => unplace(chip)}
             initial={{ opacity: 0, scale: 0.7 }}
             animate={{ opacity: 1, scale: 1 }}
-            className={`rounded-xl border border-b-4 border-duo-border bg-white px-3.5 py-2 text-lg font-bold shadow-card transition-colors hover:bg-duo-surface2 ${targetFont}`}
+            className={`rounded-xl border border-b-4 border-duo-border bg-white px-3 py-1.5 text-base font-bold shadow-card transition-colors hover:bg-duo-surface2 sm:px-3.5 sm:py-2 sm:text-lg ${targetFont}`}
             dir={targetDir}
           >
             {chip.text}
@@ -318,41 +316,36 @@ export default function SentenceExercise({
       </div>
 
       {!revealed && (
-        <div className="mt-4 rounded-2xl border border-duo-border bg-white/70 p-3 shadow-sm">
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-            <div>
-              <p className="text-sm font-black text-duo-ink">
-                מילוי בדיבור
-              </p>
-              <p className="text-xs font-bold text-duo-gray">
-                אמרו מילה מהרשימה. כל מילה מזוהה תתווסף מיד אם היא עוברת 86%.
-              </p>
-            </div>
-            <button
-              type="button"
-              onClick={toggleListening}
-              disabled={!speechSupported}
-              className={`rounded-2xl border border-b-4 px-4 py-2 text-sm font-black transition-all active:translate-y-[3px] active:border-b ${
-                listening
-                  ? "border-duo-redShadow bg-duo-red text-white"
+        <div className="mt-3 flex justify-center">
+          <button
+            type="button"
+            onClick={toggleListening}
+            disabled={!speechSupported}
+            aria-label={listening ? "כיבוי מיקרופון" : "הפעלת מיקרופון"}
+            className={`relative flex h-[52px] w-[52px] items-center justify-center rounded-full border border-b-4 text-2xl font-black shadow-card transition-all active:translate-y-[3px] active:border-b ${
+              listening
+                ? "border-duo-redShadow bg-duo-red text-white"
+                : speechStatus === "matched"
+                  ? "border-duo-greenShadow bg-duo-green text-white"
                   : "border-duo-purpleShadow bg-duo-purple text-white"
-              } disabled:cursor-not-allowed disabled:border-duo-border disabled:bg-duo-border disabled:text-duo-gray`}
-            >
-              {listening ? "עצור מיקרופון" : "הפעל מיקרופון"}
-            </button>
-          </div>
-          <SpeechHint status={speechStatus} lastHeard={lastHeard} />
+            } disabled:cursor-not-allowed disabled:border-duo-border disabled:bg-duo-border disabled:text-duo-gray`}
+          >
+            {listening && (
+              <span className="absolute inset-[-5px] rounded-full border-2 border-duo-red/35 animate-ping" />
+            )}
+            <span aria-hidden="true">🎙</span>
+          </button>
         </div>
       )}
 
       {/* Word bank */}
-      <div dir={targetDir} className="mt-5 flex flex-wrap justify-center gap-2">
+      <div dir={targetDir} className="mt-4 flex flex-wrap justify-center gap-2 sm:mt-5">
         {allChips.map((chip) =>
           placedKeys.has(chip.key) ? (
             // ghost slot for a used chip
             <span
               key={chip.key}
-              className={`rounded-xl border border-b-4 border-transparent bg-duo-border/60 px-3.5 py-2 text-lg font-bold text-transparent ${targetFont}`}
+              className={`rounded-xl border border-b-4 border-transparent bg-duo-border/60 px-3 py-1.5 text-base font-bold text-transparent sm:px-3.5 sm:py-2 sm:text-lg ${targetFont}`}
               dir={targetDir}
             >
               {chip.text}
@@ -364,7 +357,7 @@ export default function SentenceExercise({
               onClick={() => place(chip)}
               whileHover={revealed ? undefined : { y: -2 }}
               whileTap={revealed ? undefined : { scale: 0.95 }}
-              className={`rounded-xl border border-b-4 border-duo-border bg-white/85 px-3.5 py-2 text-lg font-bold shadow-card transition-colors hover:bg-duo-surface2 ${
+              className={`rounded-xl border border-b-4 border-duo-border bg-white/85 px-3 py-1.5 text-base font-bold shadow-card transition-colors hover:bg-duo-surface2 sm:px-3.5 sm:py-2 sm:text-lg ${
                 revealed ? "opacity-50" : ""
               } ${targetFont}`}
               dir={targetDir}
@@ -393,7 +386,7 @@ export default function SentenceExercise({
         <DuoButton
           variant="green"
           size="lg"
-          className="mt-5 w-full"
+          className="mt-4 w-full sm:mt-5"
           disabled={placed.length === 0}
           onClick={() =>
             onAnswer(checkSentenceAnswer(question, placed.map((c) => c.text)))
@@ -403,34 +396,5 @@ export default function SentenceExercise({
         </DuoButton>
       )}
     </section>
-  );
-}
-
-function SpeechHint({
-  status,
-  lastHeard,
-}: {
-  status: SpeechStatus;
-  lastHeard: string;
-}) {
-  const messages: Record<SpeechStatus, string> = {
-    idle: "המיקרופון כבוי. אפשר להמשיך ידנית בכל רגע.",
-    listening: "מקשיב תוך כדי דיבור...",
-    matched: "מילה זוהתה ונוספה מיד לשורה.",
-    low: "שמעתי, אבל הביטחון היה נמוך מ־86%. נסו שוב ברור יותר.",
-    missing: "שמעתי מילה בביטחון גבוה, אבל היא לא נמצאת ברשימה.",
-    unsupported: "הדפדפן הזה לא תומך בזיהוי דיבור.",
-    error: "לא הצלחתי לפתוח מיקרופון. בדקו הרשאה בדפדפן ונסו שוב.",
-  };
-
-  return (
-    <p className="mt-2 text-xs font-bold text-duo-gray">
-      {messages[status]}
-      {lastHeard && status !== "idle" && (
-        <span className="es-text ms-2 inline-block text-duo-purple" dir="ltr">
-          "{lastHeard}"
-        </span>
-      )}
-    </p>
   );
 }

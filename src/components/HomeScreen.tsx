@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import { useState } from "react";
 import { useGameStore } from "../game/store";
 import DuoButton from "./ui/DuoButton";
 import { useSound } from "../hooks/useSound";
@@ -17,32 +18,47 @@ export default function HomeScreen() {
   const openLobby = useGameStore((s) => s.openLobby);
   const stats = useGameStore((s) => s.stats);
   const { play } = useSound();
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <main className="screen-shell flex items-center">
-      <div className="app-wrap grid min-h-[calc(100vh-4rem)] items-center gap-8 lg:grid-cols-[1.08fr_0.92fr]">
+    <main className="screen-shell flex items-center overflow-hidden">
+      <div className="mx-auto flex min-h-[calc(100vh-2.5rem)] w-full max-w-sm flex-col sm:max-w-5xl">
+        <header className="flex items-center justify-between">
+          <button
+            type="button"
+            onClick={() => setMenuOpen(true)}
+            aria-label="פתיחת תפריט"
+            className="flex h-12 w-12 items-center justify-center rounded-2xl border border-duo-border bg-white/80 text-duo-ink shadow-card"
+          >
+            <span className="flex flex-col gap-1">
+              <span className="h-0.5 w-5 rounded-full bg-current" />
+              <span className="h-0.5 w-5 rounded-full bg-current" />
+              <span className="h-0.5 w-5 rounded-full bg-current" />
+            </span>
+          </button>
+          <div className="rounded-2xl border border-duo-border bg-white/70 px-3 py-1.5 text-sm font-black text-duo-greenShadow shadow-sm">
+            {stats.totalXp} XP
+          </div>
+        </header>
+
         <motion.section
           variants={stagger}
           custom={0}
           initial="hidden"
           animate="show"
-          className="text-center lg:text-start"
+          className="flex w-full flex-1 flex-col items-center justify-center overflow-hidden text-center"
         >
-          <span className="eyebrow">Spanish sprint</span>
           <h1
-            className="es-text mt-5 text-6xl font-black leading-none tracking-tight text-duo-green drop-shadow-[0_4px_0_rgba(71,167,0,0.22)] sm:text-7xl"
+            className="es-text max-w-full text-[3.85rem] font-black leading-none tracking-tight text-duo-green drop-shadow-[0_6px_0_rgba(71,167,0,0.2)] sm:text-8xl"
             dir="ltr"
           >
             ¡Vamos!
           </h1>
-          <p className="mt-5 max-w-xl text-2xl font-black leading-tight text-duo-ink sm:text-3xl lg:mx-0">
-            מרוץ ספרדית־עברית שנראה ומרגיש כמו משחק אמיתי.
-          </p>
-          <p className="mx-auto mt-3 max-w-lg text-base font-bold text-duo-gray sm:text-lg lg:mx-0">
-            תרגול מהיר, ניקוד חי, רצפים, ולוח תוצאות נקי שאפשר לבנות עליו בהמשך.
+          <p className="mt-3 max-w-[18rem] text-base font-black leading-snug text-duo-ink sm:max-w-none sm:text-lg">
+            ספרדית בעברית. מהר. נקי. משחקי.
           </p>
 
-          <div className="mx-auto mt-8 grid w-full max-w-md gap-4 lg:mx-0 lg:max-w-lg lg:grid-cols-2">
+          <div className="mt-10 grid w-full max-w-[21rem] gap-3 px-1 sm:max-w-md">
             <motion.div variants={stagger} custom={1} initial="hidden" animate="show">
               <DuoButton
                 variant="green"
@@ -54,7 +70,7 @@ export default function HomeScreen() {
                 }}
               >
                 <span className="flex items-center justify-center gap-3">
-                  <span className="text-2xl">⚡</span>
+                  <span className="text-2xl">▶</span>
                   תרגול נגד בוט
                 </span>
               </DuoButton>
@@ -77,7 +93,7 @@ export default function HomeScreen() {
                 }}
               >
                 <span className="flex items-center justify-center gap-3">
-                  <span className="text-2xl">⚔️</span>
+                  <span className="text-2xl">↔</span>
                   תחרות עם חבר
                 </span>
               </DuoButton>
@@ -88,69 +104,97 @@ export default function HomeScreen() {
           </div>
         </motion.section>
 
-        <motion.aside
-          variants={stagger}
-          custom={3}
-          initial="hidden"
-          animate="show"
-          className="panel relative overflow-hidden rounded-[2rem] p-5 sm:p-7"
-        >
-          <div className="absolute -left-16 -top-16 h-40 w-40 rounded-full bg-duo-purple/15 blur-2xl" />
-          <div className="absolute -bottom-14 -right-14 h-44 w-44 rounded-full bg-duo-green/15 blur-2xl" />
-
-          <div className="relative rounded-[1.5rem] border border-duo-border bg-white/75 p-5 text-center shadow-card">
-            <motion.div
-              className="text-7xl"
-              animate={{ y: [0, -10, 0], rotate: [0, -4, 0, 4, 0] }}
-              transition={{ duration: 3.2, repeat: Infinity, ease: "easeInOut" }}
-            >
-              🦜
-            </motion.div>
-            <p className="mt-3 text-sm font-black uppercase tracking-[0.18em] text-duo-purple">
-              ready to race
-            </p>
-            <div className="mt-5 grid grid-cols-2 gap-3">
-              <StatChip icon="✨" label="XP" value={stats.totalXp} color="text-duo-gold" />
-              <StatChip
-                icon="🎮"
-                label="משחקים"
-                value={stats.gamesPlayed}
-                color="text-duo-purple"
-              />
-              <StatChip
-                icon="🏆"
-                label="ניצחונות"
-                value={stats.wins}
-                color="text-duo-green"
-              />
-              <StatChip
-                icon="🔥"
-                label="שיא רצף"
-                value={stats.bestCombo}
-                color="text-duo-red"
-              />
-            </div>
-          </div>
-        </motion.aside>
+        <ProfileDrawer open={menuOpen} onClose={() => setMenuOpen(false)} />
       </div>
     </main>
   );
 }
 
+function ProfileDrawer({ open, onClose }: { open: boolean; onClose: () => void }) {
+  const stats = useGameStore((s) => s.stats);
+  const openLobby = useGameStore((s) => s.openLobby);
+  const startGame = useGameStore((s) => s.startGame);
+
+  return (
+    <AnimatePresence>
+      {open && (
+        <>
+          <motion.button
+            type="button"
+            aria-label="סגירת תפריט"
+            className="fixed inset-0 z-40 bg-duo-ink/20 backdrop-blur-sm"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={onClose}
+          />
+          <motion.aside
+            initial={{ x: "100%" }}
+            animate={{ x: 0 }}
+            exit={{ x: "100%" }}
+            transition={{ type: "spring", stiffness: 300, damping: 30 }}
+            className="fixed inset-y-0 right-0 z-50 w-[86vw] max-w-sm border-l border-duo-border bg-duo-surface px-5 py-6 shadow-soft"
+          >
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-xs font-black uppercase tracking-[0.16em] text-duo-purple">
+                  הפרופיל שלי
+                </p>
+                <h2 className="mt-1 text-2xl font-black text-duo-ink">את/ה</h2>
+              </div>
+              <button
+                type="button"
+                onClick={onClose}
+                className="flex h-10 w-10 items-center justify-center rounded-2xl bg-duo-border/70 text-xl font-black text-duo-gray"
+              >
+                ×
+              </button>
+            </div>
+
+            <div className="mt-6 grid grid-cols-2 gap-3">
+              <StatChip label="ניקוד" value={stats.totalXp} color="text-duo-green" />
+              <StatChip label="משחקים" value={stats.gamesPlayed} color="text-duo-purple" />
+              <StatChip label="ניצחונות" value={stats.wins} color="text-duo-greenShadow" />
+              <StatChip label="שיא רצף" value={stats.bestCombo} color="text-duo-red" />
+            </div>
+
+            <div className="mt-6 space-y-2">
+              <MenuAction label="תרגול" onClick={() => void startGame()} />
+              <MenuAction label="תחרות" onClick={openLobby} />
+              <MenuAction label="התקדמות" />
+              <MenuAction label="הגדרות" />
+            </div>
+          </motion.aside>
+        </>
+      )}
+    </AnimatePresence>
+  );
+}
+
+function MenuAction({ label, onClick }: { label: string; onClick?: () => void }) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className="flex w-full items-center justify-between rounded-2xl border border-duo-border bg-white/75 px-4 py-3 text-start text-base font-black text-duo-ink shadow-sm"
+    >
+      <span>{label}</span>
+      <span className="text-duo-purple">‹</span>
+    </button>
+  );
+}
+
 function StatChip({
-  icon,
   label,
   value,
   color,
 }: {
-  icon: string;
   label: string;
   value: number;
   color: string;
 }) {
   return (
     <div className="metric-card flex flex-col items-center">
-      <span className="text-lg">{icon}</span>
       <span className={`text-lg font-black tabular-nums ${color}`}>{value}</span>
       <span className="text-[11px] font-bold text-duo-gray">{label}</span>
     </div>

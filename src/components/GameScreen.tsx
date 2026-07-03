@@ -92,10 +92,49 @@ export default function GameScreen() {
   }
 
   return (
-    <main className="screen-shell pb-36">
+    <main className="screen-shell px-3 pb-28 pt-[112px] sm:px-6 sm:pb-36 sm:pt-8">
+      <div className="fixed inset-x-3 top-3 z-20 mx-auto max-w-3xl sm:hidden">
+        <div className="panel rounded-[1.25rem] px-2.5 py-2">
+          <div className="flex items-center gap-2" dir="ltr">
+            <div className="flex h-10 min-w-12 items-center justify-center gap-1 rounded-2xl bg-duo-redLight px-2 text-sm font-black text-duo-red">
+              <span>♥</span>
+              <span className="tabular-nums">{hearts}</span>
+            </div>
+
+            <div className="min-w-0 flex-1">
+              <RaceTrack player={player} opponent={opponent} compact />
+            </div>
+
+            <div className="flex h-10 min-w-12 items-center justify-center rounded-2xl bg-white/80 px-2">
+              <CountdownRing
+                fraction={phase === "answering" ? remainingMs / timeLimit : 0}
+                seconds={Math.ceil(remainingMs / 1000)}
+                size={36}
+              />
+            </div>
+          </div>
+
+          <div className="mt-1.5 flex items-center gap-2">
+            <button
+              onClick={goHome}
+              aria-label="יציאה"
+              className="flex h-7 w-7 shrink-0 items-center justify-center rounded-xl bg-duo-border/60 text-sm font-black text-duo-gray"
+            >
+              ×
+            </button>
+            <div className="flex-1">
+              <ProgressBar value={player.progress / ROUND_SIZE} />
+            </div>
+            <span className="text-xs font-black tabular-nums text-duo-green" dir="ltr">
+              {player.score}
+            </span>
+          </div>
+        </div>
+      </div>
+
       <div className="mx-auto flex min-h-[calc(100vh-3rem)] w-full max-w-3xl flex-col">
       {/* Header: quit, progress, hearts */}
-      <div className="panel sticky top-4 z-10 flex items-center gap-3 rounded-[1.35rem] px-3 py-3">
+      <div className="panel sticky top-4 z-10 hidden items-center gap-3 rounded-[1.35rem] px-3 py-3 sm:flex">
         <button
           onClick={goHome}
           aria-label="יציאה"
@@ -113,12 +152,12 @@ export default function GameScreen() {
       </div>
 
       {/* Race track */}
-      <div className="mt-3">
+      <div className="mt-3 hidden sm:block">
         <RaceTrack player={player} opponent={opponent} />
       </div>
 
       {/* Timer + combo + score row */}
-      <div className="mt-4 flex items-center justify-between rounded-[1.35rem] border border-duo-border bg-white/65 px-4 py-3 shadow-sm backdrop-blur">
+      <div className="mt-4 hidden items-center justify-between rounded-[1.35rem] border border-duo-border bg-white/65 px-4 py-3 shadow-sm backdrop-blur sm:flex">
         <CountdownRing
           fraction={phase === "answering" ? remainingMs / timeLimit : 0}
           seconds={Math.ceil(remainingMs / 1000)}
@@ -147,7 +186,7 @@ export default function GameScreen() {
 
       {/* Question — keyed remount (no exit animation: an interrupted exit
           could stall AnimatePresence and leave the question area blank) */}
-      <div className="mt-6 flex-1">
+      <div className="flex-1 sm:mt-6">
         <motion.div
           key={question.id}
           initial={{ opacity: 0, x: -24 }}

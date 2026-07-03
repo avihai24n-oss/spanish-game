@@ -29,13 +29,13 @@ export default function McqExercise({
   };
 
   return (
-    <section className="panel rounded-[1.7rem] p-5 sm:p-7">
+    <section className="panel rounded-[1.4rem] p-4 sm:rounded-[1.7rem] sm:p-7">
       <div>
         <p className="text-sm font-black uppercase tracking-[0.14em] text-duo-purple">
           {toSpanish ? "איך אומרים בספרדית?" : "מה הפירוש בעברית?"}
         </p>
         <h2
-          className={`mt-3 text-4xl font-black leading-tight text-duo-ink ${
+          className={`mt-2 text-3xl font-black leading-tight text-duo-ink sm:mt-3 sm:text-4xl ${
             toSpanish ? "" : "es-text"
           }`}
           dir={toSpanish ? "rtl" : "ltr"}
@@ -44,7 +44,7 @@ export default function McqExercise({
         </h2>
       </div>
 
-      <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
+      <div className="mt-5 grid grid-cols-1 gap-2.5 sm:mt-6 sm:grid-cols-2 sm:gap-3">
         {question.options.map((opt, i) => {
           const isCorrect = i === question.correctIndex;
           const isSelected = i === selected;
@@ -68,7 +68,7 @@ export default function McqExercise({
               onClick={() => choose(i)}
               disabled={revealed}
               whileTap={revealed ? undefined : { scale: 0.97 }}
-              className={`relative rounded-2xl border border-b-4 px-5 py-4 text-xl font-extrabold shadow-card transition-all duration-150 ${stateClasses} ${
+              className={`relative rounded-2xl border border-b-4 px-4 py-3 text-lg font-extrabold shadow-card transition-all duration-150 sm:px-5 sm:py-4 sm:text-xl ${stateClasses} ${
                 toSpanish ? "es-text" : ""
               }`}
               dir={toSpanish ? "ltr" : "rtl"}
