@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  @apply bg-duo-bg font-duo text-duo-text antialiased;
+  overscroll-behavior: none;
+}
+
+/* Spanish (LTR) islands inside the RTL Hebrew UI */
+.es-text {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+::selection {
+  background: #ddf4ff;
+}
+
+/* Subtle playful dotted backdrop */
+.dotted-bg {
+  background-image: radial-gradient(#e5e5e5 1.5px, transparent 1.5px);
+  background-size: 26px 26px;
+}

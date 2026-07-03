@@ -1,0 +1,86 @@
+import { useState } from "react";
+import { motion } from "framer-motion";
+import type { McqQuestion } from "../../game/types";
+
+interface McqExerciseProps {
+  question: McqQuestion;
+  revealed: boolean;
+  onAnswer: (correct: boolean) => void;
+}
+
+/**
+ * MCQ exercise, both directions:
+ *  he-to-es — Hebrew word shown big, 4 Spanish option cards (LTR)
+ *  es-to-he — Spanish word shown big, 4 Hebrew option cards (RTL)
+ * Tapping an option answers immediately (race mode — speed counts).
+ */
+export default function McqExercise({
+  question,
+  revealed,
+  onAnswer,
+}: McqExerciseProps) {
+  const [selected, setSelected] = useState<number | null>(null);
+  const toSpanish = question.direction === "he-to-es";
+
+  const choose = (i: number) => {
+    if (revealed || selected !== null) return;
+    setSelected(i);
+    onAnswer(i === question.correctIndex);
+  };
+
+  return (
+    <div className="flex flex-col gap-6">
+      <div>
+        <p className="text-sm font-extrabold text-duo-gray">
+          {toSpanish ? "איך אומרים בספרדית?" : "מה הפירוש בעברית?"}
+        </p>
+        <h2
+          className={`mt-2 text-4xl font-black ${toSpanish ? "" : "es-text"}`}
+          dir={toSpanish ? "rtl" : "ltr"}
+        >
+          {question.prompt}
+        </h2>
+      </div>
+
+      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+        {question.options.map((opt, i) => {
+          const isCorrect = i === question.correctIndex;
+          const isSelected = i === selected;
+
+          let stateClasses =
+            "border-duo-border bg-white hover:bg-duo-bg hover:-translate-y-0.5";
+          if (revealed && isCorrect) {
+            stateClasses =
+              "border-duo-green bg-duo-greenLight text-duo-greenShadow animate-pop";
+          } else if (revealed && isSelected && !isCorrect) {
+            stateClasses = "border-duo-red bg-duo-redLight text-duo-red animate-shake";
+          } else if (isSelected) {
+            stateClasses = "border-duo-blue bg-duo-blueLight text-duo-blueShadow";
+          } else if (revealed) {
+            stateClasses = "border-duo-border bg-white opacity-50";
+          }
+
+          return (
+            <motion.button
+              key={i}
+              onClick={() => choose(i)}
+              disabled={revealed}
+              whileTap={revealed ? undefined : { scale: 0.97 }}
+              className={`relative rounded-2xl border-2 border-b-4 px-5 py-4 text-xl font-bold transition-all duration-150 ${stateClasses} ${
+                toSpanish ? "es-text" : ""
+              }`}
+              dir={toSpanish ? "ltr" : "rtl"}
+            >
+              {opt}
+              {revealed && isCorrect && (
+                <span className="absolute -left-2 -top-2 flex h-7 w-7 items-center justify-center rounded-full bg-duo-green text-sm font-black text-white shadow">
+                  ✓
+                </span>
+              )}
+            </motion.button>
+          );
+        })}
+      </div>
+    </div>
+  );
+}

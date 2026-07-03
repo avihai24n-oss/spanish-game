@@ -1,0 +1,74 @@
+[
+  {
+    "id": "s001",
+    "es": "Yo como pan",
+    "he": "אני אוכל לחם",
+    "esBank": ["Yo", "como", "pan"],
+    "heBank": ["אני", "אוכל", "לחם"],
+    "esDistractors": ["bebo", "agua"],
+    "heDistractors": ["שותה", "מים"]
+  },
+  {
+    "id": "s002",
+    "es": "El perro es grande",
+    "he": "הכלב הוא גדול",
+    "esBank": ["El", "perro", "es", "grande"],
+    "heBank": ["הכלב", "הוא", "גדול"],
+    "esDistractors": ["gato", "pequeño"],
+    "heDistractors": ["החתול", "קטן"]
+  },
+  {
+    "id": "s003",
+    "es": "Ella vive en la ciudad",
+    "he": "היא גרה בעיר",
+    "esBank": ["Ella", "vive", "en", "la", "ciudad"],
+    "heBank": ["היא", "גרה", "בעיר"],
+    "esDistractors": ["calle", "come"],
+    "heDistractors": ["ברחוב", "אוכלת"]
+  },
+  {
+    "id": "s004",
+    "es": "Nosotros hablamos español",
+    "he": "אנחנו מדברים ספרדית",
+    "esBank": ["Nosotros", "hablamos", "español"],
+    "heBank": ["אנחנו", "מדברים", "ספרדית"],
+    "esDistractors": ["comemos", "inglés"],
+    "heDistractors": ["אוכלים", "אנגלית"]
+  },
+  {
+    "id": "s005",
+    "es": "Mi amigo compra un libro",
+    "he": "החבר שלי קונה ספר",
+    "esBank": ["Mi", "amigo", "compra", "un", "libro"],
+    "heBank": ["החבר", "שלי", "קונה", "ספר"],
+    "esDistractors": ["perro", "vende"],
+    "heDistractors": ["הכלב", "מוכר"]
+  },
+  {
+    "id": "s006",
+    "es": "Bebo leche por la mañana",
+    "he": "אני שותה חלב בבוקר",
+    "esBank": ["Bebo", "leche", "por", "la", "mañana"],
+    "heBank": ["אני", "שותה", "חלב", "בבוקר"],
+    "esDistractors": ["agua", "noche"],
+    "heDistractors": ["מים", "בלילה"]
+  },
+  {
+    "id": "s007",
+    "es": "La casa es pequeña y bonita",
+    "he": "הבית קטן ויפה",
+    "esBank": ["La", "casa", "es", "pequeña", "y", "bonita"],
+    "heBank": ["הבית", "קטן", "ויפה"],
+    "esDistractors": ["grande", "escuela"],
+    "heDistractors": ["גדול", "בית ספר"]
+  },
+  {
+    "id": "s008",
+    "es": "Trabajo en la ciudad todos los días",
+    "he": "אני עובד בעיר כל יום",
+    "esBank": ["Trabajo", "en", "la", "ciudad", "todos", "los", "días"],
+    "heBank": ["אני", "עובד", "בעיר", "כל", "יום"],
+    "esDistractors": ["noches", "vivo"],
+    "heDistractors": ["לילה", "גר"]
+  }
+]
