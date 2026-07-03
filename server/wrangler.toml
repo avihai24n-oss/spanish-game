@@ -6,6 +6,14 @@ compatibility_date = "2026-06-01"
 name = "QuizRoom"
 class_name = "QuizRoom"
 
+[[durable_objects.bindings]]
+name = "UserStore"
+class_name = "UserStore"
+
 [[migrations]]
 tag = "v1"
 new_sqlite_classes = ["QuizRoom"]
+
+[[migrations]]
+tag = "v2"
+new_sqlite_classes = ["UserStore"]

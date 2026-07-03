@@ -2,6 +2,7 @@ import { Server, routePartykitRequest, type Connection, type WSMessage } from "p
 
 type Env = {
   QuizRoom: DurableObjectNamespace;
+  UserStore: DurableObjectNamespace;
 };
 
 interface PlayerInfo {
@@ -135,8 +136,145 @@ export class QuizRoom extends Server<Env> {
   }
 }
 
+// ---------------- User profiles (username-only accounts) ----------------
+
+interface UserStats {
+  totalXp: number;
+  gamesPlayed: number;
+  wins: number;
+  bestCombo: number;
+}
+
+interface UserRecord {
+  /** Display name (as typed on first login) */
+  name: string;
+  avatar: string;
+  stats: UserStats;
+  updatedAt: number;
+}
+
+const ZERO_STATS: UserStats = { totalXp: 0, gamesPlayed: 0, wins: 0, bestCombo: 0 };
+
+const CORS_HEADERS: Record<string, string> = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+  "Access-Control-Allow-Headers": "Content-Type",
+};
+
+function json(data: unknown, status = 200): Response {
+  return new Response(JSON.stringify(data), {
+    status,
+    headers: { "Content-Type": "application/json", ...CORS_HEADERS },
+  });
+}
+
+function userKey(name: unknown): string | null {
+  const key = String(name ?? "").trim().toLowerCase();
+  return key.length >= 2 && key.length <= 32 ? `user:${key}` : null;
+}
+
+function sanitizeStats(input: unknown): UserStats {
+  const s = (input ?? {}) as Partial<Record<keyof UserStats, unknown>>;
+  const num = (v: unknown) =>
+    Number.isFinite(Number(v)) ? Math.max(0, Math.floor(Number(v))) : 0;
+  return {
+    totalXp: num(s.totalXp),
+    gamesPlayed: num(s.gamesPlayed),
+    wins: num(s.wins),
+    bestCombo: num(s.bestCombo),
+  };
+}
+
+/**
+ * All user profiles live in one Durable Object ("global") with persistent
+ * storage. Login is by username only — no passwords, by design: this is a
+ * friends-and-family game.
+ */
+export class UserStore {
+  constructor(private state: DurableObjectState) {}
+
+  async fetch(request: Request): Promise<Response> {
+    const url = new URL(request.url);
+    let body: Record<string, unknown> = {};
+    if (request.method === "POST") {
+      try {
+        body = (await request.json()) as Record<string, unknown>;
+      } catch {
+        return json({ error: "bad json" }, 400);
+      }
+    }
+
+    // GET /api/user?name=X — fetch a profile
+    if (request.method === "GET" && url.pathname === "/api/user") {
+      const key = userKey(url.searchParams.get("name"));
+      if (!key) return json({ error: "bad name" }, 400);
+      const record = await this.state.storage.get<UserRecord>(key);
+      return record ? json(record) : json({ error: "not found" }, 404);
+    }
+
+    // POST /api/login {name, avatar, seedStats?} — create or refresh a profile.
+    // seedStats migrates pre-existing localStorage stats on first login only.
+    if (request.method === "POST" && url.pathname === "/api/login") {
+      const key = userKey(body.name);
+      if (!key) return json({ error: "bad name" }, 400);
+      const existing = await this.state.storage.get<UserRecord>(key);
+      const record: UserRecord = existing
+        ? {
+            ...existing,
+            avatar: String(body.avatar ?? existing.avatar),
+            updatedAt: Date.now(),
+          }
+        : {
+            name: String(body.name).trim(),
+            avatar: String(body.avatar ?? "🙂"),
+            stats: sanitizeStats(body.seedStats ?? ZERO_STATS),
+            updatedAt: Date.now(),
+          };
+      await this.state.storage.put(key, record);
+      return json(record);
+    }
+
+    // POST /api/round {name, xp, won, bestCombo} — accumulate a finished round
+    if (request.method === "POST" && url.pathname === "/api/round") {
+      const key = userKey(body.name);
+      if (!key) return json({ error: "bad name" }, 400);
+      const existing = await this.state.storage.get<UserRecord>(key);
+      if (!existing) return json({ error: "not found" }, 404);
+      const xp = sanitizeStats({ totalXp: body.xp }).totalXp;
+      const record: UserRecord = {
+        ...existing,
+        stats: {
+          totalXp: existing.stats.totalXp + xp,
+          gamesPlayed: existing.stats.gamesPlayed + 1,
+          wins: existing.stats.wins + (body.won ? 1 : 0),
+          bestCombo: Math.max(
+            existing.stats.bestCombo,
+            sanitizeStats({ bestCombo: body.bestCombo }).bestCombo
+          ),
+        },
+        updatedAt: Date.now(),
+      };
+      await this.state.storage.put(key, record);
+      return json(record);
+    }
+
+    return json({ error: "not found" }, 404);
+  }
+}
+
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
+    const url = new URL(request.url);
+
+    // Profile API — routed to the single global UserStore object
+    if (url.pathname.startsWith("/api/")) {
+      if (request.method === "OPTIONS") {
+        return new Response(null, { status: 204, headers: CORS_HEADERS });
+      }
+      const stub = env.UserStore.get(env.UserStore.idFromName("global"));
+      return stub.fetch(request);
+    }
+
     const routed = await routePartykitRequest(
       request,
       env as unknown as Record<string, unknown>

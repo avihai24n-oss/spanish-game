@@ -13,6 +13,7 @@ import type { MatchTransport } from "../transport/MatchTransport";
 import { BotTransport } from "../transport/BotTransport";
 import { RealtimeTransport } from "../transport/RealtimeTransport";
 import { loadProfile, saveProfile, statsKeyFor, type Profile } from "./profile";
+import { loginUser, reportRound } from "./profileApi";
 
 export type Screen =
   | "profile"
@@ -128,6 +129,8 @@ interface GameState {
 
   boot: (roomFromUrl: string | null) => void;
   setProfile: (name: string, avatar: string) => void;
+  /** Pull the authoritative profile stats from the server (any-device login). */
+  syncProfile: (profile: Profile) => Promise<void>;
   toggleLevel: (level: Level) => void;
   setLevels: (levels: Level[]) => void;
   goHome: () => void;
@@ -360,12 +363,27 @@ export const useGameStore = create<GameState>((set, get) => {
       // StrictMode mounts effects twice in dev — join the room only once
       if (booted) return;
       booted = true;
+
+      // Returning user: refresh stats from the server (any-device profiles)
+      const profile = get().profile;
+      if (profile) void get().syncProfile(profile);
+
       if (!roomFromUrl) return;
-      if (get().profile) {
+      if (profile) {
         void get().joinDuel(roomFromUrl);
       } else {
         set({ screen: "profile", pendingRoomId: roomFromUrl });
       }
+    },
+
+    syncProfile: async (profile) => {
+      // Server is the source of truth; local stats seed it on first login
+      // and remain the offline fallback.
+      const server = await loginUser(profile.name, profile.avatar, get().stats);
+      if (!server) return;
+      if (get().profile?.name !== profile.name) return; // user switched meanwhile
+      saveStats(profile.name, server.stats);
+      set({ stats: server.stats });
     },
 
     toggleLevel: (level) => {
@@ -394,6 +412,7 @@ export const useGameStore = create<GameState>((set, get) => {
         stats: loadStats(profile.name),
         player: { ...s.player, name: profile.name, avatar: profile.avatar },
       }));
+      void get().syncProfile(profile);
 
       const pending = get().pendingRoomId;
       if (pending) {
@@ -572,6 +591,22 @@ export const useGameStore = create<GameState>((set, get) => {
       saveStats(s.profile?.name ?? null, stats);
 
       set({ screen: "results", opponent, stats, roundFinalized: true });
+
+      // Accumulate on the server too — the profile follows the user across
+      // devices. The optimistic local totals above are the offline fallback;
+      // the server's answer is authoritative.
+      const profileName = s.profile?.name;
+      if (profileName) {
+        void reportRound(profileName, {
+          xp: s.xpEarned,
+          won,
+          bestCombo: s.bestComboThisRound,
+        }).then((server) => {
+          if (!server || get().profile?.name !== profileName) return;
+          saveStats(profileName, server.stats);
+          set({ stats: server.stats });
+        });
+      }
     },
 
     showDemoScreen: (screen) => {
